@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "arm64",
+            "includePath": [
+                "/opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/include/**",
+                "/opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/include-fixed/**",
+                "/opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/avr/include/**"
+            ],
+            "compilerArgs": [
+                "-mmcu=atmega328pb",
+                "-DF_CPU=8000000UL"
+            ],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/opt/homebrew/bin/avr-gcc",
+            "cStandard": "c11",
+            "intelliSenseMode": "macos-gcc-x86"
+        }
+    ],
+    "version": 4
+}
