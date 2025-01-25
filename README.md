@@ -19,7 +19,7 @@ Soooo I did what any irritated engineer would do and made my own. 😂
 
 The rgb switcher is based around a very old Ben Heck design which uses FET bus switches [74CBT3244](https://www.ti.com/lit/ds/symlink/sn74cbt3244.pdf?ts=1737705833521&ref_url=https%253A%252F%252Fwww.google.com%252F). The idea is simple: an [ATMEGA328PB](https://www.microchip.com/en-us/product/atmega328pb) microcontroller selects which of 8 of these bus switches should be active and switch their inputs through to some commonly connected outputs. The inputs consist of red, green, blue, sync, left audio and right audio. Since some of our consoles use component video, and because gbs-control-based line doublers have separate inputs for RGB(S) and YPbPr video, there are separate outputs for each, also selected with their own bus switch. A slide switch on the front of the PCB lets you select which video format each input uses, and therefore which output it should be routed to when selected. Bicolour LEDs also indicate which input is active and which format the video is in (red for RGBS, green for YPbPr).
 
-I forgot to mention when writing this that the red, green and blue signals become Pr, Y and Pb respectively when an input is configured to be YPbPr instead of RGBS. 👍🏾
+I forgot to mention when writing this that the red, green and blue signals become Pr, Y and Pb respectively when an input is configured to be YPbPr instead of RGBS. There is no sync signal on the YPbPr output. 👍🏾
 
 The input bus switches are selected using [74HC138](https://www.ti.com/product/CD74HC138) inverting line decoders. I could have just used pins on the microcontroller, but these lines go multiple places and I already use a hex inverter for something else on the board and didn't feel like having multiple!
 
@@ -28,7 +28,7 @@ I've used the same 9-pin mini-DIN connector that the Sega Mega Drive II uses, us
 ### RGB LEDs
 
 I also wanted the consoles to look nice on shelves or some sort of storage system we haven't decided on yet, so why not have the select lines also illuminate strips of 12V RGB LEDs? 🤣
-I added some [IRF540](https://www.vishay.com/docs/91021/irf540.pdf) power MOSFETs to help with this. MOSFETs because efficient, power because those the current through the LEDs does add up! The LED outputs are selected using a [74HC238](https://www.ti.com/product/CD74HC238) non-inverting line decoder.
+I added some [IRF540](https://www.vishay.com/docs/91021/irf540.pdf) power MOSFETs to help with this. MOSFETs because efficient, power because current through the LEDs does add up! The LED outputs are selected using a [74HC238](https://www.ti.com/product/CD74HC238) non-inverting line decoder.
 
 They also fade in/out when changing inputs. Yey! ^-^
 
