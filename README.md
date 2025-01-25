@@ -1,5 +1,8 @@
 # rgb-switcher
 
+![render](https://github.com/user-attachments/assets/11b07148-e02a-4746-8927-08d80e3dff86)
+
+
 ## What is it?
 
 An open-source switcher for analogue RGBS and YPbPr video, so you don't have to.
