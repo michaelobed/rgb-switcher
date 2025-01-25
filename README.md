@@ -52,3 +52,11 @@ I'm not an expert PCB designer, and this is my first time doing anything with vi
 If you like this design, you're welcome (and encouraged!) to fork this repo and make one yourself, modify it, sell it, I don't mind!
 
 Happy gaming!
+
+## In future
+
+These are things I should probably have done but haven't had the time to do yet:
+
+- **Make the board smaller**! It would probably have been better to make the switcher with an "LED board" as a module that communicates over the UART, SPI, I2C, etc. Most importantly, it brings cost down further to not make such a large 4-layer PCB, especially if you're not interested in the RGB LED bit.
+- **Create a reference design for a remote board** that lets you use one of those universal IR TV remotes with it, or maybe even learn codes from an existing IR remote.
+- **Create an enclosure**. I'm a CAD noob but it shouldn't be too hard. It could even just be an identically-shaped PCB with some elaborate artwork on it!
