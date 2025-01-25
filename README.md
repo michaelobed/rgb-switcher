@@ -1,7 +1,6 @@
 # rgb-switcher
 
-![render](https://github.com/user-attachments/assets/11b07148-e02a-4746-8927-08d80e3dff86)
-
+![Render of v0.2 PCB](https://github.com/user-attachments/assets/11b07148-e02a-4746-8927-08d80e3dff86)
 
 ## What is it?
 
@@ -9,7 +8,7 @@ An open-source switcher for analogue RGBS and YPbPr video, so you don't have to.
 
 ## Why?
 
-My wife and I are slowly amassing some retro gaming consoles which we quite enjoy, and needed a way to connect them all to a modern TV via a [gbs-control](https://github.com/ramapcsx2/gbs-control)-based line doubler. Unfortunately, most solutions for this either don't support RGBS, don't support YPbPr (a must for certain consoles), are SCART-only, don't have many inputs or are ludicrously expensive!
+My wife and I are slowly amassing some retro gaming consoles which we quite enjoy, and needed a way to connect them all to a modern TV via a [gbs-control](https://github.com/ramapcsx2/gbs-control)-based line doubler. Unfortunately, most solutions for this either don't support RGBS, don't support YPbPr (a must for certain consoles), are SCART-only, don't have many inputs or are ludicrously expensive! Worst of all, they often don't feature remote control of any kind.
 
 Soooo I did what any irritated engineer would do and made my own. 😂
 
@@ -17,7 +16,7 @@ Soooo I did what any irritated engineer would do and made my own. 😂
 
 ### Video switching
 
-The rgb switcher is based around a very old Ben Heck design which uses FET bus switches [74CBT3244](https://www.ti.com/lit/ds/symlink/sn74cbt3244.pdf?ts=1737705833521&ref_url=https%253A%252F%252Fwww.google.com%252F). The idea is simple: an [ATMEGA328PB](https://www.microchip.com/en-us/product/atmega328pb) microcontroller selects which of 8 of these bus switches should be active and switch their inputs through to some commonly connected outputs. The inputs consist of red, green, blue, sync, left audio and right audio. Since some of our consoles use component video, and because gbs-control-based line doublers have separate inputs for RGB(S) and YPbPr video, there are separate outputs for each, also selected with their own bus switch. A slide switch on the front of the PCB lets you select which video format each input uses, and therefore which output it should be routed to when selected. Bicolour LEDs also indicate which input is active and which format the video is in (red for RGBS, green for YPbPr).
+The rgb switcher is based around a very old Ben Heck design which uses [74CBT3244](https://www.ti.com/lit/ds/symlink/sn74cbt3244.pdf?ts=1737705833521&ref_url=https%253A%252F%252Fwww.google.com%252F) FET bus switches. The idea is simple: an [ATMEGA328PB](https://www.microchip.com/en-us/product/atmega328pb) microcontroller selects which of 8 of these bus switches should be active and switch their inputs through to some commonly connected outputs. The inputs consist of red, green, blue, sync, left audio and right audio. Since some of our consoles use YPbPr video, and because gbs-control-based line doublers have separate inputs for RGB(S) and YPbPr video, there are separate outputs for each, also selected with their own bus switch. A slide switch on the front of the PCB lets you select which video format each input uses, and therefore which output it should be routed to when selected. Bicolour LEDs also indicate which input is active and which format the video is in (red for RGBS, green for YPbPr).
 
 I forgot to mention when writing this that the red, green and blue signals become Pr, Y and Pb respectively when an input is configured to be YPbPr instead of RGBS. There is no sync signal on the YPbPr output. 👍🏾
 
@@ -34,7 +33,7 @@ They also fade in/out when changing inputs. Yey! ^-^
 
 ### Audio
 
-I've read mixed things on passing audio through the bus switches, particularly around distortion. When I designed this, I didn't know the bus switches well enough and wasn't sure how they'd handle negative voltages at the input, so I buffered it using some [TL074](https://www.ti.com/product/TL074) op-amps. I've used a biasing trick to buffer audio signals for guitar pedals using a unipolar power supply, so I figured it would work here. I could, of course, be super paranoid and it turns out that the _bidirectional_ bus switch handles negative voltages just fine, so feel free to remove it entirely if you know more than me about this.
+I've read mixed things on passing audio through the bus switches, particularly around distortion. When I designed this, I didn't know the bus switches well enough and wasn't sure how they'd handle negative voltages at the input, so I buffered it using some [TL074](https://www.ti.com/product/TL074) op-amps. I've used a biasing trick to buffer audio signals for guitar pedals using a unipolar power supply, so I figured it would work here. I could, of course, be super paranoid and it turns out that the _bidirectional_ bus switches handle negative voltages just fine, so feel free to remove it entirely if you know more than me about this.
 
 ### UART
 
