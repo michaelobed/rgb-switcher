@@ -16,9 +16,11 @@ Soooo I did what any irritated engineer would do and made my own. 😂
 
 The rgb switcher is based around a very old Ben Heck design which uses FET bus switches [74CBT3244](https://www.ti.com/lit/ds/symlink/sn74cbt3244.pdf?ts=1737705833521&ref_url=https%253A%252F%252Fwww.google.com%252F). The idea is simple: an [ATMEGA328PB](https://www.microchip.com/en-us/product/atmega328pb) microcontroller selects which of 8 of these bus switches should be active and switch their inputs through to some commonly connected outputs. The inputs consist of red, green, blue, sync, left audio and right audio. Since some of our consoles use component video, and because gbs-control-based line doublers have separate inputs for RGB(S) and YPbPr video, there are separate outputs for each, also selected with their own bus switch. A slide switch on the front of the PCB lets you select which video format each input uses, and therefore which output it should be routed to when selected. Bicolour LEDs also indicate which input is active and which format the video is in (red for RGBS, green for YPbPr).
 
+I forgot to mention when writing this that the red, green and blue signals become Pr, Y and Pb respectively when an input is configured to be YPbPr instead of RGBS. 👍🏾
+
 The input bus switches are selected using [74HC138](https://www.ti.com/product/CD74HC138) inverting line decoders. I could have just used pins on the microcontroller, but these lines go multiple places and I already use a hex inverter for something else on the board and didn't feel like having multiple!
 
-I've used the same 9-pin mini-DIN connector that the Sega Mega Drive II uses, using the exact same pinout. One irritation that I discovered while deciding on this is that the cables I bought for testing (from AliExpress, admittedly) don't output the sync signal on pin 5, but instead output the composite video signal on pin 4! I've therefore added little switches to each input and to the RGBS output that let you choose pin 4 or 5 of the connector, and thus what you'd like to use as a sync signal. Be aware that there isn't any capacity to strip the sync signal from a composite video signal, both because I wasn't designing for that and because gbs-control does it already. If you like, you can add an [LM1881](https://www.ti.com/lit/ds/symlink/lm1881.pdf?ts=1737753066078&ref_url=https%253A%252F%252Fwww.google.com%252F) to the board if that's needed.
+I've used the same 9-pin mini-DIN connector that the Sega Mega Drive II uses, using the exact same pinout. One irritation that I discovered while deciding on this is that the cables I bought for testing (from AliExpress, admittedly) don't output the sync signal on pin 5, but instead output the composite video signal on pin 4! I've therefore added little switches to each input and to the RGBS output that let you choose pin 4 or 5 of the connector, and thus what you'd like to use as a sync signal. Be aware that there isn't any capacity to strip the sync signal from a composite video signal, both because I wasn't designing for that and because gbs-control does it already. If you like, you can add an [LM1881](https://www.ti.com/lit/ds/symlink/lm1881.pdf?ts=1737753066078&ref_url=https%253A%252F%252Fwww.google.com%252F) to the board if that's needed. This _doooes_ also imply that you could use this to switch composite video. Ha!
 
 ### RGB LEDs
 
@@ -29,7 +31,7 @@ They also fade in/out when changing inputs. Yey! ^-^
 
 ### Audio
 
-I've read mixed things on passing audio through the bus switches, particularly around distortion. When I designed this, I didn't know the bus switches well enough and wasn't sure how they'd handle negative voltages at the input, so I buffered it using some [TL074](https://www.ti.com/product/TL074) op-amps. I've used a biasing trick to buffer audio signals for guitar pedals using a unipolar power supply, so I figured it would work here. I could, of course, be super paranoid and it turns out that the _bidirectional_ bus switch handles negative voltages just fine, so feel free to remove it entirely should you wish to recreate this. YMMV.
+I've read mixed things on passing audio through the bus switches, particularly around distortion. When I designed this, I didn't know the bus switches well enough and wasn't sure how they'd handle negative voltages at the input, so I buffered it using some [TL074](https://www.ti.com/product/TL074) op-amps. I've used a biasing trick to buffer audio signals for guitar pedals using a unipolar power supply, so I figured it would work here. I could, of course, be super paranoid and it turns out that the _bidirectional_ bus switch handles negative voltages just fine, so feel free to remove it entirely if you know more than me about this.
 
 ### UART
 
@@ -45,7 +47,7 @@ Finally, there's the power input. Anything that supplies 12V at ≥3A is fine, t
 
 ## Final notes
 
-I'm not an expert PCB designer, and this is my first time doing anything with video, but I managed to succesfully test this and get it working! I did make a hilarious number of really dumb mistakes which you can read in the changelog in the hardware README (yes I did manually rewire the 9-pin mini-DINs to test them). Despite all this, video and audio quality should be alright.
+I'm not an expert PCB designer, and this is my first time doing anything with video, but I managed to succesfully test this and get it working! I did make a hilarious number of really dumb mistakes which you can read in the changelog in the hardware README (yes I did eventually rewire the 9-pin mini-DINs by hand to test them). Despite all this, video and audio quality should be good.
 
 If you like this design, you're welcome (and encouraged!) to fork this repo and make one yourself, modify it, sell it, I don't mind!
 
