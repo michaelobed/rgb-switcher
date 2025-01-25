@@ -24,6 +24,12 @@ The input bus switches are selected using [74HC138](https://www.ti.com/product/C
 
 I've used the same 9-pin mini-DIN connector that the Sega Mega Drive II uses, using the exact same pinout. One irritation that I discovered while deciding on this is that the cables I bought for testing (from AliExpress, admittedly) don't output the sync signal on pin 5, but instead output the composite video signal on pin 4! I've therefore added little switches to each input and to the RGBS output that let you choose pin 4 or 5 of the connector, and thus what you'd like to use as a sync signal. Be aware that there isn't any capacity to strip the sync signal from a composite video signal, both because I wasn't designing for that and because gbs-control does it already. If you like, you can add an [LM1881](https://www.ti.com/lit/ds/symlink/lm1881.pdf?ts=1737753066078&ref_url=https%253A%252F%252Fwww.google.com%252F) to the board if that's needed. This _doooes_ also imply that you could use this to switch composite video. Ha!
 
+I got the cables I used for input/output from AliExpress, for example [this one](https://www.aliexpress.com/item/1005005996147435.html?spm=a2g0o.productlist.main.1.225e74cfXCYG5h&algo_pvid=0f9260bc-c9ae-4323-ab62-fcc3ea8f7ba0&algo_exp_id=0f9260bc-c9ae-4323-ab62-fcc3ea8f7ba0-0&pdp_npi=4%40dis%21GBP%217.65%217.09%21%21%219.18%218.51%21%402103956b17378184189561915e6008%2112000035228301718%21sea%21UK%211672698285%21X&curPageLogUid=Uh0iq4dljLo4&utparam-url=scene%3Asearch%7Cquery_from%3A), but the cables typically look like this:
+
+![What an I/O cable looks like](https://github.com/user-attachments/assets/2ac21df5-6459-4b52-92e9-456604fd24ca)
+
+You can obtain these by searching for "sega mega drive 2 av cable" and you'll usually find one. You can then put [generic RCA couplers](https://www.aliexpress.com/item/32996572551.html?spm=a2g0o.productlist.main.3.5ff03bcaiFP645&algo_pvid=01b01cbc-0159-45f0-845c-6822facf72eb&algo_exp_id=01b01cbc-0159-45f0-845c-6822facf72eb-1&pdp_npi=4%40dis%21GBP%211.43%211.43%21%21%211.71%211.71%21%402103867617378185427874434e86a9%2166938801173%21sea%21UK%211672698285%21X&curPageLogUid=OJLO7MVlofdW&utparam-url=scene%3Asearch%7Cquery_from%3A) on them to turn them into input cables.
+
 ### RGB LEDs
 
 I also wanted the consoles to look nice on shelves or some sort of storage system we haven't decided on yet, so why not have the select lines also illuminate strips of 12V RGB LEDs? 🤣
