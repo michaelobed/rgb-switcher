@@ -35,3 +35,11 @@ The list of currently available commands is given below:
 All strings sent or received are required to end in a newline (`\n`) character. Windows style `\r\n` endings are fine as the `\r` will just be ignored. As mentioned in the main README, no string sanitisation is performed, and no bounds checking either, so if you supply a malformed string or pass in an out-of-bounds input index...well I'm sure you can handle it! 😅
 
 Feel free to extend this and make cool remotes and interfaces and things!
+
+## EEPROM memory map
+
+| Range | Description |
+| --- | --- |
+| 0x0000 - 0x000f | No man's land! It's apparently unreliable, so avoid. |
+| 0x0010 - 0x0013 | Signature, known value used to verify that data exists. |
+| 0x0020 - 0x003f | RGB LED colour data for each input (4 bytes * 8). |
