@@ -43,8 +43,11 @@ void MemInit(void)
         memEmpty = FALSE;
     else
     {
-        memEraseAll();
-        eeprom_write_block((void*)MemAddr_Signature, (void*)&memSignature, 4);
+        cli();
+        for(uint8_t* i = 0x00; i < (uint8_t*)MemAddr_End; i++)
+            eeprom_update_byte(i, 0xff);
+        eeprom_update_dword((void*)MemAddr_Signature, memSignature);
+        sei();
     }
 }
 
@@ -60,6 +63,8 @@ void MemRead(MemAddr addr, void* data, uint8_t length)
 
 void MemWrite(MemAddr addr, void* data, uint8_t length)
 {
-    eeprom_write_block(data, (void*)addr, length);
+    cli();
+    eeprom_update_block(data, (void*)addr, length);
     memEmpty = FALSE;
+    sei();
 }
