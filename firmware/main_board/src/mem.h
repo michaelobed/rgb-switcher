@@ -26,15 +26,15 @@
 
 typedef enum
 {
-    MemAddr_Signature = 0x00,
-    MemAddr_ColourInput0 = 0x10,
-    MemAddr_ColourInput1 = 0x14,
-    MemAddr_ColourInput2 = 0x18,
-    MemAddr_ColourInput3 = 0x1c,
-    MemAddr_ColourInput4 = 0x20,
-    MemAddr_ColourInput5 = 0x24,
-    MemAddr_ColourInput6 = 0x28,
-    MemAddr_ColourInput7 = 0x2c,
+    MemAddr_Signature = 0x10,
+    MemAddr_ColourInput0 = 0x20,
+    MemAddr_ColourInput1 = 0x24,
+    MemAddr_ColourInput2 = 0x28,
+    MemAddr_ColourInput3 = 0x2c,
+    MemAddr_ColourInput4 = 0x30,
+    MemAddr_ColourInput5 = 0x34,
+    MemAddr_ColourInput6 = 0x38,
+    MemAddr_ColourInput7 = 0x3c,
     MemAddr_End = E2END
 } MemAddr;
 
