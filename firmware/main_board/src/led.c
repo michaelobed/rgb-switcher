@@ -21,6 +21,7 @@
 
 #include "io.h"
 #include "led.h"
+#include "mem.h"
 #include "../../common/sys.h"
 #include "../../common/uart.h"
 
@@ -32,6 +33,17 @@
 
 static volatile uint32_t ledColourCurrent = LED_COLOURNONE;
 static volatile uint32_t ledColourNext = LED_COLOURNONE;
+static const MemAddr ledColourToMemAddr[8] =
+{
+    MemAddr_ColourInput0,
+    MemAddr_ColourInput1,
+    MemAddr_ColourInput2,
+    MemAddr_ColourInput3,
+    MemAddr_ColourInput4,
+    MemAddr_ColourInput5,
+    MemAddr_ColourInput6,
+    MemAddr_ColourInput7
+};
 static uint32_t ledInputColours[8] =
 {
     LED_COLOURRED,
@@ -105,6 +117,18 @@ void LedInit(void)
     OCR2B = 0x00;
     TCCR2A = (_BV(COM2B1) | _BV(WGM20));
     TCCR2B = _BV(CS20);
+
+    /* Fetch colours from EEPROM, or write default ones if they don't already exist. */
+    if(MemEmpty())
+    {
+        for(uint8_t i = 0; i < 8; i++)
+            MemWrite(ledColourToMemAddr[i], &ledInputColours[i], 4);
+    }
+    else
+    {
+        for(uint8_t i = 0; i < 8; i++)
+            MemRead(ledColourToMemAddr[i], &ledInputColours[i], 4);
+    }
 }
 
 void LedRequestFade(volatile uint32_t colour)
@@ -124,4 +148,5 @@ static void ledSetColour(volatile uint32_t colour)
 void LedSetInputColour(uint8_t input, volatile uint32_t colour)
 {
     ledInputColours[input] = colour;
+    MemWrite(ledColourToMemAddr[input], &ledInputColours[input], 4);
 }

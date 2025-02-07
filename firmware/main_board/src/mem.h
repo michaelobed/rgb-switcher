@@ -1,8 +1,8 @@
 //
-//  main.c
+//  mem.h
 //  main-board
 //
-//  Created by michaelobed on 03/01/2025.
+//  Created by michaelobed on 07/02/2025.
 //  
 //  Copyright © 2025 Michael Obed.
 //
@@ -19,31 +19,28 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see https://www.gnu.org/licenses/.
 
-#include "../../common/ctrl.h"
-#include "io.h"
-#include "led.h"
-#include "mem.h"
+#ifndef mem_h
+#define mem_h
+
 #include "../../common/sys.h"
-#include "timer.h"
-#include "../../common/uart.h"
 
-int main(void)
+typedef enum
 {
-    ctrlParams inputZero;
+    MemAddr_Signature = 0x00,
+    MemAddr_ColourInput0 = 0x10,
+    MemAddr_ColourInput1 = 0x14,
+    MemAddr_ColourInput2 = 0x18,
+    MemAddr_ColourInput3 = 0x1c,
+    MemAddr_ColourInput4 = 0x20,
+    MemAddr_ColourInput5 = 0x24,
+    MemAddr_ColourInput6 = 0x28,
+    MemAddr_ColourInput7 = 0x2c,
+    MemAddr_End = E2END
+} MemAddr;
 
-    IoInit();
-    MemInit();
-    LedInit();
-    TimerInit();
-    UartInit();
+bool MemEmpty(void);
+void MemInit(void);
+void MemRead(MemAddr addr, void* data, uint8_t length);
+void MemWrite(MemAddr addr, void* data, uint8_t length);
 
-    /* Select input 0 to avoid invalid state of front indicator LEDs. */
-    inputZero.bytes[0] = '0';
-    CtrlHandleCmd(Cmd_InputSwitch, &inputZero);
-
-    while(TRUE)
-    {
-        UartHandler();
-        IoButtonHandler();
-    }
-}
+#endif
