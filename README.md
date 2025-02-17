@@ -37,10 +37,6 @@ I added some [IRF540](https://www.vishay.com/docs/91021/irf540.pdf) power MOSFET
 
 They also fade in/out when changing inputs. Yey! ^-^
 
-### Audio
-
-I've read mixed things on passing audio through the bus switches, particularly around distortion. When I designed this, I didn't know the bus switches well enough and wasn't sure how they'd handle negative voltages at the input, so I buffered it using some [TL074](https://www.ti.com/product/TL074) op-amps. I've used a biasing trick to buffer audio signals for guitar pedals using a unipolar power supply, so I figured it would work here. I could, of course, be super paranoid and it turns out that the _bidirectional_ bus switches handle negative voltages just fine, so feel free to remove it entirely if you know more than me about this.
-
 ### UART
 
 Initially, I was going to build into the board a radio transceiver and build a separate board to use as a remote, partly because it's better than IR and because I had some nRF24L01 modules in my parts bin not really doing anything! It turns out that I hate them, powering them is finicky and I don't want to use an Arduino library, so I provided a generic UART interface instead. That way, I can design a remote of some kind in future (or maybe you, most esteemed reader, are the solution! 😉). I've also left a 5V power output near the UART connector so external remote interfaces can be powered.
