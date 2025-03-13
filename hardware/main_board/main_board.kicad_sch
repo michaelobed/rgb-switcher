@@ -6197,7 +6197,7 @@
 		)
 		(uuid "df5fb493-9b4a-40a8-8cc8-11f05c464608")
 	)
-	(text "SOFNG PJ-0320B"
+	(text "SOFNG PJ-320B"
 		(exclude_from_sim no)
 		(at 45.212 94.234 0)
 		(effects
