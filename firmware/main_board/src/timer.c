@@ -56,7 +56,8 @@ ISR(TIMER1_COMPA_vect)
 
         case SwState_Switching:
             IoSelectInput(timerSwInput);
-            LedRequestFade(LedGetInputColour(timerSwInput));
+            if(timerSwInput <= 0x07)
+                LedRequestFade(LedGetInputColour(timerSwInput));
             timerSwState = SwState_Idle;
             break;
     }
