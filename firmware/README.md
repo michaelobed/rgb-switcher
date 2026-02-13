@@ -21,6 +21,8 @@ If you're not using an arm64 Mac, you will need to change some directories in th
 
 The UART can receive commands from other devices and respond to them with an acknowledgement. This is useful both for remotely controlling the rgb switcher and for connected devices finding out its latest state (e.g. if the prev/next buttons are pressed). A command-response system has been implemented for controlling the rgb switcher and uses human-readable ASCII characters for everything.
 
+The UART is configured as 8N1, running at 38400 kbaud.
+
 The list of currently available commands is given below:
 
 | Command | Format | Description |
