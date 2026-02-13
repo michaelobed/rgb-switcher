@@ -45,7 +45,8 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
     bool willReply = FALSE;
 
     /* When switching inputs, we must deal with the cases where no input is selected and when the first/last
-     * input is selected. This flag helps to prevent out-of-bounds silliness. */
+     * input is selected. This flag helps to prevent out-of-bounds silliness. Of course, this property gets
+     * deliberately exploited for the Cmd_InputNone case, but is still handled sensibly. */
     bool willSwitchInput = FALSE;
 
     switch(cmd)
@@ -139,12 +140,17 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
 
     if(willSwitchInput)
     {
-        replyParamsSize = 3;
-
-        /* Send an acknowledgement, communicating the command and the new input.
-         * This could allow for communication with other things in future. */
-        replyParams.bytes[2] = CTRL_INPUTTOASCII(ctrlCurrentInput);
-        replyParams.bytes[3] = '\n';
+        /* Reply with ack and command only. */
+        if(cmd == Cmd_InputNone)
+            replyParamsSize = 2;
+        else
+        {
+            /* Send an acknowledgement, communicating the command and the new input.
+             * This could allow for communication with other things in future. */
+            replyParamsSize = 3;
+            replyParams.bytes[2] = CTRL_INPUTTOASCII(ctrlCurrentInput);
+        }
+        replyParams.bytes[replyParamsSize] = '\n';
         willReply = TRUE;
 
         TimerRequestInputSwitch(ctrlCurrentInput);
