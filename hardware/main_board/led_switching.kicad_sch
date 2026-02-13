@@ -2204,14 +2204,6 @@
 		(color 0 0 0 0)
 		(uuid "ed86ed0e-c341-4855-858b-1f67bb9b4ff2")
 	)
-	(no_connect
-		(at 139.7 181.61)
-		(uuid "8532ad73-6110-44bf-9d21-4d9b2ab946e4")
-	)
-	(no_connect
-		(at 162.56 181.61)
-		(uuid "983e1ec0-1b67-4de7-833e-fa04038bdb8f")
-	)
 	(wire
 		(pts
 			(xy 378.46 200.66) (xy 354.33 200.66)
@@ -2451,16 +2443,6 @@
 			(type default)
 		)
 		(uuid "1b2a897e-1f7b-4d17-b6b1-f0e9303441f5")
-	)
-	(wire
-		(pts
-			(xy 146.05 181.61) (xy 146.05 182.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1b3c8bdf-ded0-4d2e-8174-8429ad91a5f2")
 	)
 	(wire
 		(pts
@@ -2904,16 +2886,6 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 181.61) (xy 123.19 181.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b28835d-5e04-4a55-951f-6bb8d671f233")
-	)
-	(wire
-		(pts
 			(xy 144.78 38.1) (xy 144.78 40.64)
 		)
 		(stroke
@@ -3231,16 +3203,6 @@
 			(type default)
 		)
 		(uuid "8a250eff-90f2-46d3-95c9-2dc1a737a5e6")
-	)
-	(wire
-		(pts
-			(xy 147.32 181.61) (xy 146.05 181.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8b698a86-af1c-4abe-adaf-5389854c78c3")
 	)
 	(wire
 		(pts
@@ -3981,16 +3943,6 @@
 			(type default)
 		)
 		(uuid "e38104e6-b2ce-480f-a3e8-e7b1218ede57")
-	)
-	(wire
-		(pts
-			(xy 123.19 181.61) (xy 123.19 182.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e3e7535c-9e14-46e0-8154-928dd92af442")
 	)
 	(wire
 		(pts
@@ -6143,110 +6095,6 @@
 		)
 	)
 	(symbol
-		(lib_id "74xx:74HC04")
-		(at 132.08 181.61 0)
-		(unit 5)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0a70525c-0807-4827-97e5-72a2576690be")
-		(property "Reference" "U6"
-			(at 132.08 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "74HC04"
-			(at 132.08 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 132.08 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
-			(at 132.08 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Hex Inverter"
-			(at 132.08 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "469d1f14-45de-4a6d-a8da-f3b25bd12474")
-		)
-		(pin "9"
-			(uuid "94bef1d9-dc12-4633-89d4-708552b84cf7")
-		)
-		(pin "10"
-			(uuid "89a1e0c6-bfd5-448e-9a29-048a90908497")
-		)
-		(pin "6"
-			(uuid "8e795158-d2e1-4b8c-bdf0-24f3f72673f8")
-		)
-		(pin "8"
-			(uuid "c5c77e79-ecaf-4418-b40c-6ce403537506")
-		)
-		(pin "4"
-			(uuid "464cc68c-edfe-4123-9ca6-508acf97fa9d")
-		)
-		(pin "5"
-			(uuid "ae54e9a7-81d7-4c05-b8ca-436d153317bb")
-		)
-		(pin "3"
-			(uuid "3a81e463-80a3-4263-ab43-831c51075221")
-		)
-		(pin "14"
-			(uuid "8f0b03eb-59cb-4de0-a321-ce7f46169b94")
-		)
-		(pin "2"
-			(uuid "a707aa1e-2b6b-43bf-914a-47d916aad0a3")
-		)
-		(pin "11"
-			(uuid "6b7988c8-9fc3-485e-a763-ace6bc65bda2")
-		)
-		(pin "13"
-			(uuid "e133283b-8b97-4eb4-a499-3875e4a20a83")
-		)
-		(pin "12"
-			(uuid "6da99c5e-52c8-4733-b65c-2f6681cc3902")
-		)
-		(pin "7"
-			(uuid "5aefbaf3-dbe5-4e27-aa6d-e031d43dc4ae")
-		)
-		(instances
-			(project "main_board"
-				(path "/d2c111d0-ce33-4895-b1f4-02ad9d9e0b8d/6e239345-6706-4240-8bc1-b565f0c31ab6"
-					(reference "U6")
-					(unit 5)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED_Dual_Bidirectional")
 		(at 125.73 226.06 0)
 		(mirror y)
@@ -6522,176 +6370,6 @@
 			(project "main_board"
 				(path "/d2c111d0-ce33-4895-b1f4-02ad9d9e0b8d/6e239345-6706-4240-8bc1-b565f0c31ab6"
 					(reference "R12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "74xx:74HC04")
-		(at 154.94 181.61 0)
-		(unit 6)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "13f64ac6-0103-4d4c-8d39-64860cdd8997")
-		(property "Reference" "U6"
-			(at 154.94 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "74HC04"
-			(at 154.94 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 154.94 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
-			(at 154.94 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Hex Inverter"
-			(at 154.94 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "469d1f14-45de-4a6d-a8da-f3b25bd12473")
-		)
-		(pin "9"
-			(uuid "94bef1d9-dc12-4633-89d4-708552b84cf6")
-		)
-		(pin "10"
-			(uuid "93d95276-6335-4614-ae46-120e89781f22")
-		)
-		(pin "6"
-			(uuid "8e795158-d2e1-4b8c-bdf0-24f3f72673f7")
-		)
-		(pin "8"
-			(uuid "c5c77e79-ecaf-4418-b40c-6ce403537505")
-		)
-		(pin "4"
-			(uuid "464cc68c-edfe-4123-9ca6-508acf97fa9c")
-		)
-		(pin "5"
-			(uuid "ae54e9a7-81d7-4c05-b8ca-436d153317ba")
-		)
-		(pin "3"
-			(uuid "3a81e463-80a3-4263-ab43-831c51075220")
-		)
-		(pin "14"
-			(uuid "8f0b03eb-59cb-4de0-a321-ce7f46169b93")
-		)
-		(pin "2"
-			(uuid "a707aa1e-2b6b-43bf-914a-47d916aad0a2")
-		)
-		(pin "11"
-			(uuid "94bb7320-3598-4b1e-861f-6f7a051bbcd9")
-		)
-		(pin "13"
-			(uuid "3a72250a-3e3e-4be3-9a65-15ca4766f976")
-		)
-		(pin "12"
-			(uuid "633338d0-64f9-48d2-8696-4ad33065ef5a")
-		)
-		(pin "7"
-			(uuid "5aefbaf3-dbe5-4e27-aa6d-e031d43dc4ad")
-		)
-		(instances
-			(project "main_board"
-				(path "/d2c111d0-ce33-4895-b1f4-02ad9d9e0b8d/6e239345-6706-4240-8bc1-b565f0c31ab6"
-					(reference "U6")
-					(unit 6)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 146.05 182.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "188644bd-aa17-482f-b729-5b32c5715221")
-		(property "Reference" "#PWR0149"
-			(at 146.05 189.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 146.05 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 146.05 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.05 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 146.05 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "83efa343-4ba5-4471-b390-c7bd190c1aee")
-		)
-		(instances
-			(project "main_board"
-				(path "/d2c111d0-ce33-4895-b1f4-02ad9d9e0b8d/6e239345-6706-4240-8bc1-b565f0c31ab6"
-					(reference "#PWR0149")
 					(unit 1)
 				)
 			)
@@ -8652,72 +8330,6 @@
 			(project "main_board"
 				(path "/d2c111d0-ce33-4895-b1f4-02ad9d9e0b8d/6e239345-6706-4240-8bc1-b565f0c31ab6"
 					(reference "#PWR0112")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 123.19 182.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6b61ed9f-f391-4414-aeec-f17ca98012c1")
-		(property "Reference" "#PWR06"
-			(at 123.19 189.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 123.19 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 123.19 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 123.19 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 123.19 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "753bd72b-0dec-4e3f-b3c9-18d7becf3df6")
-		)
-		(instances
-			(project "main_board"
-				(path "/d2c111d0-ce33-4895-b1f4-02ad9d9e0b8d/6e239345-6706-4240-8bc1-b565f0c31ab6"
-					(reference "#PWR06")
 					(unit 1)
 				)
 			)
