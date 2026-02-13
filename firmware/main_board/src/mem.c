@@ -31,8 +31,7 @@ void MemInit(void)
     else
     {
         cli();
-        for(uint8_t* i = 0x00; i < (uint8_t*)MemAddr_End; i++)
-            eeprom_update_byte(i, 0xff);
+        memEraseAll();
         eeprom_update_dword((void*)MemAddr_Signature, memSignature);
         sei();
     }
