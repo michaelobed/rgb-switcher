@@ -1,6 +1,6 @@
 # rgb-switcher
 
-![Render of v0.2 PCB](https://github.com/user-attachments/assets/11b07148-e02a-4746-8927-08d80e3dff86)
+<img width="4722" height="2636" alt="Render of v0.2 PCB" src="https://github.com/user-attachments/assets/786d1675-147b-412b-8c94-20631b2a1f7d" />
 
 ## What is it?
 
