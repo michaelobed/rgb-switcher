@@ -15,8 +15,10 @@
 #define CTRL_ASCIITOINPUT(x)            (x - 0x30)
 #define CTRL_INPUTTOASCII(x)            (x + 0x30)
 
+static const char ctrlFWVersion[17] = "1.1";
+static const uint8_t ctrlFWVersionLen = 17;
 static const uint8_t ctrlNoInput = 0xff;
-static const char ctrlCmdToAscii[Cmd_NumCmds] = {' ', 'p', 'n', 's', 'o', 'c', 'a', 'h'};
+static const char ctrlCmdToAscii[Cmd_NumCmds] = {' ', 'p', 'n', 's', 'o', 'c', 'a', 'h', 'v'};
 static uint8_t ctrlCurrentInput = ctrlNoInput;
 
 ctrlCmd CtrlGetAsciiAsCmd(uint8_t ch)
@@ -42,7 +44,6 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
         .bytes[1] = CtrlGetCmdAsAscii(cmd)
     };
     uint8_t replyParamsSize = 0;
-    bool willReply = FALSE;
 
     /* When switching inputs, we must deal with the cases where no input is selected and when the first/last
      * input is selected. This flag helps to prevent out-of-bounds silliness. Of course, this property gets
@@ -123,7 +124,6 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
             memcpy(&replyParams.bytes[2], &params->colourChange, 7);
             replyParams.bytes[9] = '\n';
             replyParamsSize = 9;
-            willReply = TRUE;
             break;
         }
 
@@ -131,7 +131,12 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
         case Cmd_Hello:
             replyParams.bytes[2] = '\n';
             replyParamsSize = 2;
-            willReply = TRUE;
+            break;
+
+        /* Report firmware version. */
+        case Cmd_FWVersion:
+            memcpy(replyParams.bytes, ctrlFWVersion, ctrlFWVersionLen);
+            replyParamsSize = ctrlFWVersionLen;
             break;
 
         default:
@@ -151,11 +156,10 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
             replyParams.bytes[2] = CTRL_INPUTTOASCII(ctrlCurrentInput);
         }
         replyParams.bytes[replyParamsSize] = '\n';
-        willReply = TRUE;
 
         TimerRequestInputSwitch(ctrlCurrentInput);
     }
 
-    if(willReply)
-        UartSendBytes(replyParams.bytes, replyParamsSize + 1);
+    /* Always respond back. */
+    UartSendBytes(replyParams.bytes, replyParamsSize + 1);
 }

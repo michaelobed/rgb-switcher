@@ -11,7 +11,7 @@
 
 #include "sys.h"
 
-#define CTRL_PARAMSSIZE                 12
+#define CTRL_PARAMSSIZE                 17
 
 typedef enum
 {
@@ -23,6 +23,7 @@ typedef enum
     Cmd_ChangeColour,
     Cmd_Ack,
     Cmd_Hello,
+    Cmd_FWVersion,
     Cmd_NumCmds
 } ctrlCmd;
 
