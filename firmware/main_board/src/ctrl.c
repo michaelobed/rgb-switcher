@@ -16,7 +16,7 @@
 #define CTRL_INPUTTOASCII(x)            (x + 0x30)
 
 static const uint8_t ctrlNoInput = 0xff;
-static const char ctrlCmdToAscii[Cmd_NumCmds] = {' ', 'p', 'n', 's', 'c', 'a', 'h'};
+static const char ctrlCmdToAscii[Cmd_NumCmds] = {' ', 'p', 'n', 's', 'o', 'c', 'a', 'h'};
 static uint8_t ctrlCurrentInput = ctrlNoInput;
 
 ctrlCmd CtrlGetAsciiAsCmd(uint8_t ch)
@@ -81,6 +81,12 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
         /* Switch to input. */
         case Cmd_InputSwitch:
             ctrlCurrentInput = CTRL_ASCIITOINPUT(params->bytes[0]);
+            willSwitchInput = TRUE;
+            break;
+        
+        /* No input. */
+        case Cmd_InputNone:
+            ctrlCurrentInput = 0xff;
             willSwitchInput = TRUE;
             break;
 

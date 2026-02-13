@@ -19,6 +19,7 @@ typedef enum
     Cmd_InputPrev,
     Cmd_InputNext,
     Cmd_InputSwitch,
+    Cmd_InputNone,
     Cmd_ChangeColour,
     Cmd_Ack,
     Cmd_Hello,
