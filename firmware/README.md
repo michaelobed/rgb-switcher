@@ -30,6 +30,7 @@ The list of currently available commands is given below:
 | Previous input | `p` | Decrements currently selected input. |
 | Next input | `n` | Increments currently selected input. |
 | Switch to input | `sN` | Switches to input `N`. |
+| No input | `o` | Deselects all inputs. |
 | Change input colour | `cNRRGGBB` | Changes the RGB LED colour associated with input `N` to the colour `RRGGBB`, where `RR`, `GG` and `BB` are 8-bit hexadecimal numbers representing the red, green and blue values of the colour. |
 | Acknowledgement | `aCP` | Acknowledgement of the command `C` and its parameters `P`. `P` can be any length depending on the command being acknowledged. |
 | Hello | `h` | Currently unused, but could be used to detect the presence of other devices. |
