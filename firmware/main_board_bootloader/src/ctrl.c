@@ -38,11 +38,16 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
          * The data starts at byte 1. The last three bytes are a 16-bit lrc and the terminating '\n'.
          * Reject the data and do not respond with the ack if the lrc is invalid. */
         case Cmd_BootloaderWriteData:
-            bytesAvailable = UartGetBytesAvailable();
-            lrcRx = *(uint16_t*)&replyParams.bytes[bytesAvailable - 3];
-            if(lrcRx != (lrc(&replyParams.bytes[1], bytesAvailable - 4)))
+            bytesAvailable = UartGetBytesAvailable() - 1;
+            // UartPrint(  "%u bytes available, lrc = %04x:",
+            //             bytesAvailable,
+            //             lrc(params->bytes, bytesAvailable - 3));
+            // UartHexDump(params->bytes, bytesAvailable - 3);
+            // while(TRUE);
+            lrcRx = *(uint16_t*)&params->bytes[bytesAvailable - 3];
+            if(lrcRx != (lrc(params->bytes, bytesAvailable - 3)))
                 return;
-            writeData(&replyParams.bytes[1], bytesAvailable - 4);
+            writeData(params->bytes, bytesAvailable - 3);
             break;
 
         /* Signal that we won't re-enter the bootloader, then jump to the application. */

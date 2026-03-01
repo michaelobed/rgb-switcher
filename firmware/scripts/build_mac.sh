@@ -121,5 +121,18 @@ if [ $? -ne 0 ]
 then
     echo "  failed!"
     exit 1
+else
+    echo "  done!"
 fi
+
+## 5. UPGRADER FORMAT
+echo "Creating .bin file of application..."
+$sreccat_dir app.hex -I -o app.bin -Binary
+if [ $? -ne 0 ]
+then
+    echo "  failed!"
+    exit 1
+fi
+rm app.hex
+
 echo "  done!"

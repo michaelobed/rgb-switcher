@@ -28,7 +28,7 @@ void UartHandler(void)
     }
 }
 
-void UartHexDump(uint8_t* data, uint8_t size)
+void UartHexDump(uint8_t* data, uint16_t size)
 {
     UartPrint("\nData size: %u bytes:\n", size);
 

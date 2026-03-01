@@ -40,6 +40,19 @@ void UartHandler(void)
     }
 }
 
+void UartHexDump(uint8_t* data, uint16_t size)
+{
+    UartPrint("\nData size: %u bytes:\n", size);
+
+    for(uint8_t i = 0; i < size; i++)
+    {
+        if((i > 0) && ((i & 15) == 0))
+            UartPrint("\n");
+        UartPrint("%02x ", data[i]);
+    }
+    UartPrint("\n");
+}
+
 void UartInit(void)
 {
     cli();

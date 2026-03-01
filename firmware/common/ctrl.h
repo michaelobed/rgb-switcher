@@ -15,7 +15,6 @@
 
 typedef enum
 {
-    Cmd_None,
     Cmd_InputPrev = 'p',
     Cmd_InputNext = 'n',
     Cmd_InputSwitch = 's',

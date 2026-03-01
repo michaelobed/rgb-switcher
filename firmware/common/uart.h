@@ -15,7 +15,7 @@
 
 void UartDeInit(void);
 uint16_t UartGetBytesAvailable(void);
-void UartHexDump(uint8_t* data, uint8_t size);
+void UartHexDump(uint8_t* data, uint16_t size);
 void UartInit(void);
 void UartHandler(void);
 void UartPrint(const char* s, ...);
