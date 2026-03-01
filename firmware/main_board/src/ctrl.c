@@ -43,9 +43,10 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
     ctrlParams replyParams =
     {
         .bytes[0] = CtrlGetCmdAsAscii(Cmd_Ack),
-        .bytes[1] = CtrlGetCmdAsAscii(cmd)
+        .bytes[1] = CtrlGetCmdAsAscii(cmd),
+        .bytes[2] = '\n',
     };
-    uint8_t replyParamsSize = 0;
+    uint8_t replyParamsSize = 2;
 
     /* When switching inputs, we must deal with the cases where no input is selected and when the first/last
      * input is selected. This flag helps to prevent out-of-bounds silliness. Of course, this property gets
@@ -131,8 +132,6 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
 
         /* Hello! */
         case Cmd_Hello:
-            replyParams.bytes[2] = '\n';
-            replyParamsSize = 2;
             break;
 
         /* Report firmware version. */
@@ -159,7 +158,7 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
             break;
 
         default:
-            break;
+            return;
     }
 
     if(willSwitchInput)
@@ -179,6 +178,6 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
         TimerRequestInputSwitch(ctrlCurrentInput);
     }
 
-    /* Always respond back. */
+    /* Always respond back if the command is valid. */
     UartSendBytes(replyParams.bytes, replyParamsSize + 1);
 }

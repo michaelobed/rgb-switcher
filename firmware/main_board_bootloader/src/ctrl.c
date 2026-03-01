@@ -39,16 +39,15 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
     ctrlParams replyParams =
     {
         .bytes[0] = CtrlGetCmdAsAscii(Cmd_Ack),
-        .bytes[1] = CtrlGetCmdAsAscii(cmd)
+        .bytes[1] = CtrlGetCmdAsAscii(cmd),
+        .bytes[2] = '\n',
     };
-    uint8_t replyParamsSize = 0;
+    uint8_t replyParamsSize = 2;
 
     switch(cmd)
     {
         /* Hello! */
         case Cmd_Hello:
-            replyParams.bytes[2] = '\n';
-            replyParamsSize = 2;
             break;
 
         /* Write incoming data to application flash.

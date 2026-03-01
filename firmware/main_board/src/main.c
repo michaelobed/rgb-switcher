@@ -21,7 +21,7 @@ int main(void)
     IoInit();
     MemInit();
     LedInit();
-    // TimerInit();
+    TimerInit();
     UartInit();
 
     /* Select input 0 to avoid invalid state of front indicator LEDs. */

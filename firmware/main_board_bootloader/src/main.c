@@ -18,7 +18,6 @@ int main(void)
 
     /* Read the jump-to-bootloader byte. If asserted (0x00), we stay here, else we jump to the application. */
     MemRead(MemAddr_StayInBL, &stayInBl, 1);
-    UartPrint("stay = %02x\n", stayInBl);
     if(stayInBl == 0xff)
     {
         UartDeInit();

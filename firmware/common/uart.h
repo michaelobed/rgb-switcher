@@ -11,7 +11,7 @@
 
 #include "sys.h"
 
-#define UART_BUFSIZE                    1024
+#define UART_BUFSIZE                    512
 
 void UartDeInit(void);
 uint16_t UartGetBytesAvailable(void);
