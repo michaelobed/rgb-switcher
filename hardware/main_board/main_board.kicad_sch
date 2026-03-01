@@ -3512,7 +3512,7 @@
 		)
 		(uuid "35bd1f16-3f7c-4d4c-902d-7fe5aa61a831")
 	)
-	(text "Fuses should be set to:\ne: 0xfc	h: 0xd1	l: 0xe2"
+	(text "Fuses should be set to:\ne: 0xfc	h: 0xd0	l: 0xe2"
 		(exclude_from_sim no)
 		(at 341.63 122.936 0)
 		(effects
