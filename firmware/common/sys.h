@@ -26,4 +26,6 @@
 #define TRUE                (1 == 1)
 #define bool                _Bool
 
+void SysReset(void);
+
 #endif

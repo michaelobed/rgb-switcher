@@ -1,6 +1,6 @@
 //
 //  mem.h
-//  main_board
+//  rgb-switcher
 //
 //  Created by michaelobed on 07/02/2025.
 //  
@@ -9,11 +9,12 @@
 #ifndef mem_h
 #define mem_h
 
-#include "../../common/sys.h"
+#include "sys.h"
 
 typedef enum
 {
     MemAddr_Signature = 0x10,
+    MemAddr_StayInBL = 0x14,
     MemAddr_ColourInput0 = 0x20,
     MemAddr_ColourInput1 = 0x24,
     MemAddr_ColourInput2 = 0x28,

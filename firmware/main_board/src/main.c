@@ -9,7 +9,7 @@
 #include "../../common/ctrl.h"
 #include "../../common/io.h"
 #include "led.h"
-#include "mem.h"
+#include "../../common/mem.h"
 #include "../../common/sys.h"
 #include "timer.h"
 #include "../../common/uart.h"
@@ -21,7 +21,7 @@ int main(void)
     IoInit();
     MemInit();
     LedInit();
-    TimerInit();
+    // TimerInit();
     UartInit();
 
     /* Select input 0 to avoid invalid state of front indicator LEDs. */

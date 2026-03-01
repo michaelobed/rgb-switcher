@@ -45,4 +45,5 @@ Feel free to extend this and make cool remotes and interfaces and things!
 | --- | --- |
 | 0x0000 - 0x000f | No man's land! It's apparently unreliable, so avoid. |
 | 0x0010 - 0x0013 | Signature, known value used to verify that data exists. |
+| 0x0014 | Jump-to-bootloader bit. If set, the switcher will remain in the bootloader upon reset. |
 | 0x0020 - 0x003f | RGB LED colour data for each input (4 bytes * 8). |

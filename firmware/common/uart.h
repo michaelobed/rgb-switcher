@@ -13,6 +13,8 @@
 
 #define UART_BUFSIZE                    1024
 
+void UartDeInit(void);
+uint16_t UartGetBytesAvailable(void);
 void UartHexDump(uint8_t* data, uint8_t size);
 void UartInit(void);
 void UartHandler(void);

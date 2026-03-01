@@ -11,7 +11,7 @@
 
 #include "sys.h"
 
-#define CTRL_PARAMSSIZE                 19
+#define CTRL_PARAMSSIZE                 1024
 
 typedef enum
 {
@@ -24,6 +24,9 @@ typedef enum
     Cmd_Ack,
     Cmd_Hello,
     Cmd_FWVersion,
+    Cmd_BootloaderArm,
+    Cmd_BootloaderWriteData,
+    Cmd_Reset,
     Cmd_NumCmds
 } ctrlCmd;
 

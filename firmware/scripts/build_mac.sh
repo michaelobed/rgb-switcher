@@ -1,6 +1,7 @@
 # Tool directories (if they are in PATH, directory-less invocations will work here too).
 compiler_dir=avr-gcc
 objcopy_dir=avr-objcopy
+sreccat_dir=srec_cat
 
 # Change these if you're using anything other than an arm64 Mac. x86_64 Macs use different include directories,
 # and I can't remember where Windows stores things!
@@ -52,8 +53,15 @@ do
     $compiler_app -O2 -c $file -o ../obj/$file.o
 done
 
+cd ../../common
+for file in *.c
+do
+    $compiler_app -O2 -c $file -o ../main_board/obj/$file.o
+done
+cd ../main_board
+
 # Now link here.
-$compiler_app -Wall -g -fuse-linker-plugin -Wl,--gc-sections -lm ../obj/*.c.o -o ../bin/app.elf
+$compiler_app -Wall -g -fuse-linker-plugin -Wl,--gc-sections -lm ./obj/*.c.o -o ./bin/app.elf
 if [ $? -ne 0 ]
 then
     echo "  failed!"
@@ -61,14 +69,14 @@ then
 fi
 
 # Convert to .hex and report success.
-$objcopy_dir -O ihex ../bin/app.elf ../../bin/app.hex
-rm -rf ../obj
-rm -rf ../bin
+$objcopy_dir -O ihex ./bin/app.elf ../bin/app.hex
+rm -rf ./obj
+rm -rf ./bin
 echo "  done!"
 
 ## 3. BOOTLOADER.
 echo "Building bootloader..."
-cd ../../main_board_bootloader/src
+cd ../main_board_bootloader/src
 
 compiler_bl="$compiler_dir -DF_CPU=$mcu_freq"
 compiler_bl+=" -mmcu=$mcu_type -pipe -std=gnu99 -Wall -Wstrict-prototypes -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections"
@@ -81,11 +89,18 @@ done
 # Compile (but don't link).
 for file in *.c
 do
-    $compiler_bl -O2 -c $file -o ../obj/$file.o
+    $compiler_bl -Os -c $file -o ../obj/$file.o
 done
 
+cd ../../common
+for file in *.c
+do
+    $compiler_app -Os -c $file -o ../main_board_bootloader/obj/$file.o
+done
+cd ../main_board_bootloader
+
 # Link with the bootloader offset.
-$compiler_bl -Wall -g -fuse-linker-plugin -Wl,--gc-sections -Wl,--section-start=.text=$boot_offset -lm ../obj/*.c.o -o ../bin/bl.elf
+$compiler_bl -Wall -g -fuse-linker-plugin -Wl,--gc-sections -Wl,--section-start=.text=$boot_offset -lm ./obj/*.c.o -o ./bin/bl.elf
 if [ $? -ne 0 ]
 then
     echo "  failed!"
@@ -93,7 +108,18 @@ then
 fi
 
 # Convert to .hex and report success.
-$objcopy_dir -O ihex ../bin/bl.elf ../../bin/bl.hex
-rm -rf ../obj
-rm -rf ../bin
+$objcopy_dir -O ihex ./bin/bl.elf ../bin/bl.hex
+rm -rf ./obj
+rm -rf ./bin
+echo "  done!"
+
+## 4. MERGED BINARY
+echo "Merging bootloader with application..."
+cd ../bin
+$sreccat_dir app.hex -I bl.hex -I -o merged.hex -I
+if [ $? -ne 0 ]
+then
+    echo "  failed!"
+    exit 1
+fi
 echo "  done!"

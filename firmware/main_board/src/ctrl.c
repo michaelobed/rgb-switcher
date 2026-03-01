@@ -8,6 +8,7 @@
 
 #include "../../common/ctrl.h"
 #include "led.h"
+#include "../../common/mem.h"
 #include "../../common/sys.h"
 #include "timer.h"
 #include "../../common/uart.h"
@@ -18,7 +19,7 @@
 static const char ctrlFWVersion[17] = "1.1";
 static const uint8_t ctrlFWVersionLenMax = 17;
 static const uint8_t ctrlNoInput = 0xff;
-static const char ctrlCmdToAscii[Cmd_NumCmds] = {' ', 'p', 'n', 's', 'o', 'c', 'a', 'h', 'v'};
+static const char ctrlCmdToAscii[Cmd_NumCmds] = {' ', 'p', 'n', 's', 'o', 'c', 'a', 'h', 'v', 'b', 'w', 'r'};
 static uint8_t ctrlCurrentInput = ctrlNoInput;
 
 ctrlCmd CtrlGetAsciiAsCmd(uint8_t ch)
@@ -38,6 +39,7 @@ uint8_t CtrlGetCmdAsAscii(ctrlCmd cmd)
 
 void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
 {
+    uint8_t auxData = 0;
     ctrlParams replyParams =
     {
         .bytes[0] = CtrlGetCmdAsAscii(Cmd_Ack),
@@ -144,6 +146,17 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
             replyParamsSize = fwVersionLen + 2;
             break;
         }
+
+        /* Prepare to jump to the bootloader from the application. */
+        case Cmd_BootloaderArm:
+            auxData = 0x00;
+            MemWrite(MemAddr_StayInBL, &auxData, 1);
+            break;
+
+        /* Reset, usually to jump to bootloader after arming. */
+        case Cmd_Reset:
+            SysReset();
+            break;
 
         default:
             break;

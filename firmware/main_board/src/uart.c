@@ -11,7 +11,7 @@
 #include "../../common/sys.h"
 #include "../../common/uart.h"
 
-static uint8_t uartRxBuf[UART_BUFSIZE];
+static uint8_t uartRxBuf[UART_BUFSIZE] = {};
 static uint8_t uartRxBufCtr = 0;
 static bool uartDataAvaliable = FALSE;
 

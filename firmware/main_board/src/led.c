@@ -8,7 +8,7 @@
 
 #include "../../common/io.h"
 #include "led.h"
-#include "mem.h"
+#include "../../common/mem.h"
 #include "../../common/sys.h"
 #include "../../common/uart.h"
 

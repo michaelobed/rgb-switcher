@@ -1,0 +1,111 @@
+//
+//  ctrl.c
+//  main_board_bootloader
+//
+//  Created by michaelobed on 01/03/2026.
+//  
+//  Copyright © 2026 Michael Obed.
+
+#include "../../common/ctrl.h"
+#include "../../common/mem.h"
+#include "../../common/uart.h"
+
+static const char ctrlCmdToAscii[Cmd_NumCmds] = {' ', 'p', 'n', 's', 'o', 'c', 'a', 'h', 'v', 'b', 'w', 'r'};
+static uint16_t ctrlWriteAddress = 0x0000;
+
+static uint16_t lrc(uint8_t* data, uint16_t length);
+static void writeData(uint8_t* data, uint16_t length);
+
+ctrlCmd CtrlGetAsciiAsCmd(uint8_t ch)
+{
+    for(uint8_t i = 0; i < Cmd_NumCmds; i++)
+    {
+        if(ch == ctrlCmdToAscii[i])
+            return i;
+    }
+    return Cmd_None;
+}
+
+uint8_t CtrlGetCmdAsAscii(ctrlCmd cmd)
+{
+    return ctrlCmdToAscii[cmd];
+}
+
+void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
+{
+    uint8_t auxData = 0;
+    uint16_t bytesAvailable = 0;
+    uint16_t lrcRx = 0;
+    ctrlParams replyParams =
+    {
+        .bytes[0] = CtrlGetCmdAsAscii(Cmd_Ack),
+        .bytes[1] = CtrlGetCmdAsAscii(cmd)
+    };
+    uint8_t replyParamsSize = 0;
+
+    switch(cmd)
+    {
+        /* Hello! */
+        case Cmd_Hello:
+            replyParams.bytes[2] = '\n';
+            replyParamsSize = 2;
+            break;
+
+        /* Write incoming data to application flash.
+         * The data starts at byte 1. The last three bytes are a 16-bit lrc and the terminating '\n'.
+         * Reject the data and do not respond with the ack if the lrc is invalid. */
+        case Cmd_BootloaderWriteData:
+            bytesAvailable = UartGetBytesAvailable();
+            lrcRx = *(uint16_t*)&replyParams.bytes[bytesAvailable - 3];
+            if(lrcRx != (lrc(&replyParams.bytes[1], bytesAvailable - 4)))
+                return;
+            writeData(&replyParams.bytes[1], bytesAvailable - 4);
+            break;
+
+        /* Signal that we won't re-enter the bootloader, then jump to the application. */
+        case Cmd_Reset:
+            auxData = 0xff;
+            MemWrite(MemAddr_StayInBL, &auxData, 1);
+            SysReset();
+            break;
+
+        default:
+            break;
+    }
+
+    /* Always respond back. */
+    UartSendBytes(replyParams.bytes, replyParamsSize + 1);
+}
+
+uint16_t lrc(uint8_t* data, uint16_t length)
+{
+    uint16_t ret = 0x0000;
+
+    for(uint16_t i = 0; i < length; i++)
+        ret += data[i];
+    return ret;
+}
+
+void writeData(uint8_t* data, uint16_t length)
+{
+    uint16_t pageStartAddress = ctrlWriteAddress;
+    uint16_t tempWord = 0x0000;
+    
+    /* Erase the page. */
+    boot_page_erase(pageStartAddress);
+    boot_spm_busy_wait();
+
+    for(uint16_t i = 0; i < length; i += 2)
+    {
+        /* Fill this page with data (little-endian), then increment the word address. */
+        tempWord = data[i];
+        tempWord |= (data[i + 1] << 8);
+        boot_page_fill((uint16_t)(void*)ctrlWriteAddress, tempWord);
+        ctrlWriteAddress += 2;
+    }
+
+    /* Write the contents of the page buffer to flash. */
+    boot_page_write(pageStartAddress);
+    boot_spm_busy_wait();
+    boot_rww_enable();
+}
