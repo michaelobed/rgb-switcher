@@ -34,6 +34,7 @@ The list of currently available commands is given below:
 | Change input colour | `cNRRGGBB` | Changes the RGB LED colour associated with input `N` to the colour `RRGGBB`, where `RR`, `GG` and `BB` are 8-bit hexadecimal numbers representing the red, green and blue values of the colour. |
 | Acknowledgement | `aCP` | Acknowledgement of the command `C` and its parameters `P`. `P` can be any length depending on the command being acknowledged. |
 | Hello | `h` | Currently unused, but could be used to detect the presence of other devices. |
+| Firmware version | `v` | Queries the switcher for its current version, given as an ASCII string of up to 16 characters. |
 
 All strings sent or received are required to end in a newline (`\n`) character. Windows style `\r\n` endings are fine as the `\r` will just be ignored. As mentioned in the main README, no string sanitisation is performed, and no bounds checking either, so if you supply a malformed string or pass in an out-of-bounds input index...well I'm sure you can handle it! 😅
 
