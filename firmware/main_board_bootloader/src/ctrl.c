@@ -69,10 +69,10 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
             break;
 
         default:
-            break;
+            return;
     }
 
-    /* Always respond back. */
+    /* Always respond back if the command is valid. */
     UartSendBytes(replyParams.bytes, replyParamsSize + 1);
 }
 
