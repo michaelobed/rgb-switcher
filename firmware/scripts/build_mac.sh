@@ -9,9 +9,10 @@ compiler_incs=( "/opt/homebrew/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/9.
                 "/opt/homebrew/Cellar/avr-gcc@9/9.3.0_3/avr/include")
 
 # Other variables. Change this if your clock freq or microcontroller have changed.
-all_dirs=("./bin" "./src/bin" "./src/obj")
+all_dirs=("./bin" "./main_board/bin" "./main_board/obj" "./main_board_bootloader/bin" "./main_board_bootloader/obj")
 mcu_freq=8000000UL
 mcu_type=atmega328pb
+boot_offset=0x7000
 
 ## 1. PREPARE DIRECTORIES.
 echo "Preparing directories..."
@@ -35,7 +36,7 @@ done
 
 ## 2. APPLICATION.
 echo "Building application..."
-cd ./src
+cd ./main_board/src
 
 compiler_app="$compiler_dir -DF_CPU=$mcu_freq"
 compiler_app+=" -mmcu=$mcu_type -pipe -std=gnu99 -Wall -Wstrict-prototypes -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections"
@@ -48,11 +49,11 @@ done
 # Compile (but don't link).
 for file in *.c
 do
-    $compiler_app -O2 -c $file -o ./obj/$file.o
+    $compiler_app -O2 -c $file -o ../obj/$file.o
 done
 
 # Now link here.
-$compiler_app -Wall -g -fuse-linker-plugin -Wl,--gc-sections -lm ./obj/*.c.o -o ./bin/app.elf
+$compiler_app -Wall -g -fuse-linker-plugin -Wl,--gc-sections -lm ../obj/*.c.o -o ../bin/app.elf
 if [ $? -ne 0 ]
 then
     echo "  failed!"
@@ -60,8 +61,39 @@ then
 fi
 
 # Convert to .hex and report success.
-$objcopy_dir -O ihex ./bin/app.elf ../bin/app.hex
-rm ./bin/app.elf
-rm -rf ./obj
-rm -rf ./bin
+$objcopy_dir -O ihex ../bin/app.elf ../../bin/app.hex
+rm -rf ../obj
+rm -rf ../bin
+echo "  done!"
+
+## 3. BOOTLOADER.
+echo "Building bootloader..."
+cd ../../main_board_bootloader/src
+
+compiler_bl="$compiler_dir -DF_CPU=$mcu_freq"
+compiler_bl+=" -mmcu=$mcu_type -pipe -std=gnu99 -Wall -Wstrict-prototypes -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections"
+
+for path in ${compiler_incs[@]}
+do
+    compiler_bl+=" -I$path"
+done
+
+# Compile (but don't link).
+for file in *.c
+do
+    $compiler_bl -O2 -c $file -o ../obj/$file.o
+done
+
+# Link with the bootloader offset.
+$compiler_bl -Wall -g -fuse-linker-plugin -Wl,--gc-sections -Wl,--section-start=.text=$boot_offset -lm ../obj/*.c.o -o ../bin/bl.elf
+if [ $? -ne 0 ]
+then
+    echo "  failed!"
+    exit 1
+fi
+
+# Convert to .hex and report success.
+$objcopy_dir -O ihex ../bin/bl.elf ../../bin/bl.hex
+rm -rf ../obj
+rm -rf ../bin
 echo "  done!"

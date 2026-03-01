@@ -1,13 +1,13 @@
 //
 //  main.c
-//  main-board
+//  main_board
 //
 //  Created by michaelobed on 03/01/2025.
 //  
 //  Copyright © 2025 Michael Obed.
 
 #include "../../common/ctrl.h"
-#include "io.h"
+#include "../../common/io.h"
 #include "led.h"
 #include "mem.h"
 #include "../../common/sys.h"

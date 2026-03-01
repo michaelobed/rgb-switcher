@@ -1,17 +1,15 @@
 //
 //  uart.c
-//  main-board
+//  main_board
 //
 //  Created by michaelobed on 03/01/2025.
 //  
 //  Copyright © 2025 Michael Obed.
 
 #include "../../common/ctrl.h"
-#include "io.h"
+#include "../../common/io.h"
 #include "../../common/sys.h"
 #include "../../common/uart.h"
-
-#define UART_BUFSIZE                    1024
 
 static uint8_t uartRxBuf[UART_BUFSIZE];
 static uint8_t uartRxBufCtr = 0;

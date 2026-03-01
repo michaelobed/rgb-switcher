@@ -1,6 +1,6 @@
 //
 //  mem.c
-//  main-board
+//  main_board
 //
 //  Created by michaelobed on 07/02/2025.
 //  

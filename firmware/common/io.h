@@ -1,6 +1,6 @@
 //
 //  io.h
-//  main-board
+//  rgb-switcher
 //
 //  Created by michaelobed on 03/01/2025.
 //  
@@ -9,7 +9,7 @@
 #ifndef io_h
 #define io_h
 
-#include "../../common/sys.h"
+#include "sys.h"
 
 #define PIN_SELEN                       PC2
 #define PIN_SEL0                        PC3

@@ -1,6 +1,6 @@
 //
 //  ctrl.c
-//  main-board
+//  main_board
 //
 //  Created by michaelobed on 03/01/2025.
 //  

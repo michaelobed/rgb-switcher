@@ -1,12 +1,12 @@
 //
 //  timer.c
-//  main-board
+//  main_board
 //
 //  Created by michaelobed on 03/01/2025.
 //  
 //  Copyright © 2025 Michael Obed.
 
-#include "io.h"
+#include "../../common/io.h"
 #include "led.h"
 #include "../../common/sys.h"
 #include "timer.h"
