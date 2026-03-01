@@ -16,34 +16,19 @@
 #define CTRL_ASCIITOINPUT(x)            (x - 0x30)
 #define CTRL_INPUTTOASCII(x)            (x + 0x30)
 
+static bool ctrlBlArmed = FALSE;
 static const char ctrlFWVersion[17] = "1.1";
 static const uint8_t ctrlFWVersionLenMax = 17;
 static const uint8_t ctrlNoInput = 0xff;
-static const char ctrlCmdToAscii[Cmd_NumCmds] = {' ', 'p', 'n', 's', 'o', 'c', 'a', 'h', 'v', 'b', 'w', 'r'};
 static uint8_t ctrlCurrentInput = ctrlNoInput;
-
-ctrlCmd CtrlGetAsciiAsCmd(uint8_t ch)
-{
-    for(uint8_t i = 0; i < Cmd_NumCmds; i++)
-    {
-        if(ch == ctrlCmdToAscii[i])
-            return i;
-    }
-    return Cmd_None;
-}
-
-uint8_t CtrlGetCmdAsAscii(ctrlCmd cmd)
-{
-    return ctrlCmdToAscii[cmd];
-}
 
 void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
 {
     uint8_t auxData = 0;
     ctrlParams replyParams =
     {
-        .bytes[0] = CtrlGetCmdAsAscii(Cmd_Ack),
-        .bytes[1] = CtrlGetCmdAsAscii(cmd),
+        .bytes[0] = Cmd_Ack,
+        .bytes[1] = cmd,
         .bytes[2] = '\n',
     };
     uint8_t replyParamsSize = 2;
@@ -150,12 +135,14 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
         case Cmd_BootloaderArm:
             auxData = 0x00;
             MemWrite(MemAddr_StayInBL, &auxData, 1);
+            ctrlBlArmed = TRUE;
             break;
 
-        /* Reset, usually to jump to bootloader after arming. */
+        /* Reset if bootloader mode is armed. */
         case Cmd_Reset:
-            SysReset();
-            break;
+            if(ctrlBlArmed)
+                SysReset();
+            else return;
 
         default:
             return;

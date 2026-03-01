@@ -10,26 +10,10 @@
 #include "../../common/mem.h"
 #include "../../common/uart.h"
 
-static const char ctrlCmdToAscii[Cmd_NumCmds] = {' ', 'p', 'n', 's', 'o', 'c', 'a', 'h', 'v', 'b', 'w', 'r'};
 static uint16_t ctrlWriteAddress = 0x0000;
 
 static uint16_t lrc(uint8_t* data, uint16_t length);
 static void writeData(uint8_t* data, uint16_t length);
-
-ctrlCmd CtrlGetAsciiAsCmd(uint8_t ch)
-{
-    for(uint8_t i = 0; i < Cmd_NumCmds; i++)
-    {
-        if(ch == ctrlCmdToAscii[i])
-            return i;
-    }
-    return Cmd_None;
-}
-
-uint8_t CtrlGetCmdAsAscii(ctrlCmd cmd)
-{
-    return ctrlCmdToAscii[cmd];
-}
 
 void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
 {
@@ -38,8 +22,8 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
     uint16_t lrcRx = 0;
     ctrlParams replyParams =
     {
-        .bytes[0] = CtrlGetCmdAsAscii(Cmd_Ack),
-        .bytes[1] = CtrlGetCmdAsAscii(cmd),
+        .bytes[0] = Cmd_Ack,
+        .bytes[1] = cmd,
         .bytes[2] = '\n',
     };
     uint8_t replyParamsSize = 2;

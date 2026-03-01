@@ -34,7 +34,7 @@ void UartHandler(void)
     if(uartDataAvaliable)
     {
         memcpy(&params.bytes, &uartRxBuf[1], uartRxBufCtr - 1);
-        CtrlHandleCmd(CtrlGetAsciiAsCmd(uartRxBuf[0]), &params);
+        CtrlHandleCmd(uartRxBuf[0], &params);
         uartDataAvaliable = FALSE;
         uartRxBufCtr = 0;
     }

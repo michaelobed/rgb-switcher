@@ -16,18 +16,17 @@
 typedef enum
 {
     Cmd_None,
-    Cmd_InputPrev,
-    Cmd_InputNext,
-    Cmd_InputSwitch,
-    Cmd_InputNone,
-    Cmd_ChangeColour,
-    Cmd_Ack,
-    Cmd_Hello,
-    Cmd_FWVersion,
-    Cmd_BootloaderArm,
-    Cmd_BootloaderWriteData,
-    Cmd_Reset,
-    Cmd_NumCmds
+    Cmd_InputPrev = 'p',
+    Cmd_InputNext = 'n',
+    Cmd_InputSwitch = 's',
+    Cmd_InputNone = 'o',
+    Cmd_ChangeColour = 'c',
+    Cmd_Ack = 'a',
+    Cmd_Hello = 'h',
+    Cmd_FWVersion = 'v',
+    Cmd_BootloaderArm = 'b',
+    Cmd_BootloaderWriteData = 'w',
+    Cmd_Reset = 'r'
 } ctrlCmd;
 
 typedef union
@@ -42,8 +41,6 @@ typedef union
     } colourChange;
 } ctrlParams;
 
-ctrlCmd CtrlGetAsciiAsCmd(uint8_t ch);
-uint8_t CtrlGetCmdAsAscii(ctrlCmd cmd);
 void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params);
 
 #endif
