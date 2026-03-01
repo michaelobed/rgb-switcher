@@ -11,7 +11,7 @@
 
 #include "sys.h"
 
-#define CTRL_PARAMSSIZE                 17
+#define CTRL_PARAMSSIZE                 19
 
 typedef enum
 {

@@ -16,7 +16,7 @@
 #define CTRL_INPUTTOASCII(x)            (x + 0x30)
 
 static const char ctrlFWVersion[17] = "1.1";
-static const uint8_t ctrlFWVersionLen = 17;
+static const uint8_t ctrlFWVersionLenMax = 17;
 static const uint8_t ctrlNoInput = 0xff;
 static const char ctrlCmdToAscii[Cmd_NumCmds] = {' ', 'p', 'n', 's', 'o', 'c', 'a', 'h', 'v'};
 static uint8_t ctrlCurrentInput = ctrlNoInput;
@@ -135,9 +135,15 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
 
         /* Report firmware version. */
         case Cmd_FWVersion:
-            memcpy(replyParams.bytes, ctrlFWVersion, ctrlFWVersionLen);
-            replyParamsSize = ctrlFWVersionLen;
+        {
+            uint8_t fwVersionLen = strlen(ctrlFWVersion);
+            replyParams.bytes[0] = 'a';
+            replyParams.bytes[1] = 'v';
+            strncpy((char*)&replyParams.bytes[2], ctrlFWVersion, ctrlFWVersionLenMax);
+            replyParams.bytes[fwVersionLen + 2] = '\n';
+            replyParamsSize = fwVersionLen + 2;
             break;
+        }
 
         default:
             break;
