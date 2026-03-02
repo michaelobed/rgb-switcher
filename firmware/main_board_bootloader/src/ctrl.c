@@ -39,11 +39,6 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
          * Reject the data and do not respond with the ack if the lrc is invalid. */
         case Cmd_BootloaderWriteData:
             bytesAvailable = UartGetBytesAvailable() - 1;
-            // UartPrint(  "%u bytes available, lrc = %04x:",
-            //             bytesAvailable,
-            //             lrc(params->bytes, bytesAvailable - 3));
-            // UartHexDump(params->bytes, bytesAvailable - 3);
-            // while(TRUE);
             lrcRx = *(uint16_t*)&params->bytes[bytesAvailable - 3];
             if(lrcRx != (lrc(params->bytes, bytesAvailable - 3)))
                 return;
