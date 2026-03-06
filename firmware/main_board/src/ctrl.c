@@ -7,9 +7,8 @@
 //  Copyright © 2025 Michael Obed.
 
 #include "../../common/ctrl.h"
-#include "led.h"
+#include "io.h"
 #include "../../common/sys.h"
-#include "timer.h"
 #include "../../common/uart.h"
 
 #define CTRL_ASCIITOINPUT(x)            (x - 0x30)
@@ -92,40 +91,9 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
             willSwitchInput = TRUE;
             break;
 
-        /* Change input LED colour. */
+        /* Change input LED colour - not handled by main_board! */
         case Cmd_ChangeColour:
-        {
-            uint8_t input = CTRL_ASCIITOINPUT(params->colourChange.input);
-
-            /* Copy strings so we can null terminate them. */
-            char rStr[3];
-            char gStr[3];
-            char bStr[3];
-
-            strncpy(rStr, params->colourChange.red, 2);
-            rStr[2] = '\0';
-            strncpy(gStr, params->colourChange.green, 2);
-            gStr[2] = '\0';
-            strncpy(bStr, params->colourChange.blue, 2);
-            bStr[2] = '\0';
-
-            char* rEnd = &rStr[2];
-            char* gEnd = &gStr[2];
-            char* bEnd = &bStr[2];
-            
-            uint8_t r = strtoul(rStr, &rEnd, 16);
-            uint8_t g = strtoul(gStr, &gEnd, 16);
-            uint8_t b = strtoul(bStr, &bEnd, 16);
-
-            LedSetInputColour(input, LED_RGBTOCOLOUR(r, g, b));
-            if(input == ctrlCurrentInput)
-                LedRequestFade(LedGetInputColour(input));
-            
-            memcpy(&replyParams.bytes[2], &params->colourChange, 7);
-            replyParams.bytes[9] = '\n';
-            replyParamsSize = 9;
-            break;
-        }
+            return;
 
         /* Hello! */
         case Cmd_Hello:
@@ -162,8 +130,7 @@ void CtrlHandleCmd(ctrlCmd cmd, ctrlParams* params)
             replyParams.bytes[2] = CTRL_INPUTTOASCII(ctrlCurrentInput);
         }
         replyParams.bytes[replyParamsSize] = '\n';
-
-        TimerRequestInputSwitch(ctrlCurrentInput);
+        IoSelectInput(ctrlCurrentInput);
     }
 
     /* Always respond back. */

@@ -34,6 +34,5 @@
 void IoButtonHandler(void);
 void IoInit(void);
 bool IoSelectInput(uint8_t input);
-void IoTestLed(bool state);
 
 #endif

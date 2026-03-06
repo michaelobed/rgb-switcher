@@ -84,11 +84,6 @@ bool IoSelectInput(uint8_t input)
     return TRUE;
 }
 
-void IoTestLed(bool state)
-{
-    /* TODO. */
-}
-
 ISR(PCINT1_vect)
 {
     if(IO_BTNISPRESSED(PINC, PIN_BTNNEXT))
