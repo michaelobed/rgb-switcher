@@ -678,6 +678,7 @@
 		(property "Value" "5k1"
 			(at 0 1.43 0)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "ef81a7af-84fa-4017-9474-44ff2f0cbc74")
 			(effects
 				(font
@@ -10924,7 +10925,7 @@
 			)
 		)
 		(property "Value" "uart"
-			(at 8.1 -0.25 90)
+			(at 0.332108 7.728398 180)
 			(layer "F.SilkS")
 			(uuid "97ab10d7-1677-40d2-b5c7-218aa20f18ac")
 			(effects
@@ -13301,7 +13302,7 @@
 			)
 		)
 		(property "Value" "+5v out"
-			(at 1.75 -4 90)
+			(at -4.921602 0.967892 180)
 			(layer "F.SilkS")
 			(uuid "ed99e82a-cebf-44d5-9e00-1805c962acdc")
 			(effects
@@ -22235,7 +22236,7 @@
 		(descr "USB Type-C receptacle for USB 2.0, 6 pin, https://omo-oss-file.thefastfile.com/portal-saas/new2023011311465142457/cms/file/134891b2-9b01-4104-89d3-96207243f692.pdf")
 		(tags "usb usb-c 2.0 pd")
 		(property "Reference" "J1"
-			(at -6.2 -0.6 180)
+			(at -6.2 -0.6 0)
 			(layer "F.SilkS")
 			(uuid "a29f4110-c8e4-439e-87c6-199c58692118")
 			(effects
@@ -22246,13 +22247,13 @@
 			)
 		)
 		(property "Value" "+5v in"
-			(at 0 4.75 90)
-			(layer "F.Fab")
+			(at 7.021602 -0.167892 180)
+			(layer "F.SilkS")
 			(uuid "e07fef62-479e-4cf6-b9b8-b505b51ffc16")
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
+					(thickness 0.25)
 				)
 			)
 		)
@@ -22538,6 +22539,17 @@
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_HRO_TYPE-C-31-M-17.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "${KICAD9_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4125-xx-x_6P_TopMnt_Horizontal.step"
 			(offset
 				(xyz 0 0 0)
 			)
