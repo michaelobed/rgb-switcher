@@ -2810,6 +2810,10 @@
 		(at 173.99 168.91)
 		(uuid "e7150979-99d5-40fd-a554-4f8200c2325e")
 	)
+	(no_connect
+		(at 38.1 34.29)
+		(uuid "f2fd2c8c-944d-4853-bda9-d0d7b3d418b7")
+	)
 	(wire
 		(pts
 			(xy 64.77 95.25) (xy 63.5 95.25)
@@ -2849,6 +2853,16 @@
 			(type default)
 		)
 		(uuid "0393cd88-02b9-4edd-b568-613265080f9c")
+	)
+	(wire
+		(pts
+			(xy 22.86 34.29) (xy 21.59 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0409902c-ae5a-4259-b2f5-e3bf0f897e8a")
 	)
 	(wire
 		(pts
@@ -6179,6 +6193,16 @@
 			(type default)
 		)
 		(uuid "fd8549d6-885a-49af-a5c6-47999e40b14d")
+	)
+	(wire
+		(pts
+			(xy 21.59 34.29) (xy 21.59 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffc04bf4-ac42-42fd-8ae9-11cd891ea0d2")
 	)
 	(global_label "SyncIn7"
 		(shape input)
@@ -15000,6 +15024,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 21.59 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "83a262aa-9cfe-4735-9e82-5b44b216c1bf")
+		(property "Reference" "#PWR0110"
+			(at 21.59 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 21.59 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 21.59 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 21.59 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 21.59 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "35e2f6a4-bd7a-499d-999a-f637a3c30153")
+		)
+		(instances
+			(project "main_board"
+				(path "/d2c111d0-ce33-4895-b1f4-02ad9d9e0b8d/8928c934-163b-4780-a91c-52d031c71614"
+					(reference "#PWR0110")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 29.21 88.9 0)
 		(mirror y)
@@ -16061,6 +16151,110 @@
 			(project "main_board"
 				(path "/d2c111d0-ce33-4895-b1f4-02ad9d9e0b8d/8928c934-163b-4780-a91c-52d031c71614"
 					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "74xx:74HC04")
+		(at 30.48 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a08d8a5a-2fc1-48b3-a2f6-91c9093a98f7")
+		(property "Reference" "U6"
+			(at 30.48 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74HC04"
+			(at 30.48 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 30.48 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+			(at 30.48 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Hex Inverter"
+			(at 30.48 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "469d1f14-45de-4a6d-a8da-f3b25bd12476")
+		)
+		(pin "9"
+			(uuid "94bef1d9-dc12-4633-89d4-708552b84cf9")
+		)
+		(pin "10"
+			(uuid "f76b3670-f230-43c7-b5bb-bca90b2bb6ec")
+		)
+		(pin "6"
+			(uuid "8e795158-d2e1-4b8c-bdf0-24f3f72673fa")
+		)
+		(pin "8"
+			(uuid "c5c77e79-ecaf-4418-b40c-6ce403537508")
+		)
+		(pin "4"
+			(uuid "50d337ce-ffad-4568-bb7a-27365adf85b9")
+		)
+		(pin "5"
+			(uuid "ae54e9a7-81d7-4c05-b8ca-436d153317bd")
+		)
+		(pin "3"
+			(uuid "72882264-6832-40fc-a757-279ba6f26b18")
+		)
+		(pin "14"
+			(uuid "8f0b03eb-59cb-4de0-a321-ce7f46169b96")
+		)
+		(pin "2"
+			(uuid "a707aa1e-2b6b-43bf-914a-47d916aad0a5")
+		)
+		(pin "11"
+			(uuid "16e8f7f4-a4bc-4425-bdc0-f41fe3c32cfd")
+		)
+		(pin "13"
+			(uuid "e133283b-8b97-4eb4-a499-3875e4a20a84")
+		)
+		(pin "12"
+			(uuid "6da99c5e-52c8-4733-b65c-2f6681cc3903")
+		)
+		(pin "7"
+			(uuid "5aefbaf3-dbe5-4e27-aa6d-e031d43dc4b0")
+		)
+		(instances
+			(project "main_board"
+				(path "/d2c111d0-ce33-4895-b1f4-02ad9d9e0b8d/8928c934-163b-4780-a91c-52d031c71614"
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -19365,46 +19559,46 @@
 			)
 		)
 		(pin "1"
-			(uuid "469d1f14-45de-4a6d-a8da-f3b25bd12475")
+			(uuid "469d1f14-45de-4a6d-a8da-f3b25bd12476")
 		)
 		(pin "9"
-			(uuid "94bef1d9-dc12-4633-89d4-708552b84cf8")
+			(uuid "94bef1d9-dc12-4633-89d4-708552b84cf9")
 		)
 		(pin "10"
-			(uuid "f76b3670-f230-43c7-b5bb-bca90b2bb6eb")
+			(uuid "f76b3670-f230-43c7-b5bb-bca90b2bb6ec")
 		)
 		(pin "6"
-			(uuid "8e795158-d2e1-4b8c-bdf0-24f3f72673f9")
+			(uuid "8e795158-d2e1-4b8c-bdf0-24f3f72673fa")
 		)
 		(pin "8"
-			(uuid "c5c77e79-ecaf-4418-b40c-6ce403537507")
+			(uuid "c5c77e79-ecaf-4418-b40c-6ce403537508")
 		)
 		(pin "4"
 			(uuid "13adf915-b174-4502-88ac-9c96fb5069e9")
 		)
 		(pin "5"
-			(uuid "ae54e9a7-81d7-4c05-b8ca-436d153317bc")
+			(uuid "ae54e9a7-81d7-4c05-b8ca-436d153317bd")
 		)
 		(pin "3"
 			(uuid "30487652-6a50-49fe-b29b-4cc0db03f057")
 		)
 		(pin "14"
-			(uuid "8f0b03eb-59cb-4de0-a321-ce7f46169b95")
+			(uuid "8f0b03eb-59cb-4de0-a321-ce7f46169b96")
 		)
 		(pin "2"
-			(uuid "a707aa1e-2b6b-43bf-914a-47d916aad0a4")
+			(uuid "a707aa1e-2b6b-43bf-914a-47d916aad0a5")
 		)
 		(pin "11"
-			(uuid "16e8f7f4-a4bc-4425-bdc0-f41fe3c32cfc")
+			(uuid "16e8f7f4-a4bc-4425-bdc0-f41fe3c32cfd")
 		)
 		(pin "13"
-			(uuid "e133283b-8b97-4eb4-a499-3875e4a20a82")
+			(uuid "e133283b-8b97-4eb4-a499-3875e4a20a84")
 		)
 		(pin "12"
-			(uuid "6da99c5e-52c8-4733-b65c-2f6681cc3901")
+			(uuid "6da99c5e-52c8-4733-b65c-2f6681cc3903")
 		)
 		(pin "7"
-			(uuid "5aefbaf3-dbe5-4e27-aa6d-e031d43dc4af")
+			(uuid "5aefbaf3-dbe5-4e27-aa6d-e031d43dc4b0")
 		)
 		(instances
 			(project "main_board"

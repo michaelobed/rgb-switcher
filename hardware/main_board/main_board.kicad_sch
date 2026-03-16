@@ -2905,7 +2905,7 @@
 	)
 	(text "these are wired according to the sega mega\ndrive model 2 standard (9-pin shielded mini-DIN)."
 		(exclude_from_sim no)
-		(at 147.828 44.704 0)
+		(at 191.008 45.974 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2947,7 +2947,7 @@
 	)
 	(text "SHOU HAN MST-22D18G2 3J\nor equivalent"
 		(exclude_from_sim no)
-		(at 86.868 62.23 0)
+		(at 130.048 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2997,7 +2997,7 @@
 	)
 	(text "connectors"
 		(exclude_from_sim no)
-		(at 116.078 25.4 0)
+		(at 159.258 26.67 0)
 		(effects
 			(font
 				(size 8 8)
@@ -3008,7 +3008,7 @@
 	)
 	(text "Kycon KMDGX-9S-BS-1"
 		(exclude_from_sim no)
-		(at 147.828 52.324 0)
+		(at 191.008 53.594 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3028,7 +3028,7 @@
 	)
 	(text "video"
 		(exclude_from_sim no)
-		(at 147.066 36.322 0)
+		(at 190.246 37.592 0)
 		(effects
 			(font
 				(size 4 4)
@@ -3095,11 +3095,11 @@
 		(uuid "fdc1aa31-58ca-4f0e-9216-48d10633fdb6")
 	)
 	(no_connect
-		(at 132.08 115.57)
+		(at 175.26 116.84)
 		(uuid "00052126-ab15-4afc-b99d-e0072a1f2661")
 	)
 	(no_connect
-		(at 207.01 139.7)
+		(at 250.19 140.97)
 		(uuid "07787f13-0951-49e0-8c0e-9d5eb400f0b1")
 	)
 	(no_connect
@@ -3115,19 +3115,19 @@
 		(uuid "242ed8eb-c186-4ffa-bdfe-eb3b2de049aa")
 	)
 	(no_connect
-		(at 109.22 92.71)
+		(at 152.4 93.98)
 		(uuid "29bda94d-45d0-4bde-a96d-d46ed9b2f9df")
 	)
 	(no_connect
-		(at 109.22 166.37)
+		(at 152.4 167.64)
 		(uuid "2c50e885-d460-4efd-afbe-3e472ea681eb")
 	)
 	(no_connect
-		(at 184.15 142.24)
+		(at 227.33 143.51)
 		(uuid "2e767889-3944-4c11-a89d-5cf7182c0547")
 	)
 	(no_connect
-		(at 184.15 166.37)
+		(at 227.33 167.64)
 		(uuid "303bc10e-fc69-408b-8235-581b1bc90fed")
 	)
 	(no_connect
@@ -3139,7 +3139,7 @@
 		(uuid "3846f983-5548-439e-bed6-2143e5124ace")
 	)
 	(no_connect
-		(at 109.22 142.24)
+		(at 152.4 143.51)
 		(uuid "3e82ce0b-3d55-4986-8692-2e0cb02f9558")
 	)
 	(no_connect
@@ -3147,7 +3147,7 @@
 		(uuid "3fc5ca78-591f-431d-ade1-fe6dabe5db9e")
 	)
 	(no_connect
-		(at 207.01 115.57)
+		(at 250.19 116.84)
 		(uuid "512d431b-f99e-4130-9abd-f61345ab4e32")
 	)
 	(no_connect
@@ -3155,15 +3155,15 @@
 		(uuid "53bae0d8-0410-469d-930c-77ae81d8e5c6")
 	)
 	(no_connect
-		(at 132.08 66.04)
+		(at 175.26 67.31)
 		(uuid "56153fdd-b86d-407d-b9de-b974066608f9")
 	)
 	(no_connect
-		(at 207.01 90.17)
+		(at 250.19 91.44)
 		(uuid "5e38680d-19d0-4b43-99f2-6a225a5aa971")
 	)
 	(no_connect
-		(at 132.08 163.83)
+		(at 175.26 165.1)
 		(uuid "60b0d5f1-b2d2-4068-8299-30fa6e213d7b")
 	)
 	(no_connect
@@ -3171,11 +3171,11 @@
 		(uuid "6963b53f-185d-4a97-868c-ab0890865d79")
 	)
 	(no_connect
-		(at 184.15 68.58)
+		(at 227.33 69.85)
 		(uuid "6b0f62d3-5a2d-447e-9419-b77a3143aaa0")
 	)
 	(no_connect
-		(at 109.22 118.11)
+		(at 152.4 119.38)
 		(uuid "70c3d2f0-cbea-4ff7-8ddf-5b57a5646d98")
 	)
 	(no_connect
@@ -3183,19 +3183,19 @@
 		(uuid "7b001e6d-d1f9-43c9-9149-a41bf6018d18")
 	)
 	(no_connect
-		(at 184.15 171.45)
+		(at 227.33 172.72)
 		(uuid "7c7ee756-aca5-44d5-a814-ddde2d6f9493")
 	)
 	(no_connect
-		(at 184.15 118.11)
+		(at 227.33 119.38)
 		(uuid "8cff1e3c-29c3-469d-a8fc-ece42edecad7")
 	)
 	(no_connect
-		(at 132.08 90.17)
+		(at 175.26 91.44)
 		(uuid "9184bacd-9a28-4f56-bf1a-69cee93d441d")
 	)
 	(no_connect
-		(at 207.01 163.83)
+		(at 250.19 165.1)
 		(uuid "95ef508e-3529-4b6e-8afb-72ffca89b61a")
 	)
 	(no_connect
@@ -3207,7 +3207,7 @@
 		(uuid "ab7321e8-8cc7-421f-962c-82a5c878269c")
 	)
 	(no_connect
-		(at 109.22 68.58)
+		(at 152.4 69.85)
 		(uuid "ac489fb4-c469-4ae7-ba31-b88854213440")
 	)
 	(no_connect
@@ -3215,7 +3215,7 @@
 		(uuid "bd05d1da-6227-4a41-8f06-91df7084f452")
 	)
 	(no_connect
-		(at 184.15 92.71)
+		(at 227.33 93.98)
 		(uuid "c87c2c44-c439-49fe-8a1c-d0e60490460c")
 	)
 	(no_connect
@@ -3227,15 +3227,15 @@
 		(uuid "cb34fad0-2870-403a-9c5f-f763329f31ca")
 	)
 	(no_connect
-		(at 132.08 139.7)
+		(at 175.26 140.97)
 		(uuid "cbe67158-1e86-4019-8adf-3b22dccbc444")
 	)
 	(no_connect
-		(at 207.01 66.04)
+		(at 250.19 67.31)
 		(uuid "d2731116-d666-49e3-bd86-e022b7cb8e27")
 	)
 	(no_connect
-		(at 184.15 173.99)
+		(at 227.33 175.26)
 		(uuid "dc1bc977-2cdc-42aa-bba6-e7ea63e043e2")
 	)
 	(no_connect
@@ -3274,7 +3274,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 168.91) (xy 106.68 168.91)
+			(xy 152.4 170.18) (xy 149.86 170.18)
 		)
 		(stroke
 			(width 0)
@@ -3284,7 +3284,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 76.2) (xy 133.35 77.47)
+			(xy 176.53 77.47) (xy 176.53 78.74)
 		)
 		(stroke
 			(width 0)
@@ -3294,7 +3294,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 76.2) (xy 184.15 76.2)
+			(xy 220.98 77.47) (xy 227.33 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3304,7 +3304,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 139.7) (xy 109.22 139.7)
+			(xy 149.86 140.97) (xy 152.4 140.97)
 		)
 		(stroke
 			(width 0)
@@ -3314,7 +3314,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 66.04) (xy 184.15 66.04)
+			(xy 224.79 67.31) (xy 227.33 67.31)
 		)
 		(stroke
 			(width 0)
@@ -3334,7 +3334,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 173.99) (xy 133.35 175.26)
+			(xy 176.53 175.26) (xy 176.53 176.53)
 		)
 		(stroke
 			(width 0)
@@ -3344,7 +3344,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 95.25) (xy 209.55 95.25)
+			(xy 250.19 96.52) (xy 252.73 96.52)
 		)
 		(stroke
 			(width 0)
@@ -3364,7 +3364,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 147.32) (xy 109.22 147.32)
+			(xy 138.43 148.59) (xy 152.4 148.59)
 		)
 		(stroke
 			(width 0)
@@ -3374,7 +3374,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 152.4) (xy 177.8 152.4)
+			(xy 213.36 153.67) (xy 220.98 153.67)
 		)
 		(stroke
 			(width 0)
@@ -3404,7 +3404,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 92.71) (xy 134.62 92.71)
+			(xy 175.26 93.98) (xy 177.8 93.98)
 		)
 		(stroke
 			(width 0)
@@ -3424,7 +3424,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 100.33) (xy 208.28 101.6)
+			(xy 251.46 101.6) (xy 251.46 102.87)
 		)
 		(stroke
 			(width 0)
@@ -3434,7 +3434,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 147.32) (xy 184.15 147.32)
+			(xy 213.36 148.59) (xy 227.33 148.59)
 		)
 		(stroke
 			(width 0)
@@ -3444,7 +3444,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 125.73) (xy 133.35 125.73)
+			(xy 175.26 127) (xy 176.53 127)
 		)
 		(stroke
 			(width 0)
@@ -3454,7 +3454,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 149.86) (xy 85.09 149.86)
+			(xy 125.73 151.13) (xy 128.27 151.13)
 		)
 		(stroke
 			(width 0)
@@ -3464,7 +3464,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 173.99) (xy 85.09 173.99)
+			(xy 125.73 175.26) (xy 128.27 175.26)
 		)
 		(stroke
 			(width 0)
@@ -3474,7 +3474,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 78.74) (xy 102.87 76.2)
+			(xy 146.05 80.01) (xy 146.05 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3484,7 +3484,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 76.2) (xy 208.28 77.47)
+			(xy 251.46 77.47) (xy 251.46 78.74)
 		)
 		(stroke
 			(width 0)
@@ -3494,7 +3494,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 144.78) (xy 209.55 144.78)
+			(xy 250.19 146.05) (xy 252.73 146.05)
 		)
 		(stroke
 			(width 0)
@@ -3504,7 +3504,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 144.78) (xy 106.68 144.78)
+			(xy 152.4 146.05) (xy 149.86 146.05)
 		)
 		(stroke
 			(width 0)
@@ -3524,7 +3524,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 168.91) (xy 181.61 168.91)
+			(xy 227.33 170.18) (xy 224.79 170.18)
 		)
 		(stroke
 			(width 0)
@@ -3534,7 +3534,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 102.87) (xy 177.8 100.33)
+			(xy 220.98 104.14) (xy 220.98 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3544,7 +3544,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 76.2) (xy 85.09 76.2)
+			(xy 125.73 77.47) (xy 128.27 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3564,7 +3564,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 128.27) (xy 102.87 128.27)
+			(xy 138.43 129.54) (xy 146.05 129.54)
 		)
 		(stroke
 			(width 0)
@@ -3574,7 +3574,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 173.99) (xy 109.22 173.99)
+			(xy 146.05 175.26) (xy 152.4 175.26)
 		)
 		(stroke
 			(width 0)
@@ -3594,7 +3594,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 128.27) (xy 102.87 125.73)
+			(xy 146.05 129.54) (xy 146.05 127)
 		)
 		(stroke
 			(width 0)
@@ -3604,7 +3604,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 125.73) (xy 160.02 125.73)
+			(xy 200.66 127) (xy 203.2 127)
 		)
 		(stroke
 			(width 0)
@@ -3614,7 +3614,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 73.66) (xy 209.55 73.66)
+			(xy 250.19 74.93) (xy 252.73 74.93)
 		)
 		(stroke
 			(width 0)
@@ -3624,7 +3624,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 100.33) (xy 184.15 100.33)
+			(xy 220.98 101.6) (xy 227.33 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3634,7 +3634,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 142.24) (xy 209.55 142.24)
+			(xy 250.19 143.51) (xy 252.73 143.51)
 		)
 		(stroke
 			(width 0)
@@ -3644,7 +3644,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 123.19) (xy 184.15 123.19)
+			(xy 213.36 124.46) (xy 227.33 124.46)
 		)
 		(stroke
 			(width 0)
@@ -3654,7 +3654,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 139.7) (xy 184.15 139.7)
+			(xy 224.79 140.97) (xy 227.33 140.97)
 		)
 		(stroke
 			(width 0)
@@ -3664,7 +3664,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 149.86) (xy 133.35 149.86)
+			(xy 175.26 151.13) (xy 176.53 151.13)
 		)
 		(stroke
 			(width 0)
@@ -3674,7 +3674,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 144.78) (xy 181.61 144.78)
+			(xy 227.33 146.05) (xy 224.79 146.05)
 		)
 		(stroke
 			(width 0)
@@ -3684,7 +3684,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 90.17) (xy 184.15 90.17)
+			(xy 224.79 91.44) (xy 227.33 91.44)
 		)
 		(stroke
 			(width 0)
@@ -3694,7 +3694,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 66.04) (xy 109.22 66.04)
+			(xy 149.86 67.31) (xy 152.4 67.31)
 		)
 		(stroke
 			(width 0)
@@ -3704,7 +3704,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 120.65) (xy 134.62 120.65)
+			(xy 175.26 121.92) (xy 177.8 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3714,7 +3714,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 125.73) (xy 109.22 125.73)
+			(xy 146.05 127) (xy 152.4 127)
 		)
 		(stroke
 			(width 0)
@@ -3734,7 +3734,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 163.83) (xy 109.22 163.83)
+			(xy 149.86 165.1) (xy 152.4 165.1)
 		)
 		(stroke
 			(width 0)
@@ -3744,7 +3744,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 97.79) (xy 134.62 97.79)
+			(xy 175.26 99.06) (xy 177.8 99.06)
 		)
 		(stroke
 			(width 0)
@@ -3754,7 +3754,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 100.33) (xy 208.28 100.33)
+			(xy 250.19 101.6) (xy 251.46 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3764,7 +3764,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 152.4) (xy 102.87 152.4)
+			(xy 138.43 153.67) (xy 146.05 153.67)
 		)
 		(stroke
 			(width 0)
@@ -3784,7 +3784,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 144.78) (xy 134.62 144.78)
+			(xy 175.26 146.05) (xy 177.8 146.05)
 		)
 		(stroke
 			(width 0)
@@ -3794,7 +3794,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 120.65) (xy 181.61 120.65)
+			(xy 227.33 121.92) (xy 224.79 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3804,7 +3804,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 100.33) (xy 85.09 100.33)
+			(xy 125.73 101.6) (xy 128.27 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3814,7 +3814,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 149.86) (xy 109.22 149.86)
+			(xy 146.05 151.13) (xy 152.4 151.13)
 		)
 		(stroke
 			(width 0)
@@ -3824,7 +3824,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 171.45) (xy 134.62 171.45)
+			(xy 175.26 172.72) (xy 177.8 172.72)
 		)
 		(stroke
 			(width 0)
@@ -3834,7 +3834,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 71.12) (xy 134.62 71.12)
+			(xy 175.26 72.39) (xy 177.8 72.39)
 		)
 		(stroke
 			(width 0)
@@ -3854,7 +3854,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 123.19) (xy 134.62 123.19)
+			(xy 175.26 124.46) (xy 177.8 124.46)
 		)
 		(stroke
 			(width 0)
@@ -3864,7 +3864,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 76.2) (xy 160.02 76.2)
+			(xy 200.66 77.47) (xy 203.2 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3874,7 +3874,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 95.25) (xy 106.68 95.25)
+			(xy 152.4 96.52) (xy 149.86 96.52)
 		)
 		(stroke
 			(width 0)
@@ -3884,7 +3884,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 68.58) (xy 134.62 68.58)
+			(xy 175.26 69.85) (xy 177.8 69.85)
 		)
 		(stroke
 			(width 0)
@@ -3894,7 +3894,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 149.86) (xy 133.35 151.13)
+			(xy 176.53 151.13) (xy 176.53 152.4)
 		)
 		(stroke
 			(width 0)
@@ -3914,7 +3914,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 78.74) (xy 177.8 78.74)
+			(xy 213.36 80.01) (xy 220.98 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3954,7 +3954,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 149.86) (xy 208.28 149.86)
+			(xy 250.19 151.13) (xy 251.46 151.13)
 		)
 		(stroke
 			(width 0)
@@ -3964,7 +3964,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 97.79) (xy 184.15 97.79)
+			(xy 213.36 99.06) (xy 227.33 99.06)
 		)
 		(stroke
 			(width 0)
@@ -3974,7 +3974,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 95.25) (xy 181.61 95.25)
+			(xy 227.33 96.52) (xy 224.79 96.52)
 		)
 		(stroke
 			(width 0)
@@ -3984,7 +3984,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 125.73) (xy 85.09 125.73)
+			(xy 125.73 127) (xy 128.27 127)
 		)
 		(stroke
 			(width 0)
@@ -4004,7 +4004,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 100.33) (xy 160.02 100.33)
+			(xy 200.66 101.6) (xy 203.2 101.6)
 		)
 		(stroke
 			(width 0)
@@ -4014,7 +4014,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 149.86) (xy 208.28 151.13)
+			(xy 251.46 151.13) (xy 251.46 152.4)
 		)
 		(stroke
 			(width 0)
@@ -4034,7 +4034,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 171.45) (xy 209.55 171.45)
+			(xy 250.19 172.72) (xy 252.73 172.72)
 		)
 		(stroke
 			(width 0)
@@ -4044,7 +4044,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 123.19) (xy 209.55 123.19)
+			(xy 250.19 124.46) (xy 252.73 124.46)
 		)
 		(stroke
 			(width 0)
@@ -4064,7 +4064,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 73.66) (xy 184.15 73.66)
+			(xy 213.36 74.93) (xy 227.33 74.93)
 		)
 		(stroke
 			(width 0)
@@ -4104,7 +4104,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 120.65) (xy 106.68 120.65)
+			(xy 152.4 121.92) (xy 149.86 121.92)
 		)
 		(stroke
 			(width 0)
@@ -4114,7 +4114,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 152.4) (xy 177.8 149.86)
+			(xy 220.98 153.67) (xy 220.98 151.13)
 		)
 		(stroke
 			(width 0)
@@ -4134,7 +4134,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 163.83) (xy 184.15 163.83)
+			(xy 224.79 165.1) (xy 227.33 165.1)
 		)
 		(stroke
 			(width 0)
@@ -4154,7 +4154,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 125.73) (xy 208.28 127)
+			(xy 251.46 127) (xy 251.46 128.27)
 		)
 		(stroke
 			(width 0)
@@ -4164,7 +4164,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 100.33) (xy 133.35 101.6)
+			(xy 176.53 101.6) (xy 176.53 102.87)
 		)
 		(stroke
 			(width 0)
@@ -4184,7 +4184,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 152.4) (xy 102.87 149.86)
+			(xy 146.05 153.67) (xy 146.05 151.13)
 		)
 		(stroke
 			(width 0)
@@ -4204,7 +4204,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 78.74) (xy 102.87 78.74)
+			(xy 138.43 80.01) (xy 146.05 80.01)
 		)
 		(stroke
 			(width 0)
@@ -4224,7 +4224,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 102.87) (xy 177.8 102.87)
+			(xy 213.36 104.14) (xy 220.98 104.14)
 		)
 		(stroke
 			(width 0)
@@ -4234,7 +4234,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 128.27) (xy 177.8 128.27)
+			(xy 213.36 129.54) (xy 220.98 129.54)
 		)
 		(stroke
 			(width 0)
@@ -4244,7 +4244,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 118.11) (xy 134.62 118.11)
+			(xy 175.26 119.38) (xy 177.8 119.38)
 		)
 		(stroke
 			(width 0)
@@ -4254,7 +4254,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 90.17) (xy 109.22 90.17)
+			(xy 149.86 91.44) (xy 152.4 91.44)
 		)
 		(stroke
 			(width 0)
@@ -4264,7 +4264,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 125.73) (xy 133.35 127)
+			(xy 176.53 127) (xy 176.53 128.27)
 		)
 		(stroke
 			(width 0)
@@ -4294,7 +4294,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 176.53) (xy 102.87 173.99)
+			(xy 146.05 177.8) (xy 146.05 175.26)
 		)
 		(stroke
 			(width 0)
@@ -4304,7 +4304,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 166.37) (xy 209.55 166.37)
+			(xy 250.19 167.64) (xy 252.73 167.64)
 		)
 		(stroke
 			(width 0)
@@ -4324,7 +4324,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 100.33) (xy 109.22 100.33)
+			(xy 146.05 101.6) (xy 152.4 101.6)
 		)
 		(stroke
 			(width 0)
@@ -4344,7 +4344,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 166.37) (xy 134.62 166.37)
+			(xy 175.26 167.64) (xy 177.8 167.64)
 		)
 		(stroke
 			(width 0)
@@ -4354,7 +4354,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 118.11) (xy 209.55 118.11)
+			(xy 250.19 119.38) (xy 252.73 119.38)
 		)
 		(stroke
 			(width 0)
@@ -4364,7 +4364,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 171.45) (xy 109.22 171.45)
+			(xy 138.43 172.72) (xy 152.4 172.72)
 		)
 		(stroke
 			(width 0)
@@ -4384,7 +4384,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 102.87) (xy 102.87 100.33)
+			(xy 146.05 104.14) (xy 146.05 101.6)
 		)
 		(stroke
 			(width 0)
@@ -4394,7 +4394,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 71.12) (xy 209.55 71.12)
+			(xy 250.19 72.39) (xy 252.73 72.39)
 		)
 		(stroke
 			(width 0)
@@ -4404,7 +4404,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 173.99) (xy 208.28 173.99)
+			(xy 250.19 175.26) (xy 251.46 175.26)
 		)
 		(stroke
 			(width 0)
@@ -4424,7 +4424,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 73.66) (xy 134.62 73.66)
+			(xy 175.26 74.93) (xy 177.8 74.93)
 		)
 		(stroke
 			(width 0)
@@ -4444,7 +4444,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 71.12) (xy 181.61 71.12)
+			(xy 227.33 72.39) (xy 224.79 72.39)
 		)
 		(stroke
 			(width 0)
@@ -4454,7 +4454,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 73.66) (xy 109.22 73.66)
+			(xy 138.43 74.93) (xy 152.4 74.93)
 		)
 		(stroke
 			(width 0)
@@ -4474,7 +4474,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 173.99) (xy 208.28 175.26)
+			(xy 251.46 175.26) (xy 251.46 176.53)
 		)
 		(stroke
 			(width 0)
@@ -4514,7 +4514,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 168.91) (xy 134.62 168.91)
+			(xy 175.26 170.18) (xy 177.8 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4534,7 +4534,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 102.87) (xy 102.87 102.87)
+			(xy 138.43 104.14) (xy 146.05 104.14)
 		)
 		(stroke
 			(width 0)
@@ -4584,7 +4584,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 76.2) (xy 133.35 76.2)
+			(xy 175.26 77.47) (xy 176.53 77.47)
 		)
 		(stroke
 			(width 0)
@@ -4634,7 +4634,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 95.25) (xy 134.62 95.25)
+			(xy 175.26 96.52) (xy 177.8 96.52)
 		)
 		(stroke
 			(width 0)
@@ -4704,7 +4704,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 76.2) (xy 109.22 76.2)
+			(xy 146.05 77.47) (xy 152.4 77.47)
 		)
 		(stroke
 			(width 0)
@@ -4754,7 +4754,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 123.19) (xy 109.22 123.19)
+			(xy 138.43 124.46) (xy 152.4 124.46)
 		)
 		(stroke
 			(width 0)
@@ -4774,7 +4774,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 147.32) (xy 209.55 147.32)
+			(xy 250.19 148.59) (xy 252.73 148.59)
 		)
 		(stroke
 			(width 0)
@@ -4784,7 +4784,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 168.91) (xy 209.55 168.91)
+			(xy 250.19 170.18) (xy 252.73 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4794,7 +4794,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 92.71) (xy 209.55 92.71)
+			(xy 250.19 93.98) (xy 252.73 93.98)
 		)
 		(stroke
 			(width 0)
@@ -4804,7 +4804,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 115.57) (xy 184.15 115.57)
+			(xy 224.79 116.84) (xy 227.33 116.84)
 		)
 		(stroke
 			(width 0)
@@ -4824,7 +4824,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 147.32) (xy 134.62 147.32)
+			(xy 175.26 148.59) (xy 177.8 148.59)
 		)
 		(stroke
 			(width 0)
@@ -4854,7 +4854,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 78.74) (xy 177.8 76.2)
+			(xy 220.98 80.01) (xy 220.98 77.47)
 		)
 		(stroke
 			(width 0)
@@ -4884,7 +4884,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 97.79) (xy 209.55 97.79)
+			(xy 250.19 99.06) (xy 252.73 99.06)
 		)
 		(stroke
 			(width 0)
@@ -4914,7 +4914,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 149.86) (xy 160.02 149.86)
+			(xy 200.66 151.13) (xy 203.2 151.13)
 		)
 		(stroke
 			(width 0)
@@ -4934,7 +4934,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 71.12) (xy 106.68 71.12)
+			(xy 152.4 72.39) (xy 149.86 72.39)
 		)
 		(stroke
 			(width 0)
@@ -4944,7 +4944,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 128.27) (xy 177.8 125.73)
+			(xy 220.98 129.54) (xy 220.98 127)
 		)
 		(stroke
 			(width 0)
@@ -4954,7 +4954,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 120.65) (xy 209.55 120.65)
+			(xy 250.19 121.92) (xy 252.73 121.92)
 		)
 		(stroke
 			(width 0)
@@ -4964,7 +4964,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 76.2) (xy 208.28 76.2)
+			(xy 250.19 77.47) (xy 251.46 77.47)
 		)
 		(stroke
 			(width 0)
@@ -4974,7 +4974,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 115.57) (xy 109.22 115.57)
+			(xy 149.86 116.84) (xy 152.4 116.84)
 		)
 		(stroke
 			(width 0)
@@ -4984,7 +4984,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 97.79) (xy 109.22 97.79)
+			(xy 138.43 99.06) (xy 152.4 99.06)
 		)
 		(stroke
 			(width 0)
@@ -4994,7 +4994,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 100.33) (xy 133.35 100.33)
+			(xy 175.26 101.6) (xy 176.53 101.6)
 		)
 		(stroke
 			(width 0)
@@ -5014,7 +5014,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 125.73) (xy 184.15 125.73)
+			(xy 220.98 127) (xy 227.33 127)
 		)
 		(stroke
 			(width 0)
@@ -5034,7 +5034,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 68.58) (xy 209.55 68.58)
+			(xy 250.19 69.85) (xy 252.73 69.85)
 		)
 		(stroke
 			(width 0)
@@ -5064,7 +5064,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 173.99) (xy 133.35 173.99)
+			(xy 175.26 175.26) (xy 176.53 175.26)
 		)
 		(stroke
 			(width 0)
@@ -5094,7 +5094,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 125.73) (xy 208.28 125.73)
+			(xy 250.19 127) (xy 251.46 127)
 		)
 		(stroke
 			(width 0)
@@ -5114,7 +5114,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 176.53) (xy 102.87 176.53)
+			(xy 138.43 177.8) (xy 146.05 177.8)
 		)
 		(stroke
 			(width 0)
@@ -5124,7 +5124,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 142.24) (xy 134.62 142.24)
+			(xy 175.26 143.51) (xy 177.8 143.51)
 		)
 		(stroke
 			(width 0)
@@ -5144,7 +5144,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 149.86) (xy 184.15 149.86)
+			(xy 220.98 151.13) (xy 227.33 151.13)
 		)
 		(stroke
 			(width 0)
@@ -5164,7 +5164,7 @@
 	)
 	(global_label "AudioRIn3"
 		(shape output)
-		(at 209.55 97.79 0)
+		(at 252.73 99.06 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5174,7 +5174,7 @@
 		)
 		(uuid "16706d98-eb3c-46cd-a450-9ab3f3118264")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.9089 97.79 0)
+			(at 265.0889 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5230,7 +5230,7 @@
 	)
 	(global_label "AudioLIn6"
 		(shape output)
-		(at 134.62 144.78 0)
+		(at 177.8 146.05 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5240,7 +5240,7 @@
 		)
 		(uuid "19f44456-9cd9-4336-912a-217925cd6b41")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.737 144.78 0)
+			(at 189.917 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5252,7 +5252,7 @@
 	)
 	(global_label "BlueIn3"
 		(shape output)
-		(at 181.61 90.17 180)
+		(at 224.79 91.44 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5262,7 +5262,7 @@
 		)
 		(uuid "20e9b4ac-302e-4ad9-94f5-47aa1500496f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 171.4887 90.17 0)
+			(at 214.6687 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5296,7 +5296,7 @@
 	)
 	(global_label "AudioLIn2"
 		(shape output)
-		(at 134.62 95.25 0)
+		(at 177.8 96.52 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5306,7 +5306,7 @@
 		)
 		(uuid "2164fc1b-cd92-4f70-8d85-110d47aa4f89")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.737 95.25 0)
+			(at 189.917 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5318,7 +5318,7 @@
 	)
 	(global_label "SyncIn0"
 		(shape output)
-		(at 82.55 76.2 180)
+		(at 125.73 77.47 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5328,7 +5328,7 @@
 		)
 		(uuid "23ee9e49-db63-411d-af36-5da7ca5394f4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.1868 76.2 0)
+			(at 115.3668 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5406,7 +5406,7 @@
 	)
 	(global_label "RedIn5"
 		(shape output)
-		(at 209.55 118.11 0)
+		(at 252.73 119.38 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5416,7 +5416,7 @@
 		)
 		(uuid "361d6d96-f001-4783-b586-83909f0f1e44")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 219.0061 118.11 0)
+			(at 262.1861 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5428,7 +5428,7 @@
 	)
 	(global_label "GreenIn1"
 		(shape output)
-		(at 181.61 71.12 180)
+		(at 224.79 72.39 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5438,7 +5438,7 @@
 		)
 		(uuid "369f2f49-4944-4051-8e08-888707b7a788")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170.2791 71.12 0)
+			(at 213.4591 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5450,7 +5450,7 @@
 	)
 	(global_label "GreenIn2"
 		(shape output)
-		(at 106.68 95.25 180)
+		(at 149.86 96.52 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5460,7 +5460,7 @@
 		)
 		(uuid "3951b232-086b-49df-88cb-7bf6e34ef241")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 95.3491 95.25 0)
+			(at 138.5291 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5472,7 +5472,7 @@
 	)
 	(global_label "PbOutSwitched"
 		(shape input)
-		(at 181.61 163.83 180)
+		(at 224.79 165.1 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5482,7 +5482,7 @@
 		)
 		(uuid "3b50d54f-95f3-457f-8e14-beb04fc97b56")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 164.6549 163.83 0)
+			(at 207.8349 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5494,7 +5494,7 @@
 	)
 	(global_label "RedIn4"
 		(shape output)
-		(at 134.62 118.11 0)
+		(at 177.8 119.38 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5504,7 +5504,7 @@
 		)
 		(uuid "3de6b830-c75e-4752-8f6d-473d3e7fdb18")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.0761 118.11 0)
+			(at 187.2561 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5538,7 +5538,7 @@
 	)
 	(global_label "SyncIn5"
 		(shape output)
-		(at 157.48 125.73 180)
+		(at 200.66 127 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5548,7 +5548,7 @@
 		)
 		(uuid "42b12338-efa1-4e9e-b2f5-c98340a2d880")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 147.1168 125.73 0)
+			(at 190.2968 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5560,7 +5560,7 @@
 	)
 	(global_label "AudioLIn0"
 		(shape output)
-		(at 134.62 71.12 0)
+		(at 177.8 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5570,7 +5570,7 @@
 		)
 		(uuid "44b67f28-14ac-4cf8-9032-b1e93bd0e4f3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.737 71.12 0)
+			(at 189.917 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5604,7 +5604,7 @@
 	)
 	(global_label "AudioROut"
 		(shape input)
-		(at 134.62 171.45 0)
+		(at 177.8 172.72 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5614,7 +5614,7 @@
 		)
 		(uuid "44f49a3e-560d-4d2f-a252-91dabd18b1ea")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 147.2208 171.45 0)
+			(at 190.4008 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5626,7 +5626,7 @@
 	)
 	(global_label "BlueIn1"
 		(shape output)
-		(at 181.61 66.04 180)
+		(at 224.79 67.31 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5636,7 +5636,7 @@
 		)
 		(uuid "45e4db28-3313-4a42-92aa-71b4d3a067bf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 171.4887 66.04 0)
+			(at 214.6687 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5648,7 +5648,7 @@
 	)
 	(global_label "RedOutSwitched"
 		(shape input)
-		(at 134.62 166.37 0)
+		(at 177.8 167.64 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5658,7 +5658,7 @@
 		)
 		(uuid "471a2b6e-4bc5-40c9-8d6a-d15272703525")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.6637 166.37 0)
+			(at 195.8437 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5670,7 +5670,7 @@
 	)
 	(global_label "GreenIn0"
 		(shape output)
-		(at 106.68 71.12 180)
+		(at 149.86 72.39 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5680,7 +5680,7 @@
 		)
 		(uuid "4802d84f-4032-42cc-b0bd-42f502631cf1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 95.3491 71.12 0)
+			(at 138.5291 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5692,7 +5692,7 @@
 	)
 	(global_label "GreenIn6"
 		(shape output)
-		(at 106.68 144.78 180)
+		(at 149.86 146.05 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5702,7 +5702,7 @@
 		)
 		(uuid "4aa06789-4589-4c54-8a91-5aa39cd866f6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 95.3491 144.78 0)
+			(at 138.5291 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5714,7 +5714,7 @@
 	)
 	(global_label "SyncIn7"
 		(shape output)
-		(at 157.48 149.86 180)
+		(at 200.66 151.13 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5724,7 +5724,7 @@
 		)
 		(uuid "4ba8533a-8ad9-4808-99da-84443abd8a98")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 147.1168 149.86 0)
+			(at 190.2968 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5736,7 +5736,7 @@
 	)
 	(global_label "RedIn7"
 		(shape output)
-		(at 209.55 142.24 0)
+		(at 252.73 143.51 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5746,7 +5746,7 @@
 		)
 		(uuid "4e670097-13a3-4cff-901f-a0d2c975e91d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 219.0061 142.24 0)
+			(at 262.1861 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5758,7 +5758,7 @@
 	)
 	(global_label "AudioRIn6"
 		(shape output)
-		(at 134.62 147.32 0)
+		(at 177.8 148.59 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5768,7 +5768,7 @@
 		)
 		(uuid "5256deb6-7ab4-40d3-85ab-489db217df72")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.9789 147.32 0)
+			(at 190.1589 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5780,7 +5780,7 @@
 	)
 	(global_label "RedIn6"
 		(shape output)
-		(at 134.62 142.24 0)
+		(at 177.8 143.51 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5790,7 +5790,7 @@
 		)
 		(uuid "53271919-102a-4426-abed-92d4771f0a97")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.0761 142.24 0)
+			(at 187.2561 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5802,7 +5802,7 @@
 	)
 	(global_label "GreenIn4"
 		(shape output)
-		(at 106.68 120.65 180)
+		(at 149.86 121.92 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5812,7 +5812,7 @@
 		)
 		(uuid "55548078-3eb6-4546-8ad3-07fb89653f0d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 95.3491 120.65 0)
+			(at 138.5291 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5824,7 +5824,7 @@
 	)
 	(global_label "GreenIn5"
 		(shape output)
-		(at 181.61 120.65 180)
+		(at 224.79 121.92 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5834,7 +5834,7 @@
 		)
 		(uuid "5b8b6951-a927-4d9b-bfa7-f712d8f23943")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170.2791 120.65 0)
+			(at 213.4591 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5846,7 +5846,7 @@
 	)
 	(global_label "SyncIn1"
 		(shape output)
-		(at 157.48 76.2 180)
+		(at 200.66 77.47 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5856,7 +5856,7 @@
 		)
 		(uuid "5d79e741-40e2-4519-a94a-d97e5a7682b8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 147.1168 76.2 0)
+			(at 190.2968 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5868,7 +5868,7 @@
 	)
 	(global_label "GreenIn3"
 		(shape output)
-		(at 181.61 95.25 180)
+		(at 224.79 96.52 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5878,7 +5878,7 @@
 		)
 		(uuid "60ba0b67-a6ef-4dfc-9d9a-74bdb46edd27")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170.2791 95.25 0)
+			(at 213.4591 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5890,7 +5890,7 @@
 	)
 	(global_label "GreenIn7"
 		(shape output)
-		(at 181.61 144.78 180)
+		(at 224.79 146.05 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5900,7 +5900,7 @@
 		)
 		(uuid "63c6af9d-b53e-45e6-9809-15d06143d773")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170.2791 144.78 0)
+			(at 213.4591 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5934,7 +5934,7 @@
 	)
 	(global_label "AudioLIn1"
 		(shape output)
-		(at 209.55 71.12 0)
+		(at 252.73 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5944,7 +5944,7 @@
 		)
 		(uuid "68ba5f42-4777-4e94-8590-cec7c65f7067")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.667 71.12 0)
+			(at 264.847 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5956,7 +5956,7 @@
 	)
 	(global_label "SyncIn6"
 		(shape output)
-		(at 82.55 149.86 180)
+		(at 125.73 151.13 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5966,7 +5966,7 @@
 		)
 		(uuid "723683aa-f255-47d5-828c-34eae30cf760")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.1868 149.86 0)
+			(at 115.3668 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5978,7 +5978,7 @@
 	)
 	(global_label "RedIn0"
 		(shape output)
-		(at 134.62 68.58 0)
+		(at 177.8 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5988,7 +5988,7 @@
 		)
 		(uuid "7587776c-560c-479c-aae8-f4f1a3923dde")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.0761 68.58 0)
+			(at 187.2561 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6000,7 +6000,7 @@
 	)
 	(global_label "YOutSwitched"
 		(shape input)
-		(at 181.61 168.91 180)
+		(at 224.79 170.18 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6010,7 +6010,7 @@
 		)
 		(uuid "78f57ab2-a6b8-4ed6-9e6a-78bedeed9105")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 165.9853 168.91 0)
+			(at 209.1653 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6022,7 +6022,7 @@
 	)
 	(global_label "AudioRIn1"
 		(shape output)
-		(at 209.55 73.66 0)
+		(at 252.73 74.93 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6032,7 +6032,7 @@
 		)
 		(uuid "7989e5ef-3d42-4604-9618-80d8dea169d0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.9089 73.66 0)
+			(at 265.0889 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6044,7 +6044,7 @@
 	)
 	(global_label "BlueIn0"
 		(shape output)
-		(at 106.68 66.04 180)
+		(at 149.86 67.31 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6054,7 +6054,7 @@
 		)
 		(uuid "79affcd1-b8b3-431f-bf26-4d9df77f8adc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.5587 66.04 0)
+			(at 139.7387 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6066,7 +6066,7 @@
 	)
 	(global_label "AudioLOut"
 		(shape input)
-		(at 209.55 168.91 0)
+		(at 252.73 170.18 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6076,7 +6076,7 @@
 		)
 		(uuid "7bd4b244-af9f-4830-bbe7-28d060c90f41")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.9089 168.91 0)
+			(at 265.0889 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6088,7 +6088,7 @@
 	)
 	(global_label "BlueIn4"
 		(shape output)
-		(at 106.68 115.57 180)
+		(at 149.86 116.84 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6098,7 +6098,7 @@
 		)
 		(uuid "7c72342d-2f40-4cc6-97af-596d2d3c1271")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.5587 115.57 0)
+			(at 139.7387 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6132,7 +6132,7 @@
 	)
 	(global_label "AudioRIn4"
 		(shape output)
-		(at 134.62 123.19 0)
+		(at 177.8 124.46 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6142,7 +6142,7 @@
 		)
 		(uuid "8886cc44-6833-4dd1-8feb-f077285e0c89")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.9789 123.19 0)
+			(at 190.1589 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6198,7 +6198,7 @@
 	)
 	(global_label "BlueIn5"
 		(shape output)
-		(at 181.61 115.57 180)
+		(at 224.79 116.84 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6208,7 +6208,7 @@
 		)
 		(uuid "8af7b4d9-aee8-4549-9272-b86aa1a48ed9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 171.4887 115.57 0)
+			(at 214.6687 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6220,7 +6220,7 @@
 	)
 	(global_label "AudioLIn7"
 		(shape output)
-		(at 209.55 144.78 0)
+		(at 252.73 146.05 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6230,7 +6230,7 @@
 		)
 		(uuid "8e5518c0-7842-441b-ba1e-d8a10a469bd5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.667 144.78 0)
+			(at 264.847 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6264,7 +6264,7 @@
 	)
 	(global_label "SyncIn2"
 		(shape output)
-		(at 82.55 100.33 180)
+		(at 125.73 101.6 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6274,7 +6274,7 @@
 		)
 		(uuid "9227e0e6-bebf-4674-b95c-e68207c4a1b8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.1868 100.33 0)
+			(at 115.3668 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6286,7 +6286,7 @@
 	)
 	(global_label "BlueIn6"
 		(shape output)
-		(at 106.68 139.7 180)
+		(at 149.86 140.97 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6296,7 +6296,7 @@
 		)
 		(uuid "989f7909-e6e0-4f94-af0a-8feab0d4d721")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.5587 139.7 0)
+			(at 139.7387 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6308,7 +6308,7 @@
 	)
 	(global_label "AudioLOut"
 		(shape input)
-		(at 134.62 168.91 0)
+		(at 177.8 170.18 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6318,7 +6318,7 @@
 		)
 		(uuid "9d2d1b36-9c08-4a81-9475-9adbcd33da2b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.9789 168.91 0)
+			(at 190.1589 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6330,7 +6330,7 @@
 	)
 	(global_label "BlueIn2"
 		(shape output)
-		(at 106.68 90.17 180)
+		(at 149.86 91.44 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6340,7 +6340,7 @@
 		)
 		(uuid "9ff54344-65f9-460f-a643-2187930ea703")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.5587 90.17 0)
+			(at 139.7387 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6352,7 +6352,7 @@
 	)
 	(global_label "AudioLIn4"
 		(shape output)
-		(at 134.62 120.65 0)
+		(at 177.8 121.92 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6362,7 +6362,7 @@
 		)
 		(uuid "b4db00e2-8612-45a6-91fe-846abf35727d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.737 120.65 0)
+			(at 189.917 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6374,7 +6374,7 @@
 	)
 	(global_label "AudioRIn5"
 		(shape output)
-		(at 209.55 123.19 0)
+		(at 252.73 124.46 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6384,7 +6384,7 @@
 		)
 		(uuid "b778d218-20d0-4942-bf8a-835c73d21d2e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.9089 123.19 0)
+			(at 265.0889 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6462,7 +6462,7 @@
 	)
 	(global_label "AudioLIn3"
 		(shape output)
-		(at 209.55 95.25 0)
+		(at 252.73 96.52 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6472,7 +6472,7 @@
 		)
 		(uuid "c4dde729-9d93-41ae-9197-96de6433772b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.667 95.25 0)
+			(at 264.847 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6484,7 +6484,7 @@
 	)
 	(global_label "RedIn2"
 		(shape output)
-		(at 134.62 92.71 0)
+		(at 177.8 93.98 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6494,7 +6494,7 @@
 		)
 		(uuid "c8ea6c5e-8962-4828-baed-59483dbcd8ce")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.0761 92.71 0)
+			(at 187.2561 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6506,7 +6506,7 @@
 	)
 	(global_label "SyncIn3"
 		(shape output)
-		(at 157.48 100.33 180)
+		(at 200.66 101.6 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6516,7 +6516,7 @@
 		)
 		(uuid "ce224f85-9495-48ca-8ba3-f40060d21b0c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 147.1168 100.33 0)
+			(at 190.2968 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6528,7 +6528,7 @@
 	)
 	(global_label "AudioRIn7"
 		(shape output)
-		(at 209.55 147.32 0)
+		(at 252.73 148.59 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6538,7 +6538,7 @@
 		)
 		(uuid "d19cfc0c-087f-4cf0-8d34-640c0de804dd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.9089 147.32 0)
+			(at 265.0889 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6550,7 +6550,7 @@
 	)
 	(global_label "AudioRIn2"
 		(shape output)
-		(at 134.62 97.79 0)
+		(at 177.8 99.06 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6560,7 +6560,7 @@
 		)
 		(uuid "d2ec0a7f-89a5-44ac-ad77-1dbcbeaaca60")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.9789 97.79 0)
+			(at 190.1589 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6572,7 +6572,7 @@
 	)
 	(global_label "RedIn3"
 		(shape output)
-		(at 209.55 92.71 0)
+		(at 252.73 93.98 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6582,7 +6582,7 @@
 		)
 		(uuid "d31b8253-ceb2-4c16-8572-e3e53b39760b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 219.0061 92.71 0)
+			(at 262.1861 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6616,7 +6616,7 @@
 	)
 	(global_label "SyncIn4"
 		(shape output)
-		(at 82.55 125.73 180)
+		(at 125.73 127 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6626,7 +6626,7 @@
 		)
 		(uuid "d5622e94-ee5d-4a7b-926b-54d7b6adf6e9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.1868 125.73 0)
+			(at 115.3668 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6660,7 +6660,7 @@
 	)
 	(global_label "AudioRIn0"
 		(shape output)
-		(at 134.62 73.66 0)
+		(at 177.8 74.93 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6670,7 +6670,7 @@
 		)
 		(uuid "d8a6a166-6828-4ada-bb7e-7b26216ba183")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.9789 73.66 0)
+			(at 190.1589 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6682,7 +6682,7 @@
 	)
 	(global_label "AudioROut"
 		(shape input)
-		(at 209.55 171.45 0)
+		(at 252.73 172.72 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6692,7 +6692,7 @@
 		)
 		(uuid "da398e17-4880-4432-ad60-17522946bd66")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 222.1508 171.45 0)
+			(at 265.3308 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6704,7 +6704,7 @@
 	)
 	(global_label "AudioLIn5"
 		(shape output)
-		(at 209.55 120.65 0)
+		(at 252.73 121.92 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6714,7 +6714,7 @@
 		)
 		(uuid "e133a19c-7085-4aa8-ba48-c9d11f40e655")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.667 120.65 0)
+			(at 264.847 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6726,7 +6726,7 @@
 	)
 	(global_label "GreenOutSwitched"
 		(shape input)
-		(at 106.68 168.91 180)
+		(at 149.86 170.18 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6736,7 +6736,7 @@
 		)
 		(uuid "ea616079-2f06-4cdc-883a-b6f3f4869c75")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 86.7615 168.91 0)
+			(at 129.9415 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6748,7 +6748,7 @@
 	)
 	(global_label "BlueIn7"
 		(shape output)
-		(at 181.61 139.7 180)
+		(at 224.79 140.97 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6758,7 +6758,7 @@
 		)
 		(uuid "ec7e42ab-3931-40f5-9388-b8dd3ebc8f6a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 171.4887 139.7 0)
+			(at 214.6687 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6770,7 +6770,7 @@
 	)
 	(global_label "SyncOut"
 		(shape input)
-		(at 82.55 173.99 180)
+		(at 125.73 175.26 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6780,7 +6780,7 @@
 		)
 		(uuid "f23c0f2e-c8ef-45b0-ae25-d0062e384a2a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 71.9449 173.99 0)
+			(at 115.1249 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6792,7 +6792,7 @@
 	)
 	(global_label "PrOutSwitched"
 		(shape input)
-		(at 209.55 166.37 0)
+		(at 252.73 167.64 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6802,7 +6802,7 @@
 		)
 		(uuid "fc335de7-2642-46ed-9ce2-376f579ca59f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 226.1423 166.37 0)
+			(at 269.3223 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6814,7 +6814,7 @@
 	)
 	(global_label "RedIn1"
 		(shape output)
-		(at 209.55 68.58 0)
+		(at 252.73 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6824,7 +6824,7 @@
 		)
 		(uuid "fd11f7ff-26ac-4b2a-a892-0d5d9e45309f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 219.0061 68.58 0)
+			(at 262.1861 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6858,7 +6858,7 @@
 	)
 	(global_label "BlueOutSwitched"
 		(shape input)
-		(at 106.68 163.83 180)
+		(at 149.86 165.1 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6868,7 +6868,7 @@
 		)
 		(uuid "fdd6cf8c-4718-4a5c-be12-7af83c4fc685")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 87.9711 163.83 0)
+			(at 131.1511 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7035,7 +7035,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPDT")
-		(at 165.1 76.2 0)
+		(at 208.28 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7044,7 +7044,7 @@
 		(fields_autoplaced yes)
 		(uuid "04c1c69a-52c9-4943-a7b0-e39fd7c20f03")
 		(property "Reference" "SW16"
-			(at 165.1 67.31 0)
+			(at 208.28 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7052,7 +7052,7 @@
 			)
 		)
 		(property "Value" "csync/rgbs"
-			(at 165.1 69.85 0)
+			(at 208.28 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7060,7 +7060,7 @@
 			)
 		)
 		(property "Footprint" "JS102011JCQN:SW_JS102011JCQN"
-			(at 165.1 76.2 0)
+			(at 208.28 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7069,7 +7069,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 83.82 0)
+			(at 208.28 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7078,7 +7078,7 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 165.1 76.2 0)
+			(at 208.28 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7106,7 +7106,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPDT")
-		(at 90.17 173.99 0)
+		(at 133.35 175.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7114,7 +7114,7 @@
 		(dnp no)
 		(uuid "060b1b73-a436-45f0-a9d3-f77540decef8")
 		(property "Reference" "SW20"
-			(at 89.916 179.578 0)
+			(at 133.096 180.848 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7122,7 +7122,7 @@
 			)
 		)
 		(property "Value" "csync/rgbs"
-			(at 89.916 182.118 0)
+			(at 133.096 183.388 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7130,7 +7130,7 @@
 			)
 		)
 		(property "Footprint" "JS102011JCQN:SW_JS102011JCQN"
-			(at 90.17 173.99 0)
+			(at 133.35 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7139,7 +7139,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 90.17 181.61 0)
+			(at 133.35 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7148,7 +7148,7 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 90.17 173.99 0)
+			(at 133.35 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7242,7 +7242,7 @@
 	)
 	(symbol
 		(lib_id "KMDGX-9S-N:KMDGX-9S-N")
-		(at 184.15 139.7 0)
+		(at 227.33 140.97 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7251,7 +7251,7 @@
 		(fields_autoplaced yes)
 		(uuid "23575d37-da39-47cc-975e-c2505653bc9d")
 		(property "Reference" "J17"
-			(at 195.58 132.08 0)
+			(at 238.76 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7259,7 +7259,7 @@
 			)
 		)
 		(property "Value" "input 7"
-			(at 195.58 134.62 0)
+			(at 238.76 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7267,7 +7267,7 @@
 			)
 		)
 		(property "Footprint" "KMDGX-9S-N:KMDGX9SN"
-			(at 203.2 234.62 0)
+			(at 246.38 235.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7277,7 +7277,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.kycon.com/Pub_Eng_Draw/KMDGX-9S-N.pdf"
-			(at 203.2 334.62 0)
+			(at 246.38 335.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7287,7 +7287,7 @@
 			)
 		)
 		(property "Description" "Circular DIN Connectors 9P R/A MINI-DIN SKT"
-			(at 184.15 139.7 0)
+			(at 227.33 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7296,7 +7296,7 @@
 			)
 		)
 		(property "Height" "13"
-			(at 203.2 534.62 0)
+			(at 246.38 535.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7306,7 +7306,7 @@
 			)
 		)
 		(property "Mouser Part Number" "806-KMDGX-9S-N"
-			(at 203.2 634.62 0)
+			(at 246.38 635.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7316,7 +7316,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-9S-N?qs=XNV0BZVlaZGjANZN0nATTg%3D%3D"
-			(at 203.2 734.62 0)
+			(at 246.38 735.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7326,7 +7326,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Kycon"
-			(at 203.2 834.62 0)
+			(at 246.38 835.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7336,7 +7336,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "KMDGX-9S-N"
-			(at 203.2 934.62 0)
+			(at 246.38 935.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7386,7 +7386,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPDT")
-		(at 90.17 100.33 0)
+		(at 133.35 101.6 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7395,7 +7395,7 @@
 		(fields_autoplaced yes)
 		(uuid "284b49e0-7d67-4e67-8854-463d25702d21")
 		(property "Reference" "SW13"
-			(at 90.17 91.44 0)
+			(at 133.35 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7403,7 +7403,7 @@
 			)
 		)
 		(property "Value" "csync/rgbs"
-			(at 90.17 93.98 0)
+			(at 133.35 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7411,7 +7411,7 @@
 			)
 		)
 		(property "Footprint" "JS102011JCQN:SW_JS102011JCQN"
-			(at 90.17 100.33 0)
+			(at 133.35 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7420,7 +7420,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 90.17 107.95 0)
+			(at 133.35 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7429,7 +7429,7 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 90.17 100.33 0)
+			(at 133.35 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7457,7 +7457,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 133.35 127 0)
+		(at 176.53 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7466,7 +7466,7 @@
 		(fields_autoplaced yes)
 		(uuid "2add9a85-2031-4d90-9836-9e8f797454d9")
 		(property "Reference" "#PWR021"
-			(at 133.35 133.35 0)
+			(at 176.53 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7475,7 +7475,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 133.35 132.08 0)
+			(at 176.53 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7483,7 +7483,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 127 0)
+			(at 176.53 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7492,7 +7492,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 127 0)
+			(at 176.53 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7501,7 +7501,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 133.35 127 0)
+			(at 176.53 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7589,7 +7589,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPDT")
-		(at 165.1 149.86 0)
+		(at 208.28 151.13 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7598,7 +7598,7 @@
 		(fields_autoplaced yes)
 		(uuid "2da7b001-067e-407a-97cb-3a1be9793068")
 		(property "Reference" "SW19"
-			(at 165.1 140.97 0)
+			(at 208.28 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7606,7 +7606,7 @@
 			)
 		)
 		(property "Value" "csync/rgbs"
-			(at 165.1 143.51 0)
+			(at 208.28 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7614,7 +7614,7 @@
 			)
 		)
 		(property "Footprint" "JS102011JCQN:SW_JS102011JCQN"
-			(at 165.1 149.86 0)
+			(at 208.28 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7623,7 +7623,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 157.48 0)
+			(at 208.28 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7632,7 +7632,7 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 165.1 149.86 0)
+			(at 208.28 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7793,7 +7793,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 208.28 127 0)
+		(at 251.46 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7802,7 +7802,7 @@
 		(fields_autoplaced yes)
 		(uuid "31879c23-4cf1-4d97-ad68-c25a26c9932e")
 		(property "Reference" "#PWR022"
-			(at 208.28 133.35 0)
+			(at 251.46 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7811,7 +7811,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 208.28 132.08 0)
+			(at 251.46 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7819,7 +7819,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 208.28 127 0)
+			(at 251.46 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7828,7 +7828,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 127 0)
+			(at 251.46 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7837,7 +7837,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 208.28 127 0)
+			(at 251.46 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7926,7 +7926,7 @@
 	)
 	(symbol
 		(lib_id "KMDGX-9S-N:KMDGX-9S-N")
-		(at 184.15 115.57 0)
+		(at 227.33 116.84 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7934,7 +7934,7 @@
 		(dnp no)
 		(uuid "39010f10-106c-41d0-98f8-9eba6fd90302")
 		(property "Reference" "J12"
-			(at 195.58 107.95 0)
+			(at 238.76 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7942,7 +7942,7 @@
 			)
 		)
 		(property "Value" "input 5"
-			(at 195.58 110.49 0)
+			(at 238.76 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7950,7 +7950,7 @@
 			)
 		)
 		(property "Footprint" "KMDGX-9S-N:KMDGX9SN"
-			(at 203.2 210.49 0)
+			(at 246.38 211.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7960,7 +7960,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.kycon.com/Pub_Eng_Draw/KMDGX-9S-N.pdf"
-			(at 203.2 310.49 0)
+			(at 246.38 311.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7970,7 +7970,7 @@
 			)
 		)
 		(property "Description" "Circular DIN Connectors 9P R/A MINI-DIN SKT"
-			(at 184.15 115.57 0)
+			(at 227.33 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7979,7 +7979,7 @@
 			)
 		)
 		(property "Height" "13"
-			(at 203.2 510.49 0)
+			(at 246.38 511.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7989,7 +7989,7 @@
 			)
 		)
 		(property "Mouser Part Number" "806-KMDGX-9S-N"
-			(at 203.2 610.49 0)
+			(at 246.38 611.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7999,7 +7999,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-9S-N?qs=XNV0BZVlaZGjANZN0nATTg%3D%3D"
-			(at 203.2 710.49 0)
+			(at 246.38 711.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8009,7 +8009,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Kycon"
-			(at 203.2 810.49 0)
+			(at 246.38 811.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8019,7 +8019,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "KMDGX-9S-N"
-			(at 203.2 910.49 0)
+			(at 246.38 911.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8267,7 +8267,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPDT")
-		(at 90.17 125.73 0)
+		(at 133.35 127 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8276,7 +8276,7 @@
 		(fields_autoplaced yes)
 		(uuid "44e80457-0e3e-4308-9d71-03b813417bb1")
 		(property "Reference" "SW14"
-			(at 90.17 116.84 0)
+			(at 133.35 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8284,7 +8284,7 @@
 			)
 		)
 		(property "Value" "csync/rgbs"
-			(at 90.17 119.38 0)
+			(at 133.35 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8292,7 +8292,7 @@
 			)
 		)
 		(property "Footprint" "JS102011JCQN:SW_JS102011JCQN"
-			(at 90.17 125.73 0)
+			(at 133.35 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8301,7 +8301,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 90.17 133.35 0)
+			(at 133.35 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8310,7 +8310,7 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 90.17 125.73 0)
+			(at 133.35 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8338,7 +8338,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 133.35 77.47 0)
+		(at 176.53 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8347,7 +8347,7 @@
 		(fields_autoplaced yes)
 		(uuid "454d1ec4-a161-437f-9b9c-ef2aaed35e5f")
 		(property "Reference" "#PWR011"
-			(at 133.35 83.82 0)
+			(at 176.53 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8356,7 +8356,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 133.35 82.55 0)
+			(at 176.53 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8364,7 +8364,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 77.47 0)
+			(at 176.53 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8373,7 +8373,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 77.47 0)
+			(at 176.53 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8382,7 +8382,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 133.35 77.47 0)
+			(at 176.53 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8542,7 +8542,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPDT")
-		(at 90.17 149.86 0)
+		(at 133.35 151.13 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8551,7 +8551,7 @@
 		(fields_autoplaced yes)
 		(uuid "4d6b387b-0f74-49e4-af4b-a9ac8c004728")
 		(property "Reference" "SW15"
-			(at 90.17 140.97 0)
+			(at 133.35 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8559,7 +8559,7 @@
 			)
 		)
 		(property "Value" "csync/rgbs"
-			(at 90.17 143.51 0)
+			(at 133.35 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8567,7 +8567,7 @@
 			)
 		)
 		(property "Footprint" "JS102011JCQN:SW_JS102011JCQN"
-			(at 90.17 149.86 0)
+			(at 133.35 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8576,7 +8576,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 90.17 157.48 0)
+			(at 133.35 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8585,7 +8585,7 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 90.17 149.86 0)
+			(at 133.35 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8749,7 +8749,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPDT")
-		(at 165.1 100.33 0)
+		(at 208.28 101.6 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8758,7 +8758,7 @@
 		(fields_autoplaced yes)
 		(uuid "5580d730-75d3-400b-a236-df875e0185c0")
 		(property "Reference" "SW17"
-			(at 165.1 91.44 0)
+			(at 208.28 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8766,7 +8766,7 @@
 			)
 		)
 		(property "Value" "csync/rgbs"
-			(at 165.1 93.98 0)
+			(at 208.28 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8774,7 +8774,7 @@
 			)
 		)
 		(property "Footprint" "JS102011JCQN:SW_JS102011JCQN"
-			(at 165.1 100.33 0)
+			(at 208.28 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8783,7 +8783,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 107.95 0)
+			(at 208.28 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8792,7 +8792,7 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 165.1 100.33 0)
+			(at 208.28 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8820,7 +8820,7 @@
 	)
 	(symbol
 		(lib_id "KMDGX-9S-N:KMDGX-9S-N")
-		(at 109.22 90.17 0)
+		(at 152.4 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8829,7 +8829,7 @@
 		(fields_autoplaced yes)
 		(uuid "574cb51d-ce31-4aeb-9454-6136a68220b0")
 		(property "Reference" "J7"
-			(at 120.65 82.55 0)
+			(at 163.83 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8837,7 +8837,7 @@
 			)
 		)
 		(property "Value" "input 2"
-			(at 120.65 85.09 0)
+			(at 163.83 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8845,7 +8845,7 @@
 			)
 		)
 		(property "Footprint" "KMDGX-9S-N:KMDGX9SN"
-			(at 128.27 185.09 0)
+			(at 171.45 186.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8855,7 +8855,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.kycon.com/Pub_Eng_Draw/KMDGX-9S-N.pdf"
-			(at 128.27 285.09 0)
+			(at 171.45 286.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8865,7 +8865,7 @@
 			)
 		)
 		(property "Description" "Circular DIN Connectors 9P R/A MINI-DIN SKT"
-			(at 109.22 90.17 0)
+			(at 152.4 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8874,7 +8874,7 @@
 			)
 		)
 		(property "Height" "13"
-			(at 128.27 485.09 0)
+			(at 171.45 486.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8884,7 +8884,7 @@
 			)
 		)
 		(property "Mouser Part Number" "806-KMDGX-9S-N"
-			(at 128.27 585.09 0)
+			(at 171.45 586.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8894,7 +8894,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-9S-N?qs=XNV0BZVlaZGjANZN0nATTg%3D%3D"
-			(at 128.27 685.09 0)
+			(at 171.45 686.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8904,7 +8904,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Kycon"
-			(at 128.27 785.09 0)
+			(at 171.45 786.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8914,7 +8914,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "KMDGX-9S-N"
-			(at 128.27 885.09 0)
+			(at 171.45 886.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9030,7 +9030,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 208.28 175.26 0)
+		(at 251.46 176.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9039,7 +9039,7 @@
 		(fields_autoplaced yes)
 		(uuid "5ec800a6-8a89-4f1e-95b3-3a7e608f21f7")
 		(property "Reference" "#PWR032"
-			(at 208.28 181.61 0)
+			(at 251.46 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9048,7 +9048,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 208.28 180.34 0)
+			(at 251.46 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9056,7 +9056,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 208.28 175.26 0)
+			(at 251.46 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9065,7 +9065,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 175.26 0)
+			(at 251.46 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9074,7 +9074,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 208.28 175.26 0)
+			(at 251.46 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9096,7 +9096,7 @@
 	)
 	(symbol
 		(lib_id "KMDGX-9S-N:KMDGX-9S-N")
-		(at 184.15 90.17 0)
+		(at 227.33 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9105,7 +9105,7 @@
 		(fields_autoplaced yes)
 		(uuid "60331374-ea7a-4ff9-983e-d165262485bf")
 		(property "Reference" "J8"
-			(at 195.58 82.55 0)
+			(at 238.76 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9113,7 +9113,7 @@
 			)
 		)
 		(property "Value" "input 3"
-			(at 195.58 85.09 0)
+			(at 238.76 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9121,7 +9121,7 @@
 			)
 		)
 		(property "Footprint" "KMDGX-9S-N:KMDGX9SN"
-			(at 203.2 185.09 0)
+			(at 246.38 186.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9131,7 +9131,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.kycon.com/Pub_Eng_Draw/KMDGX-9S-N.pdf"
-			(at 203.2 285.09 0)
+			(at 246.38 286.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9141,7 +9141,7 @@
 			)
 		)
 		(property "Description" "Circular DIN Connectors 9P R/A MINI-DIN SKT"
-			(at 184.15 90.17 0)
+			(at 227.33 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9150,7 +9150,7 @@
 			)
 		)
 		(property "Height" "13"
-			(at 203.2 485.09 0)
+			(at 246.38 486.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9160,7 +9160,7 @@
 			)
 		)
 		(property "Mouser Part Number" "806-KMDGX-9S-N"
-			(at 203.2 585.09 0)
+			(at 246.38 586.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9170,7 +9170,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-9S-N?qs=XNV0BZVlaZGjANZN0nATTg%3D%3D"
-			(at 203.2 685.09 0)
+			(at 246.38 686.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9180,7 +9180,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Kycon"
-			(at 203.2 785.09 0)
+			(at 246.38 786.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9190,7 +9190,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "KMDGX-9S-N"
-			(at 203.2 885.09 0)
+			(at 246.38 886.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9515,7 +9515,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 133.35 101.6 0)
+		(at 176.53 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9524,7 +9524,7 @@
 		(fields_autoplaced yes)
 		(uuid "8175cf5f-2f37-4506-ad4b-49347a015b31")
 		(property "Reference" "#PWR015"
-			(at 133.35 107.95 0)
+			(at 176.53 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9533,7 +9533,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 133.35 106.68 0)
+			(at 176.53 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9541,7 +9541,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 101.6 0)
+			(at 176.53 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9550,7 +9550,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 101.6 0)
+			(at 176.53 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9559,7 +9559,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 133.35 101.6 0)
+			(at 176.53 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9718,7 +9718,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 208.28 151.13 0)
+		(at 251.46 152.4 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9727,7 +9727,7 @@
 		(fields_autoplaced yes)
 		(uuid "91f5a98d-3238-4a19-9554-de277e31ad19")
 		(property "Reference" "#PWR027"
-			(at 208.28 157.48 0)
+			(at 251.46 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9736,7 +9736,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 208.28 156.21 0)
+			(at 251.46 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9744,7 +9744,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 208.28 151.13 0)
+			(at 251.46 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9753,7 +9753,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 151.13 0)
+			(at 251.46 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9762,7 +9762,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 208.28 151.13 0)
+			(at 251.46 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9850,7 +9850,7 @@
 	)
 	(symbol
 		(lib_id "KMDGX-9S-N:KMDGX-9S-N")
-		(at 109.22 163.83 0)
+		(at 152.4 165.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9859,7 +9859,7 @@
 		(fields_autoplaced yes)
 		(uuid "9a1ddf45-61d7-4d93-b8de-513a469f9254")
 		(property "Reference" "J19"
-			(at 120.65 156.21 0)
+			(at 163.83 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9867,7 +9867,7 @@
 			)
 		)
 		(property "Value" "rgb output"
-			(at 120.65 158.75 0)
+			(at 163.83 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9875,7 +9875,7 @@
 			)
 		)
 		(property "Footprint" "KMDGX-9S-N:KMDGX9SN"
-			(at 128.27 258.75 0)
+			(at 171.45 260.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9885,7 +9885,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.kycon.com/Pub_Eng_Draw/KMDGX-9S-N.pdf"
-			(at 128.27 358.75 0)
+			(at 171.45 360.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9895,7 +9895,7 @@
 			)
 		)
 		(property "Description" "Circular DIN Connectors 9P R/A MINI-DIN SKT"
-			(at 109.22 163.83 0)
+			(at 152.4 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9904,7 +9904,7 @@
 			)
 		)
 		(property "Height" "13"
-			(at 128.27 558.75 0)
+			(at 171.45 560.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9914,7 +9914,7 @@
 			)
 		)
 		(property "Mouser Part Number" "806-KMDGX-9S-N"
-			(at 128.27 658.75 0)
+			(at 171.45 660.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9924,7 +9924,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-9S-N?qs=XNV0BZVlaZGjANZN0nATTg%3D%3D"
-			(at 128.27 758.75 0)
+			(at 171.45 760.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9934,7 +9934,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Kycon"
-			(at 128.27 858.75 0)
+			(at 171.45 860.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9944,7 +9944,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "KMDGX-9S-N"
-			(at 128.27 958.75 0)
+			(at 171.45 960.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10194,7 +10194,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 208.28 101.6 0)
+		(at 251.46 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10203,7 +10203,7 @@
 		(fields_autoplaced yes)
 		(uuid "a41dc0e6-02a9-49f4-82ba-5c7a8dc42f71")
 		(property "Reference" "#PWR016"
-			(at 208.28 107.95 0)
+			(at 251.46 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10212,7 +10212,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 208.28 106.68 0)
+			(at 251.46 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10220,7 +10220,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 208.28 101.6 0)
+			(at 251.46 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10229,7 +10229,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 101.6 0)
+			(at 251.46 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10238,7 +10238,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 208.28 101.6 0)
+			(at 251.46 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10328,7 +10328,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 208.28 77.47 0)
+		(at 251.46 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10337,7 +10337,7 @@
 		(fields_autoplaced yes)
 		(uuid "b8f96b14-06fa-43b5-9517-47eb187be9f7")
 		(property "Reference" "#PWR012"
-			(at 208.28 83.82 0)
+			(at 251.46 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10346,7 +10346,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 208.28 82.55 0)
+			(at 251.46 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10354,7 +10354,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 208.28 77.47 0)
+			(at 251.46 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10363,7 +10363,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 77.47 0)
+			(at 251.46 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10372,7 +10372,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 208.28 77.47 0)
+			(at 251.46 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10394,7 +10394,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPDT")
-		(at 165.1 125.73 0)
+		(at 208.28 127 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10403,7 +10403,7 @@
 		(fields_autoplaced yes)
 		(uuid "bd6a4533-c39c-4ee7-a970-c3c290ad6a1d")
 		(property "Reference" "SW18"
-			(at 165.1 116.84 0)
+			(at 208.28 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10411,7 +10411,7 @@
 			)
 		)
 		(property "Value" "csync/rgbs"
-			(at 165.1 119.38 0)
+			(at 208.28 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10419,7 +10419,7 @@
 			)
 		)
 		(property "Footprint" "JS102011JCQN:SW_JS102011JCQN"
-			(at 165.1 125.73 0)
+			(at 208.28 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10428,7 +10428,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 133.35 0)
+			(at 208.28 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10437,7 +10437,7 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 165.1 125.73 0)
+			(at 208.28 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10465,7 +10465,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 133.35 175.26 0)
+		(at 176.53 176.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10474,7 +10474,7 @@
 		(fields_autoplaced yes)
 		(uuid "bdf6ba67-9a2a-41d2-a76e-72ad39a8c077")
 		(property "Reference" "#PWR031"
-			(at 133.35 181.61 0)
+			(at 176.53 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10483,7 +10483,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 133.35 180.34 0)
+			(at 176.53 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10491,7 +10491,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 175.26 0)
+			(at 176.53 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10500,7 +10500,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 175.26 0)
+			(at 176.53 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10509,7 +10509,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 133.35 175.26 0)
+			(at 176.53 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10597,7 +10597,7 @@
 	)
 	(symbol
 		(lib_id "KMDGX-9S-N:KMDGX-9S-N")
-		(at 109.22 115.57 0)
+		(at 152.4 116.84 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10606,7 +10606,7 @@
 		(fields_autoplaced yes)
 		(uuid "c4741f7a-5305-45fa-ae6f-5c95250cef1b")
 		(property "Reference" "J11"
-			(at 120.65 107.95 0)
+			(at 163.83 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10614,7 +10614,7 @@
 			)
 		)
 		(property "Value" "input 4"
-			(at 120.65 110.49 0)
+			(at 163.83 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10622,7 +10622,7 @@
 			)
 		)
 		(property "Footprint" "KMDGX-9S-N:KMDGX9SN"
-			(at 128.27 210.49 0)
+			(at 171.45 211.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10632,7 +10632,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.kycon.com/Pub_Eng_Draw/KMDGX-9S-N.pdf"
-			(at 128.27 310.49 0)
+			(at 171.45 311.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10642,7 +10642,7 @@
 			)
 		)
 		(property "Description" "Circular DIN Connectors 9P R/A MINI-DIN SKT"
-			(at 109.22 115.57 0)
+			(at 152.4 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10651,7 +10651,7 @@
 			)
 		)
 		(property "Height" "13"
-			(at 128.27 510.49 0)
+			(at 171.45 511.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10661,7 +10661,7 @@
 			)
 		)
 		(property "Mouser Part Number" "806-KMDGX-9S-N"
-			(at 128.27 610.49 0)
+			(at 171.45 611.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10671,7 +10671,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-9S-N?qs=XNV0BZVlaZGjANZN0nATTg%3D%3D"
-			(at 128.27 710.49 0)
+			(at 171.45 711.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10681,7 +10681,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Kycon"
-			(at 128.27 810.49 0)
+			(at 171.45 811.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10691,7 +10691,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "KMDGX-9S-N"
-			(at 128.27 910.49 0)
+			(at 171.45 911.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10741,7 +10741,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPDT")
-		(at 90.17 76.2 0)
+		(at 133.35 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10750,7 +10750,7 @@
 		(fields_autoplaced yes)
 		(uuid "cc51402b-838a-4147-a4a2-eec0b8c3a774")
 		(property "Reference" "SW12"
-			(at 90.17 67.31 0)
+			(at 133.35 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10758,7 +10758,7 @@
 			)
 		)
 		(property "Value" "csync/rgbs"
-			(at 90.17 69.85 0)
+			(at 133.35 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10766,7 +10766,7 @@
 			)
 		)
 		(property "Footprint" "JS102011JCQN:SW_JS102011JCQN"
-			(at 90.17 76.2 0)
+			(at 133.35 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10775,7 +10775,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 90.17 83.82 0)
+			(at 133.35 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10784,7 +10784,7 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 90.17 76.2 0)
+			(at 133.35 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10949,7 +10949,7 @@
 	)
 	(symbol
 		(lib_id "KMDGX-9S-N:KMDGX-9S-N")
-		(at 184.15 66.04 0)
+		(at 227.33 67.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10958,7 +10958,7 @@
 		(fields_autoplaced yes)
 		(uuid "d2c32d68-d26b-405c-ad89-4ba9546737b5")
 		(property "Reference" "J4"
-			(at 195.58 58.42 0)
+			(at 238.76 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10966,7 +10966,7 @@
 			)
 		)
 		(property "Value" "input 1"
-			(at 195.58 60.96 0)
+			(at 238.76 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10974,7 +10974,7 @@
 			)
 		)
 		(property "Footprint" "KMDGX-9S-N:KMDGX9SN"
-			(at 203.2 160.96 0)
+			(at 246.38 162.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10984,7 +10984,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.kycon.com/Pub_Eng_Draw/KMDGX-9S-N.pdf"
-			(at 203.2 260.96 0)
+			(at 246.38 262.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10994,7 +10994,7 @@
 			)
 		)
 		(property "Description" "Circular DIN Connectors 9P R/A MINI-DIN SKT"
-			(at 184.15 66.04 0)
+			(at 227.33 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11003,7 +11003,7 @@
 			)
 		)
 		(property "Height" "13"
-			(at 203.2 460.96 0)
+			(at 246.38 462.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11013,7 +11013,7 @@
 			)
 		)
 		(property "Mouser Part Number" "806-KMDGX-9S-N"
-			(at 203.2 560.96 0)
+			(at 246.38 562.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11023,7 +11023,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-9S-N?qs=XNV0BZVlaZGjANZN0nATTg%3D%3D"
-			(at 203.2 660.96 0)
+			(at 246.38 662.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11033,7 +11033,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Kycon"
-			(at 203.2 760.96 0)
+			(at 246.38 762.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11043,7 +11043,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "KMDGX-9S-N"
-			(at 203.2 860.96 0)
+			(at 246.38 862.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11093,7 +11093,7 @@
 	)
 	(symbol
 		(lib_id "KMDGX-9S-N:KMDGX-9S-N")
-		(at 184.15 163.83 0)
+		(at 227.33 165.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11102,7 +11102,7 @@
 		(fields_autoplaced yes)
 		(uuid "d4f4a2f1-9c5e-4b02-8865-fb7da1ff7239")
 		(property "Reference" "J20"
-			(at 195.58 156.21 0)
+			(at 238.76 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11110,7 +11110,7 @@
 			)
 		)
 		(property "Value" "ypbpr output"
-			(at 195.58 158.75 0)
+			(at 238.76 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11118,7 +11118,7 @@
 			)
 		)
 		(property "Footprint" "KMDGX-9S-N:KMDGX9SN"
-			(at 203.2 258.75 0)
+			(at 246.38 260.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11128,7 +11128,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.kycon.com/Pub_Eng_Draw/KMDGX-9S-N.pdf"
-			(at 203.2 358.75 0)
+			(at 246.38 360.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11138,7 +11138,7 @@
 			)
 		)
 		(property "Description" "Circular DIN Connectors 9P R/A MINI-DIN SKT"
-			(at 184.15 163.83 0)
+			(at 227.33 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11147,7 +11147,7 @@
 			)
 		)
 		(property "Height" "13"
-			(at 203.2 558.75 0)
+			(at 246.38 560.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11157,7 +11157,7 @@
 			)
 		)
 		(property "Mouser Part Number" "806-KMDGX-9S-N"
-			(at 203.2 658.75 0)
+			(at 246.38 660.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11167,7 +11167,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-9S-N?qs=XNV0BZVlaZGjANZN0nATTg%3D%3D"
-			(at 203.2 758.75 0)
+			(at 246.38 760.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11177,7 +11177,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Kycon"
-			(at 203.2 858.75 0)
+			(at 246.38 860.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11187,7 +11187,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "KMDGX-9S-N"
-			(at 203.2 958.75 0)
+			(at 246.38 960.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11830,7 +11830,7 @@
 	)
 	(symbol
 		(lib_id "KMDGX-9S-N:KMDGX-9S-N")
-		(at 109.22 66.04 0)
+		(at 152.4 67.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11838,7 +11838,7 @@
 		(dnp no)
 		(uuid "e7883fb6-aaf4-4a51-9cb4-034025d83570")
 		(property "Reference" "J3"
-			(at 120.65 58.42 0)
+			(at 163.83 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11846,7 +11846,7 @@
 			)
 		)
 		(property "Value" "input 0"
-			(at 120.65 60.96 0)
+			(at 163.83 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11854,7 +11854,7 @@
 			)
 		)
 		(property "Footprint" "KMDGX-9S-N:KMDGX9SN"
-			(at 128.27 160.96 0)
+			(at 171.45 162.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11864,7 +11864,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.kycon.com/Pub_Eng_Draw/KMDGX-9S-N.pdf"
-			(at 128.27 260.96 0)
+			(at 171.45 262.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11874,7 +11874,7 @@
 			)
 		)
 		(property "Description" "Circular DIN Connectors 9P R/A MINI-DIN SKT"
-			(at 109.22 66.04 0)
+			(at 152.4 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11883,7 +11883,7 @@
 			)
 		)
 		(property "Height" "13"
-			(at 128.27 460.96 0)
+			(at 171.45 462.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11893,7 +11893,7 @@
 			)
 		)
 		(property "Mouser Part Number" "806-KMDGX-9S-N"
-			(at 128.27 560.96 0)
+			(at 171.45 562.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11903,7 +11903,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-9S-N?qs=XNV0BZVlaZGjANZN0nATTg%3D%3D"
-			(at 128.27 660.96 0)
+			(at 171.45 662.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11913,7 +11913,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Kycon"
-			(at 128.27 760.96 0)
+			(at 171.45 762.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11923,7 +11923,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "KMDGX-9S-N"
-			(at 128.27 860.96 0)
+			(at 171.45 862.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11973,7 +11973,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 133.35 151.13 0)
+		(at 176.53 152.4 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11982,7 +11982,7 @@
 		(fields_autoplaced yes)
 		(uuid "e93ac658-7d5e-4813-8b33-fc377c4f3ac9")
 		(property "Reference" "#PWR026"
-			(at 133.35 157.48 0)
+			(at 176.53 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11991,7 +11991,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 133.35 156.21 0)
+			(at 176.53 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11999,7 +11999,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 151.13 0)
+			(at 176.53 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12008,7 +12008,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 151.13 0)
+			(at 176.53 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12017,7 +12017,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 133.35 151.13 0)
+			(at 176.53 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12107,7 +12107,7 @@
 	)
 	(symbol
 		(lib_id "KMDGX-9S-N:KMDGX-9S-N")
-		(at 109.22 139.7 0)
+		(at 152.4 140.97 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12116,7 +12116,7 @@
 		(fields_autoplaced yes)
 		(uuid "f8e49224-43ff-4436-a409-a27b3e8620a4")
 		(property "Reference" "J16"
-			(at 120.65 132.08 0)
+			(at 163.83 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12124,7 +12124,7 @@
 			)
 		)
 		(property "Value" "input 6"
-			(at 120.65 134.62 0)
+			(at 163.83 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12132,7 +12132,7 @@
 			)
 		)
 		(property "Footprint" "KMDGX-9S-N:KMDGX9SN"
-			(at 128.27 234.62 0)
+			(at 171.45 235.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12142,7 +12142,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.kycon.com/Pub_Eng_Draw/KMDGX-9S-N.pdf"
-			(at 128.27 334.62 0)
+			(at 171.45 335.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12152,7 +12152,7 @@
 			)
 		)
 		(property "Description" "Circular DIN Connectors 9P R/A MINI-DIN SKT"
-			(at 109.22 139.7 0)
+			(at 152.4 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12161,7 +12161,7 @@
 			)
 		)
 		(property "Height" "13"
-			(at 128.27 534.62 0)
+			(at 171.45 535.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12171,7 +12171,7 @@
 			)
 		)
 		(property "Mouser Part Number" "806-KMDGX-9S-N"
-			(at 128.27 634.62 0)
+			(at 171.45 635.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12181,7 +12181,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-9S-N?qs=XNV0BZVlaZGjANZN0nATTg%3D%3D"
-			(at 128.27 734.62 0)
+			(at 171.45 735.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12191,7 +12191,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Kycon"
-			(at 128.27 834.62 0)
+			(at 171.45 835.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12201,7 +12201,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "KMDGX-9S-N"
-			(at 128.27 934.62 0)
+			(at 171.45 935.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
