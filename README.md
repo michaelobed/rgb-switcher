@@ -1,6 +1,6 @@
 # rgb-switcher
 
-<img width="4722" height="2636" alt="Render of v0.2 PCB" src="https://github.com/user-attachments/assets/786d1675-147b-412b-8c94-20631b2a1f7d" />
+<img width="4722" height="2514" alt="Render of v1.0 PCB" src="https://github.com/user-attachments/assets/c6539778-18e0-4fc8-a005-e61ba6136509" />
 
 ## What is it?
 
@@ -47,7 +47,7 @@ Be warned, though, that there is no string sanitisation of any kind, so you can 
 
 ### Power
 
-Finally, there's the power input. Anything that supplies 12V at ≥3A is fine, the high current being to drive the LEDs. Be sure to use a centre-positive DC barrel jack with a 5.5mm outer diameter and a 2.5mm inner diameter. I haven't provided any reverse voltage protection because I genuinely forgot. Perhaps a Schottky diode in series with the 12V rail will do the trick.
+Finally, there's the power input. Anything that supplies 12V at ≥3A is fine, the high current being to drive the LEDs. Be sure to use a **centre-positive** DC barrel jack with a 5.5mm outer diameter and a 2.5mm inner diameter. I haven't provided any reverse voltage protection because I genuinely forgot. ~~Perhaps a Schottky diode in series with the 12V rail will do the trick.~~
 
 ## Final notes
 
@@ -61,6 +61,7 @@ Happy gaming!
 
 These are things I should probably have done but haven't had the time to do yet:
 
-- **Make the board smaller**! It would probably have been better to make the switcher with an "LED board" as a module that communicates over the UART, SPI, I2C, etc. Most importantly, it brings cost down further to not make such a large 4-layer PCB, especially if you're not interested in the RGB LED bit.
+- ~~**Make the board smaller**! It would probably have been better to make the switcher with an "LED board" as a module that communicates over the UART, SPI, I2C, etc. Most importantly, it brings cost down further to not make such a large 4-layer PCB, especially if you're not interested in the RGB LED bit.~~
 - **Create a reference design for a remote board** that lets you use one of those universal IR TV remotes with it, or maybe even learn codes from an existing IR remote.
 - **Create an enclosure**. I'm a CAD noob but it shouldn't be too hard. It could even just be an identically-shaped PCB with some elaborate artwork on it!
+- **Give the LED board reverse voltage protection**. This is particularly important for the +12V rail as there's currently nothing stopping a centre-negative DC connection from frying everything. While I suggested a Schottky diode earlier, I'm thinking a P-channel power MOFSET, for voltage drop and power dissipation reasons.

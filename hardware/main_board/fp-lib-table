@@ -4,6 +4,5 @@
   (lib (name "SN74CBT3244CPW")(type "KiCad")(uri "${KIPRJMOD}/lib/SN74CBT3244CPW")(options "")(descr ""))
   (lib (name "PJ-320B")(type "KiCad")(uri "${KIPRJMOD}/lib/PJ-320B")(options "")(descr ""))
   (lib (name "GT-TC050B")(type "KiCad")(uri "${KIPRJMOD}/lib/GT-TC050B/GT-TC050B.pretty")(options "")(descr ""))
-  (lib (name "MTS-102")(type "KiCad")(uri "${KIPRJMOD}/lib/MTS-102")(options "")(descr ""))
   (lib (name "JS102011JCQN")(type "KiCad")(uri "${KIPRJMOD}/lib/JS102011JCQN")(options "")(descr ""))
 )

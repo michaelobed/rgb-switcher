@@ -11456,9 +11456,9 @@
 		(at 44.45 191.77 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d8bded25-0fc1-4871-a310-8da82c59ec84")
 		(property "Reference" "J5"
