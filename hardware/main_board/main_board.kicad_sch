@@ -12334,7 +12334,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "+5v out"
+		(property "Value" "+5v in/out"
 			(at 53.34 125.7299 0)
 			(effects
 				(font
