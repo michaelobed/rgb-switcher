@@ -9,8 +9,8 @@
 	(paper "A4")
 	(title_block
 		(title "MO-011 rgb switcher (main board)")
-		(date "2025-01-21")
-		(rev "v0.2")
+		(date "2026-03-16")
+		(rev "v1.0")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -2976,7 +2976,7 @@
 		(path "/e7883fb6-aaf4-4a51-9cb4-034025d83570")
 		(sheetname "/")
 		(sheetfile "main_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 11 1.5)
 			(end -3 1.5)
@@ -7871,7 +7871,7 @@
 		(path "/c4741f7a-5305-45fa-ae6f-5c95250cef1b")
 		(sheetname "/")
 		(sheetfile "main_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 11 1.5)
 			(end -3 1.5)
@@ -12973,7 +12973,7 @@
 		(path "/39010f10-106c-41d0-98f8-9eba6fd90302")
 		(sheetname "/")
 		(sheetfile "main_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 11 1.5)
 			(end -3 1.5)
@@ -15821,7 +15821,7 @@
 		(path "/f8e49224-43ff-4436-a409-a27b3e8620a4")
 		(sheetname "/")
 		(sheetfile "main_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 11 1.5)
 			(end -3 1.5)
@@ -17597,7 +17597,7 @@
 		(path "/60331374-ea7a-4ff9-983e-d165262485bf")
 		(sheetname "/")
 		(sheetfile "main_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 11 1.5)
 			(end -3 1.5)
@@ -19195,7 +19195,7 @@
 		(path "/d8bded25-0fc1-4871-a310-8da82c59ec84")
 		(sheetname "/")
 		(sheetfile "main_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start 3.87 -1.33)
 			(end 3.87 6.41)
@@ -19445,6 +19445,7 @@
 		)
 		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_2x03_P2.54mm_Vertical.wrl"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
@@ -19577,7 +19578,7 @@
 		(path "/9a1ddf45-61d7-4d93-b8de-513a469f9254")
 		(sheetname "/")
 		(sheetfile "main_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 11 1.5)
 			(end -3 1.5)
@@ -20214,7 +20215,7 @@
 		(path "/23575d37-da39-47cc-975e-c2505653bc9d")
 		(sheetname "/")
 		(sheetfile "main_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 11 1.5)
 			(end -3 1.5)
@@ -21076,7 +21077,7 @@
 		(path "/d4f4a2f1-9c5e-4b02-8865-fb7da1ff7239")
 		(sheetname "/")
 		(sheetfile "main_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 11 1.5)
 			(end -3 1.5)
@@ -21474,7 +21475,7 @@
 		(path "/d2c32d68-d26b-405c-ad89-4ba9546737b5")
 		(sheetname "/")
 		(sheetfile "main_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 11 1.5)
 			(end -3 1.5)
@@ -24522,7 +24523,7 @@
 		(path "/574cb51d-ce31-4aeb-9454-6136a68220b0")
 		(sheetname "/")
 		(sheetfile "main_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 11 1.5)
 			(end -3 1.5)
@@ -25567,7 +25568,7 @@
 			)
 		)
 	)
-	(gr_text "v0.2"
+	(gr_text "v1.0"
 		(at 188.467892 70.421602 180)
 		(layer "F.SilkS")
 		(uuid "8ceab4bf-9b58-4152-8595-99cf3101f009")
