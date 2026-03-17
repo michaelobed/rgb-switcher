@@ -1,0 +1,44 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# 694108106102
+#
+DEF 694108106102 J 0 40 Y N 1 L N
+F0 "J" 0 100 50 H V L BNN
+F1 "694108106102" -200 -400 50 H V L BNN
+F2 "694108106102" 0 0 50 H I L BNN
+F3 "" 0 0 50 H I L BNN
+F4 "SMT" 0 0 50 H I L BNN "MOUNT"
+F5 "5A" 0 0 50 H I L BNN "IR"
+F6 "694108106102" 0 0 50 H I L BNN "VALUE"
+F7 "https://www.we-online.com/catalog/datasheet/694108106102.pdf" 0 0 50 H I L BNN "DATASHEET-URL"
+F8 "24V(AC)" 0 0 50 H I L BNN "WORKING-VOLTAGE"
+F9 "694108106102" 0 0 50 H I L BNN "PART-NUMBER"
+F10 "Right Angled" 0 0 50 H I L BNN "TYPE"
+DRAW
+A -125 0 50 899 2700 0 0 6 N -125 -50 -125 50
+P 2 0 0 6 -125 50 50 50 N
+P 2 0 0 6 50 50 50 -50 N
+P 2 0 0 6 50 -50 -125 -50 N
+P 2 0 0 6 50 -50 50 -75 N
+P 2 0 0 6 50 -75 100 -75 N
+P 2 0 0 6 100 -175 100 75 N
+P 2 0 0 6 100 75 50 75 N
+P 2 0 0 6 50 75 50 50 N
+P 2 0 0 6 0 -300 -125 -300 N
+P 2 0 0 6 -125 -300 -150 -250 N
+P 2 0 0 6 -150 -250 -175 -300 N
+P 2 0 0 6 0 -200 0 -300 N
+P 2 0 0 6 100 -300 0 -300 N
+P 2 0 0 6 0 -200 100 -200 N
+P 4 0 0 6 0 -200 -20 -150 20 -150 0 -200 f
+X ~ 1 200 0 100 L 40 40 0 0 P 
+X ~ 2 200 -300 100 L 40 40 0 0 P 
+X ~ 3 200 -200 100 L 40 40 0 0 P 
+X ~ A1 200 -100 100 L 40 40 0 0 P 
+ENDDRAW
+ENDDEF
+#
+# End Library
