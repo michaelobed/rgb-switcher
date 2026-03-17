@@ -33,9 +33,13 @@ You can obtain these by searching for "sega mega drive 2 av cable" and you'll us
 ### RGB LEDs
 
 I also wanted the consoles to look nice on shelves or some sort of storage system we haven't decided on yet, so why not have the select lines also illuminate strips of 12V RGB LEDs? 🤣
-I added some [IRF540](https://www.vishay.com/docs/91021/irf540.pdf) power MOSFETs to help with this. MOSFETs because efficient, power because current through the LEDs does add up! The LED outputs are selected using a [74HC238](https://www.ti.com/product/CD74HC238) non-inverting line decoder.
+I added some [IRF540](https://www.vishay.com/docs/91021/irf540.pdf) power MOSFETs to help with this. MOSFETs because efficient, power because current through the LEDs does add up!
 
-They also fade in/out when changing inputs. Yey! ^-^
+Since I wanted to make this modular, the LED board now gets its own board as of v1.0 of the project:
+
+(image)
+
+The LEDs also fade in/out when changing inputs. Yey! ^-^
 
 ### UART
 

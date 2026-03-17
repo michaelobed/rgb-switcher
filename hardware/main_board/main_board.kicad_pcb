@@ -25999,10 +25999,21 @@
 		(layer "Edge.Cuts")
 		(uuid "dd61aff2-3fad-43ed-8de7-711ce94094ac")
 	)
-	(gr_text "designed by michael obed 2026"
-		(at 239.067892 62.90813 180)
+	(gr_text "MO-011 rgb switcher"
+		(at 218.6 66.7 180)
 		(layer "F.SilkS")
-		(uuid "39fa2f64-6fbf-49c5-910c-3e14ff3f98ff")
+		(uuid "3224a59e-5019-47de-b1d4-46546b303285")
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.28)
+			)
+		)
+	)
+	(gr_text "designed by michael obed 2026"
+		(at 243 61.5 180)
+		(layer "F.SilkS")
+		(uuid "dd1daccc-ff30-4454-bb76-2d82f2f6a29f")
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -26011,21 +26022,10 @@
 			(justify left)
 		)
 	)
-	(gr_text "MO-011 rgb switcher"
-		(at 214.667892 68.10813 180)
-		(layer "F.SilkS")
-		(uuid "42236b4c-935e-44ed-be20-0b57a6420aa0")
-		(effects
-			(font
-				(size 3 3)
-				(thickness 0.28)
-			)
-		)
-	)
 	(gr_text "v1.0"
-		(at 188.867892 67.30813 180)
+		(at 192.6 66.1 180)
 		(layer "F.SilkS")
-		(uuid "8ceab4bf-9b58-4152-8595-99cf3101f009")
+		(uuid "fcb55010-d8eb-41fd-83e2-a503def77f9a")
 		(effects
 			(font
 				(size 1.5 1.5)
