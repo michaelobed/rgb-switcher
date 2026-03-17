@@ -1349,7 +1349,7 @@
 		(path "/8928c934-163b-4780-a91c-52d031c71614/0b4fd893-add4-474b-bc95-519969e0123c")
 		(sheetname "/video switching/")
 		(sheetfile "video_switching.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -1.29 -1.545)
 			(end -1.29 1.545)
@@ -5213,7 +5213,7 @@
 		(path "/8928c934-163b-4780-a91c-52d031c71614/32fe3ed2-5afc-4353-87ac-3ba40a8fac14")
 		(sheetname "/video switching/")
 		(sheetfile "video_switching.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -1.29 -1.545)
 			(end -1.29 1.545)
@@ -7840,7 +7840,7 @@
 		(path "/8928c934-163b-4780-a91c-52d031c71614/8b8c0add-17f8-4406-b1f7-b8b69ee354f5")
 		(sheetname "/video switching/")
 		(sheetfile "video_switching.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -1.29 -1.545)
 			(end -1.29 1.545)
@@ -9634,7 +9634,7 @@
 		(path "/8928c934-163b-4780-a91c-52d031c71614/622e6bb4-f8b0-441f-ac22-09cef867d846")
 		(sheetname "/video switching/")
 		(sheetfile "video_switching.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -1.29 -1.545)
 			(end -1.29 1.545)
@@ -10056,7 +10056,7 @@
 		(path "/8928c934-163b-4780-a91c-52d031c71614/0f7005da-85d9-4ad5-92d0-42a423ff216d")
 		(sheetname "/video switching/")
 		(sheetfile "video_switching.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -1.29 -1.545)
 			(end -1.29 1.545)
@@ -11406,7 +11406,7 @@
 		(path "/8928c934-163b-4780-a91c-52d031c71614/f300701f-6600-4e92-a3c0-ef6172d23a14")
 		(sheetname "/video switching/")
 		(sheetfile "video_switching.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -1.29 -1.545)
 			(end -1.29 1.545)
@@ -14003,7 +14003,7 @@
 		(path "/fb65d436-84eb-470e-b83c-331e4e3b447f")
 		(sheetname "/")
 		(sheetfile "main_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 0.3 -2.6)
 			(end 0 -2)
@@ -22728,7 +22728,7 @@
 		(path "/8928c934-163b-4780-a91c-52d031c71614/253be43d-b9ba-4bfc-9f2b-061e245008cf")
 		(sheetname "/video switching/")
 		(sheetfile "video_switching.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -1.29 -1.545)
 			(end -1.29 1.545)
@@ -25312,7 +25312,7 @@
 		(path "/8928c934-163b-4780-a91c-52d031c71614/2bfc5ac6-691b-4975-aa34-30c0a1ed53ab")
 		(sheetname "/video switching/")
 		(sheetfile "video_switching.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -1.29 -1.545)
 			(end -1.29 1.545)

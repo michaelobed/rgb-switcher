@@ -243,7 +243,7 @@
 		(path "/2e480261-8bf2-4ec4-a342-a2aa6982c53d")
 		(sheetname "/")
 		(sheetfile "led_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -2.56 -1.31)
 			(end -2.56 8.11)
@@ -2896,7 +2896,7 @@
 		(path "/bb5e4cf5-6344-4f67-ba85-b4f9dfbed822")
 		(sheetname "/")
 		(sheetfile "led_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -2.56 -1.31)
 			(end -2.56 8.11)
@@ -4567,7 +4567,7 @@
 		(path "/346609ef-482d-4e34-9c9e-c4c8e16123ce")
 		(sheetname "/")
 		(sheetfile "led_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -2.56 -1.31)
 			(end -2.56 8.11)
@@ -7144,7 +7144,7 @@
 		(path "/152b4197-628d-4127-b4a6-ffa02c737c78")
 		(sheetname "/")
 		(sheetfile "led_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -2.56 -1.31)
 			(end -2.56 8.11)
@@ -8079,7 +8079,7 @@
 		(path "/29263b6f-f1d4-40f4-94d0-715d110890c6")
 		(sheetname "/")
 		(sheetfile "led_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -2.56 -1.31)
 			(end -2.56 8.11)
@@ -8418,6 +8418,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "86c381d9-5edb-4d20-a15e-c863ec7f080a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C2286"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "3e2eab2c-95dc-4d78-8beb-a556573184dc")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11338,7 +11350,7 @@
 		(path "/19c433bd-78c4-4fbe-8a77-15cd7ff130d7")
 		(sheetname "/")
 		(sheetfile "led_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -2.56 -1.31)
 			(end -2.56 8.11)
@@ -13656,7 +13668,7 @@
 		(path "/fb65d436-84eb-470e-b83c-331e4e3b447f")
 		(sheetname "/")
 		(sheetfile "led_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 0.3 -2.6)
 			(end 0 -2)
@@ -14632,7 +14644,7 @@
 		(path "/20bf5b1b-3f0f-4f6a-9af9-2c1c26c94c1b")
 		(sheetname "/")
 		(sheetfile "led_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -2.56 -1.31)
 			(end -2.56 8.11)
@@ -15365,7 +15377,7 @@
 		(path "/dde4b400-5a51-4680-a72e-493a71f041fb")
 		(sheetname "/")
 		(sheetfile "led_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -2.56 -1.31)
 			(end -2.56 8.11)
@@ -20049,7 +20061,7 @@
 		(path "/a0d546ee-ae47-41a9-b0c0-57af95c6ece4")
 		(sheetname "/")
 		(sheetfile "led_board.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 6.985 4.445)
 			(end -6.985 4.445)
