@@ -1,6 +1,6 @@
 # rgb-switcher
 
-<img width="4722" height="2636" alt="Render of v1.0 PCB" src="https://github.com/user-attachments/assets/aba06d5a-c4ed-4174-9609-7f38cde9e543" />
+<img width="4722" height="2514" alt="Render of v1.0 main board PCB" src="https://github.com/user-attachments/assets/f543d383-22c4-4c0c-b9ac-8c8322da9f96" />
 
 ## What is it?
 
@@ -37,7 +37,7 @@ I added some [IRF540](https://www.vishay.com/docs/91021/irf540.pdf) power MOSFET
 
 Since I wanted to make this modular, the LED board now gets its own board as of v1.0 of the project:
 
-(image)
+<img width="4722" height="2636" alt="Render of v1.0 LED board PCB" src="https://github.com/user-attachments/assets/7864398b-a439-43ef-8510-534bc284e939" />
 
 The LEDs also fade in/out when changing inputs. Yey! ^-^
 
