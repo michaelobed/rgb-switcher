@@ -19,7 +19,7 @@ void Uart::Handle()
     /* Get the data from the FIFO. */
     uart_get_buffered_data_len(UartNum, &length);
     length = uart_read_bytes(UartNum, data, length, rxTicksToWait);
-    ESP_LOGI(__func__, "Got %d bytes.", length, data);
+    ESP_LOGI(__func__, "Got %d bytes.", length);
 
     /* TODO: Handling. :D */
 }

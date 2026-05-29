@@ -7,15 +7,17 @@
 //  Copyright © 2026 Michael Obed.
 
 #include "AppEvent.hpp"
+#include "Config.hpp"
 #include <cstdio>
 #include "esp_event.h"
 #include "esp_log.h"
+#include "freertos/FreeRTOS.h"
 #include <inttypes.h>
 #include "sdkconfig.h"
-#include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "Uart.hpp"
 
+static Config& config = Config::GetInstance();
 static Uart& uart = Uart::GetInstance();
 
 static void errorHandler();
@@ -53,8 +55,29 @@ extern "C" void app_main()
 
     /* Initialise peripherals. */
     if(!uart.Init())
+    {
+        ESP_LOGE(__func__, "Could not init UART!");
         errorHandler();
+    }
     
+    /* Look for a config in storage. If it doesn't exist, save the initialised one. */
+    if(!config.InitStorage())
+    {
+        ESP_LOGE(__func__, "Could not init config storage!");
+        errorHandler();
+    }
+    else if(!config.Load())
+    {
+        ESP_LOGW(__func__, "Config did not exist. Saving afresh...");
+        config.Save();
+    }
+    else
+    {
+        ESP_LOGI(__func__, "Config loaded successfully.");
+        
+        /* TODO: We have all the information we need. Start the Wi-Fi! */
+    }
+
     ESP_LOGI(__func__, "Peripheral init done! Running main loop...");
     
     while(true)

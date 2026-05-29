@@ -1,0 +1,5 @@
+menu "rgb switcher remote board"
+    config CONFIG_ERASEALLONBOOT
+        bool "Erase all keys on boot"
+        default n
+endmenu
