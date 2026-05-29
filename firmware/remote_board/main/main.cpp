@@ -11,6 +11,7 @@
 #include "esp_event.h"
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
+#include "Http.hpp"
 #include <inttypes.h>
 #include "Network.hpp"
 #include "sdkconfig.h"
@@ -18,6 +19,7 @@
 #include "Uart.hpp"
 
 static Config& config = Config::GetInstance();
+static Http& http = Http::GetInstance();
 static Network& network = Network::GetInstance();
 static Uart& uart = Uart::GetInstance();
 
@@ -50,7 +52,7 @@ extern "C" void app_main()
     else
     {
         /* We couldn't initialise the default event loop. This is even worse. Freak out! */
-        ESP_LOGE(__func__, "Event loop init failed (%d)!", err);
+        ESP_LOGE(__func__, "Could not init event loop (%d)!", err);
         errorHandler();
     }
 
@@ -93,7 +95,16 @@ extern "C" void app_main()
         else ESP_LOGI(__func__, "WiFi access point started.");
     }
 
-    ESP_LOGI(__func__, "Peripheral init done! Running main loop...");
+    /* Get HTTP server going. */
+    err = http.Init();
+    if(err != ESP_OK)
+    {
+        ESP_LOGE(__func__, "Could not start HTTP server (%d)!", err);
+        errorHandler();
+    }
+    else ESP_LOGI(__func__, "HTTP server started.");
+
+    ESP_LOGI(__func__, "Init done! Running main loop...");
     
     while(true)
     {
