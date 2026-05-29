@@ -23,8 +23,9 @@ class Config
             return c;
         }
 
-        char networkSsid[MAX_SSID_LEN];
-        char networkPsk[MAX_PASSPHRASE_LEN];
+        bool NetworkIsSTA;
+        char NetworkSsid[MAX_SSID_LEN];
+        char NetworkPsk[MAX_PASSPHRASE_LEN];
 
         void EraseAll();
         bool InitStorage();

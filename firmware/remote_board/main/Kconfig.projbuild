@@ -1,5 +1,18 @@
 menu "rgb switcher remote board"
-    config CONFIG_ERASEALLONBOOT
-        bool "Erase all keys on boot"
-        default n
+    menu "Config"
+        config CONFIG_ERASEALLONBOOT
+            bool "Erase all keys on boot"
+            default n
+            help
+                The config will be wiped when the board boots.
+    endmenu
+
+    menu "Network"
+        config NETWORK_CHANNEL
+            int "WiFi channel"
+            default 6
+            help
+                The channel the WiFi should use. The default is 6 because I'm British. ^-^
+
+    endmenu
 endmenu

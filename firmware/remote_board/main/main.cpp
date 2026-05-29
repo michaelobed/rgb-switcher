@@ -6,18 +6,19 @@
 //  
 //  Copyright © 2026 Michael Obed.
 
-#include "AppEvent.hpp"
 #include "Config.hpp"
 #include <cstdio>
 #include "esp_event.h"
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include <inttypes.h>
+#include "Network.hpp"
 #include "sdkconfig.h"
 #include "freertos/task.h"
 #include "Uart.hpp"
 
 static Config& config = Config::GetInstance();
+static Network& network = Network::GetInstance();
 static Uart& uart = Uart::GetInstance();
 
 static void errorHandler();
@@ -27,7 +28,7 @@ ESP_EVENT_DEFINE_BASE(EVENT_APPEVENT);
 
 extern "C" void app_main()
 {
-    int err = ESP_OK;
+    esp_err_t err = ESP_OK;
 
     /* Initialise a default event loop. */
     err = esp_event_loop_create_default();
@@ -66,16 +67,30 @@ extern "C" void app_main()
         ESP_LOGE(__func__, "Could not init config storage!");
         errorHandler();
     }
-    else if(!config.Load())
+    
+    if(!config.Load())
     {
         ESP_LOGW(__func__, "Config did not exist. Saving afresh...");
         config.Save();
     }
+    else ESP_LOGI(__func__, "Config loaded successfully.");
+
+    /* We have all the information we need. Start the WiFi! */
+    if(config.NetworkIsSTA)
+    {
+        /* TODO: WiFi STA config. For now, panic. */
+        ESP_LOGE(__func__, "WiFi STA not yet supported!");
+        errorHandler();
+    }
     else
     {
-        ESP_LOGI(__func__, "Config loaded successfully.");
-        
-        /* TODO: We have all the information we need. Start the Wi-Fi! */
+        err = network.InitAP();
+        if(err != ESP_OK)
+        {
+            ESP_LOGE(__func__, "Could not start WiFi access point (%d)!", err);
+            errorHandler();
+        }
+        else ESP_LOGI(__func__, "WiFi access point started.");
     }
 
     ESP_LOGI(__func__, "Peripheral init done! Running main loop...");

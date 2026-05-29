@@ -12,8 +12,9 @@
 Config::Config()
 {
     /* Populate with initial values. */
-    strncpy(networkSsid, "YourNetworkHere", MAX_SSID_LEN);
-    memset(networkPsk, 0, MAX_PASSPHRASE_LEN);
+    NetworkIsSTA = false;
+    strncpy(NetworkSsid, "YourNetworkHere", MAX_SSID_LEN);
+    memset(NetworkPsk, 0, MAX_PASSPHRASE_LEN);
 }
 
 void Config::EraseAll()
@@ -24,37 +25,45 @@ void Config::EraseAll()
 
 bool Config::InitStorage()
 {
-    int ret = ESP_OK;
+    esp_err_t err = ESP_OK;
     
     /* Init the NVS flash driver. */
-    ret = nvs_flash_init();
-    if(ret != ESP_OK)
+    err = nvs_flash_init();
+    if(err != ESP_OK)
         return false;
 
     /* Now get a handle to the NVS. */
-    ret = nvs_open("KeyStorage", NVS_READWRITE, &handle);
-    return (ret == ESP_OK);
+    err = nvs_open("KeyStorage", NVS_READWRITE, &handle);
 
-#if defined(CONFIG_ERASEALLONBOOT)
+#if defined(CONFIG_CONFIG_ERASEALLONBOOT)
     EraseAll();
 #endif
+
+    return (err == ESP_OK);
 }
 
 bool Config::Load()
 {
-    uint32_t existence = 0xffffffff;
+    union
+    {
+        uint8_t u8;
+        uint16_t u16;
+        uint32_t u32;
+    } temp;
     size_t size = 0;
     
     /* Get the existence number. Do we exist? */
-    nvs_get_u32(handle, "existence", &existence);
-    if(existence != existenceNum)
+    nvs_get_u32(handle, "existence", &temp.u32);
+    if(temp.u32 != existenceNum)
         return false;
 
     /* If we do, grab all the config data. */
+    nvs_get_u8(handle, "networkIsSTA", &temp.u8);
+    NetworkIsSTA = (temp.u8 > 0);
     size = MAX_SSID_LEN;
-    nvs_get_str(handle, "networkSsid", networkSsid, &size);
+    nvs_get_str(handle, "networkSsid", NetworkSsid, &size);
     size = MAX_PASSPHRASE_LEN;
-    nvs_get_str(handle, "networkPsk", networkPsk, &size);
+    nvs_get_str(handle, "networkPsk", NetworkPsk, &size);
 
     return true;
 } 
@@ -62,8 +71,8 @@ bool Config::Load()
 void Config::Save()
 {
     nvs_set_u32(handle, "existence", existenceNum);
-    nvs_set_str(handle, "networkSsid", networkSsid);
-    nvs_set_str(handle, "networkPsk", networkPsk);
+    nvs_set_str(handle, "networkSsid", NetworkSsid);
+    nvs_set_str(handle, "networkPsk", NetworkPsk);
 
     nvs_commit(handle);
 }

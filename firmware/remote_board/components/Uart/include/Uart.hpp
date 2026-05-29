@@ -11,7 +11,6 @@
 
 #include <cstdint>
 #include "driver/uart.h"
-#include "esp_event.h"
 
 class Uart
 {

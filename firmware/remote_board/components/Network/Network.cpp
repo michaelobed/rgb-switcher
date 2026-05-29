@@ -1,0 +1,68 @@
+//
+//  Network.cpp
+//  remote_board
+//
+//  Created by michaelobed on 29/05/2026.
+//  
+//  Copyright © 2026 Michael Obed.
+
+#include "Config.hpp"
+#include <cstring>
+#include "esp_log.h"
+#include "Network.hpp"
+
+static Config& config = Config::GetInstance();
+
+Network::Network()
+{
+    netIfInstance = nullptr;
+}
+
+esp_err_t Network::InitAP()
+{
+    constexpr char defaultSsid[] = "rgbswremote";
+    esp_err_t err = ESP_OK;
+
+    wifi_init_config_t initConfig = WIFI_INIT_CONFIG_DEFAULT();
+
+    err = preInit();
+    if(err != ESP_OK)
+    {
+        ESP_LOGE(__func__, "WiFi net-if initialisation failed (%d)!", err);
+        return err;
+    }
+
+    /* Initialise an AP netif instance. */
+    netIfInstance = esp_netif_create_default_wifi_ap();
+    if(netIfInstance == nullptr)
+    {
+        err = ESP_FAIL;
+        ESP_LOGE(__func__, "WiFi AP creation failed!");
+        return err;
+    }
+
+    /* Initialise WiFi and copy some default settings across to its config. */
+    strncpy((char*)wifiConfig.ap.ssid, defaultSsid, MAX_SSID_LEN);
+    strncpy((char*)wifiConfig.ap.password, defaultSsid, MAX_PASSPHRASE_LEN);
+    wifiConfig.ap.channel = CONFIG_NETWORK_CHANNEL;
+    wifiConfig.ap.ssid_len = 0;
+    wifiConfig.ap.max_connection = 2;
+    wifiConfig.ap.authmode = WIFI_AUTH_WPA_WPA2_PSK;
+    err = esp_wifi_init(&initConfig);
+    if(err == ESP_OK)
+        err = postInit();
+
+    return err;
+}
+
+esp_err_t Network::postInit()
+{
+    return (    esp_wifi_set_mode(config.NetworkIsSTA ? WIFI_MODE_STA : WIFI_MODE_AP) |
+                esp_wifi_set_config(config.NetworkIsSTA ? WIFI_IF_STA : WIFI_IF_AP, &wifiConfig) |
+                esp_wifi_start());
+}
+
+esp_err_t Network::preInit()
+{
+    return esp_netif_init();
+}
