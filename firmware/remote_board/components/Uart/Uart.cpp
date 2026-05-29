@@ -9,17 +9,19 @@
 #include "esp_log.h"
 #include "Uart.hpp"
 
-void Uart::handle()
+static void eventTask(void* arg);
+
+void Uart::Handle()
 {
     uint8_t data[bufferSize];
     size_t length = 0;
 
     /* Get the data from the FIFO. */
-    uart_get_buffered_data_len(uartNum, &length);
-    length = uart_read_bytes(uartNum, data, length, rxTicksToWait);
+    uart_get_buffered_data_len(UartNum, &length);
+    length = uart_read_bytes(UartNum, data, length, rxTicksToWait);
+    ESP_LOGI(__func__, "Got %d bytes.", length, data);
 
     /* TODO: Handling. :D */
-    ESP_LOGI(__func__, "Got %d bytes.", length);
 }
 
 bool Uart::Init()
@@ -31,18 +33,20 @@ bool Uart::Init()
         .parity = UART_PARITY_DISABLE,
         .stop_bits = UART_STOP_BITS_1,
         .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
-        .rx_flow_ctrl_thresh = 0
+        .rx_flow_ctrl_thresh = 0,
+        .source_clk = UART_SCLK_DEFAULT,
+        .flags = {false, false}
     };
     esp_err_t err = ESP_OK;
     
-    err = uart_driver_install(uartNum, bufferSize, bufferSize, queueSize, &queue, 0);
+    err = uart_driver_install(UartNum, bufferSize, bufferSize, queueSize, &Queue, 0);
     if(err != ESP_OK)
     {
         ESP_LOGE(__func__, "Driver install failed!");
         return false;
     }
 
-    err = uart_param_config(uartNum, &config);
+    err = uart_param_config(UartNum, &config);
     if(err != ESP_OK)
     {
         ESP_LOGE(__func__, "Configuration failed!");
@@ -50,7 +54,7 @@ bool Uart::Init()
     }
 
     /* These UART pins are according to the ESP32-WROOM-32 datasheet. Change in the .hpp file if needed. */
-    err = uart_set_pin(uartNum, 18, 17, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
+    err = uart_set_pin(UartNum, 18, 17, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
     if(err != ESP_OK)
     {
         ESP_LOGE(__func__, "Could not set pins!");
@@ -58,29 +62,47 @@ bool Uart::Init()
     }
 
     /* Configure pattern recognition to respond to "\n" command ending. */
-    err = uart_enable_pattern_det_baud_intr(uartNum, '\n', 1, 5, 0, 0);
+    err = uart_enable_pattern_det_baud_intr(UartNum, '\n', 1, 1, 0, 0);
     if(err != ESP_OK)
     {
         ESP_LOGE(__func__, "Could not set up pattern detection!");
         return false;
     }
+    
+    /* Fire off the event task. */
+    xTaskCreate(eventTask, "uart_eventTask", taskStackDepth, nullptr, taskPriority, nullptr);
 
     return true;
 }
 
-void Uart::onEvent(void* arg, esp_event_base_t base, int32_t id, void* data)
+void eventTask(void* arg)
 {
-    switch(id)
-    {
-        /* We aren't interested. Flush everything. */
-        case UART_FIFO_OVF:
-            uart_flush_input(uartNum);
-            xQueueReset(queue);
-            break;
+    uart_event_t event;
+    Uart& uart = Uart::GetInstance();
 
-        /* Ah, something to do! */
-        case UART_PATTERN_DET:
-            handle();
-            break;
+    while(true)
+    {
+        /* Get the event if there is one. */
+        if(xQueueReceive(uart.Queue, (void*)&event, portMAX_DELAY))
+        {
+            switch(event.type)
+            {
+                /* We aren't interested. Flush everything. */
+                case UART_FIFO_OVF:
+                    uart_flush_input(uart.UartNum);
+                    xQueueReset(uart.Queue);
+                    break;
+        
+                /* Ah, something to do! */
+                case UART_PATTERN_DET:
+                    uart.Handle();
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }

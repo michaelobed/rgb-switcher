@@ -52,7 +52,9 @@ extern "C" void app_main()
     }
 
     /* Initialise peripherals. */
-    uart.Init();
+    if(!uart.Init())
+        errorHandler();
+    
     ESP_LOGI(__func__, "Peripheral init done! Running main loop...");
     
     while(true)

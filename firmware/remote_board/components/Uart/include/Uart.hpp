@@ -24,19 +24,20 @@ class Uart
             return s;
         }
 
+        QueueHandle_t Queue;
+        static constexpr uart_port_t UartNum = UART_NUM_1;
+
+        void Handle();
         bool Init();
 
     private:
         static constexpr uint16_t bufferSize = 1024;
         static constexpr uint8_t pinRx = 17;
         static constexpr uint8_t pinTx = 18;
-        QueueHandle_t queue;
         static constexpr uint8_t queueSize = 10;
         static constexpr uint8_t rxTicksToWait = 100;
-        static constexpr uart_port_t uartNum = UART_NUM_1;
-
-        void handle();
-        void onEvent(void* arg, esp_event_base_t base, int32_t id, void* data);
+        static constexpr uint8_t taskPriority = 12;
+        static constexpr uint16_t taskStackDepth = 3072;
         
 };
 
