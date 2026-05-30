@@ -12,6 +12,8 @@
 Config::Config()
 {
     /* Populate with initial values. */
+    for(int i = 0; i < 8; i++)
+        snprintf(InputName[i], InputNameMaxLen, "Input %d", i);
     NetworkIsSTA = false;
     strncpy(NetworkSsid, "YourNetworkHere", MAX_SSID_LEN);
     memset(NetworkPsk, 0, MAX_PASSPHRASE_LEN);
