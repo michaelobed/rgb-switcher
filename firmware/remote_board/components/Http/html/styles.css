@@ -1,0 +1,16 @@
+body {
+    background-color: dimgrey;
+}
+
+.button {
+    background-color: lightgrey;
+    border: 2px solid black;
+    border-radius: 4px;
+    color: black;
+    display: inline-block;
+    font-family: trebuchet ms;
+    font-size: 12px;
+    text-align: center;
+    transition-duration: 0.4s;
+    padding: 10px;
+}

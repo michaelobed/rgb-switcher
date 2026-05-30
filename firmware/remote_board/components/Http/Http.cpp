@@ -8,12 +8,14 @@
 
 #include "Http.hpp"
 
-static esp_err_t onUri(httpd_req_t* request);
+extern const uint8_t html_remote[] asm("_binary_remote_html_start");
+
+static esp_err_t onUriRemote(httpd_req_t* request);
 
 Http::Http()
 {
     handle = nullptr;
-    uriIndex.handler = onUri;
+    uriIndexRemote.handler = onUriRemote;
 }
 
 esp_err_t Http::Init()
@@ -24,15 +26,15 @@ esp_err_t Http::Init()
     httpConfig.lru_purge_enable = true;
 
     /* Start httpd and register URIs. */
-    return (httpd_start(&handle, &httpConfig) | httpd_register_uri_handler(handle, &uriIndex));
+    return (    httpd_start(&handle, &httpConfig) |
+                httpd_register_uri_handler(handle, &uriIndexRemote));
 }
 
-esp_err_t onUri(httpd_req_t* request)
+esp_err_t onUriRemote(httpd_req_t* request)
 {
     esp_err_t err = ESP_OK;
-    const char response[] = "Hello, world! :)";
 
-    err = httpd_resp_send(request, response, HTTPD_RESP_USE_STRLEN);
+    err = httpd_resp_send(request, (char*)html_remote, HTTPD_RESP_USE_STRLEN);
 
     return err;
 }

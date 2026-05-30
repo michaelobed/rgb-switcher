@@ -26,7 +26,7 @@ class Http
 
     private:
         httpd_handle_t handle;
-        httpd_uri_t uriIndex =
+        httpd_uri_t uriIndexRemote =
         {
             .uri = "/",
             .method = HTTP_GET,
