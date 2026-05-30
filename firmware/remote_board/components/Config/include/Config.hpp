@@ -23,7 +23,7 @@ class Config
             return c;
         }
 
-        static constexpr uint8_t InputNameMaxLen = 32;
+        static constexpr int InputNameMaxLen = 32;
         char InputName[InputNameMaxLen][8];
         bool NetworkIsSTA;
         char NetworkSsid[MAX_SSID_LEN];

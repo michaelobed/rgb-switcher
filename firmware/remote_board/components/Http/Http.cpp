@@ -29,7 +29,6 @@ Http::Http()
 
 char* Http::DoReplacement(char* html, const char* toLookFor, const char* toReplaceItWith, bool htmlIsStatic)
 {
-    int htmlSize = strlen(html);
     char* tag = nullptr;
     int tagLocation = 0;
     int toLookForSize = strlen(toLookFor);

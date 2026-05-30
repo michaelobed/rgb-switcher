@@ -30,13 +30,13 @@ class Uart
         bool Init();
 
     private:
-        static constexpr uint16_t bufferSize = 1024;
-        static constexpr uint8_t pinRx = 17;
-        static constexpr uint8_t pinTx = 18;
-        static constexpr uint8_t queueSize = 10;
-        static constexpr uint8_t rxTicksToWait = 100;
-        static constexpr uint8_t taskPriority = 12;
-        static constexpr uint16_t taskStackDepth = 3072;
+        static constexpr int bufferSize = 1024;
+        static constexpr int pinRx = 17;
+        static constexpr int pinTx = 18;
+        static constexpr int queueSize = 10;
+        static constexpr int rxTicksToWait = 100;
+        static constexpr int taskPriority = 12;
+        static constexpr int taskStackDepth = 3072;
         
 };
 
