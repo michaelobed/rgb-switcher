@@ -22,14 +22,15 @@ class Http
             return h;
         }
 
+        static constexpr int BufferSize = 8192;
+        char Buffer[BufferSize];
+
         char* DoReplacement(char* html, const char* toLookFor, const char* toReplaceItWith, bool htmlIsStatic = false);
         esp_err_t Init();
         void OnOops(httpd_req_t* request);
 
     private:
         httpd_handle_t handle;
-        static constexpr int replacementBufferSize = 8192;
-        char replacementBuffer[replacementBufferSize];
         
         /* URIs. */
         httpd_uri_t uriIndexConfig =
@@ -42,7 +43,7 @@ class Http
         
         httpd_uri_t uriIndexConfigSubmit =
         {
-            .uri = "/config_submit",
+            .uri = "/config",
             .method = HTTP_POST,
             .handler = nullptr,
             .user_ctx = nullptr

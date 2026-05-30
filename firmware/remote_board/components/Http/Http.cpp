@@ -24,7 +24,7 @@ static esp_err_t onUriPost(httpd_req_t* request);
 Http::Http()
 {
     handle = nullptr;
-    memset(replacementBuffer, 0, replacementBufferSize);
+    memset(Buffer, 0, BufferSize);
     uriIndexConfig.handler = onUriGet;
     uriIndexConfigSubmit.handler = onUriPost;
     uriIndexInput.handler = onUriGet;
@@ -44,12 +44,12 @@ char* Http::DoReplacement(char* html, const char* toLookFor, const char* toRepla
     {
         /* Copy everything until just before the tag, then replace it with the contents of toReplaceItWith. */
         tagLocation = tag - html;
-        strncpy(replacementBuffer, html, tagLocation);
-        strcpy(replacementBuffer + tagLocation, toReplaceItWith);
-        strcpy(replacementBuffer + tagLocation + toReplaceItWithSize, html + tagLocation + toLookForSize);
+        strncpy(Buffer, html, tagLocation);
+        strcpy(Buffer + tagLocation, toReplaceItWith);
+        strcpy(Buffer + tagLocation + toReplaceItWithSize, html + tagLocation + toLookForSize);
     }
 
-    return replacementBuffer;
+    return Buffer;
 }
 
 esp_err_t Http::Init()
@@ -75,11 +75,8 @@ void Http::OnOops(httpd_req_t* request)
 esp_err_t onUriGet(httpd_req_t* request)
 {
     Http& http = Http::GetInstance();
-    char* inputFromUri = nullptr;
     constexpr int inputTagMaxLen = 18;
     char inputTag[inputTagMaxLen] = "[[INPUTNAMEx]]";
-    static constexpr int queryBufferSize = 64;
-    char queryBuffer[queryBufferSize];
     constexpr char stylesTag[] = "[[STYLES]]";
     char* toServe = nullptr;
 
@@ -89,12 +86,11 @@ esp_err_t onUriGet(httpd_req_t* request)
     else toServe = (char*)htmlRemote;
 
     /* Are we doing anything UART-wise? If so, check that the input number is valid before executing. */
-    inputFromUri = strstr(request->uri, "input");
-    if(inputFromUri != nullptr)
+    if(strstr(request->uri, "input") != nullptr)
     {
-        httpd_req_get_url_query_str(request, queryBuffer, queryBufferSize);
-        if((queryBuffer[0] >= '0') && (queryBuffer[0] <= '7'))
-            uart.SwitchToInput(queryBuffer[0]);
+        httpd_req_get_url_query_str(request, http.Buffer, http.BufferSize);
+        if((http.Buffer[0] >= '0') && (http.Buffer[0] <= '7'))
+            uart.SwitchToInput(http.Buffer[0]);
     }
 
     /* Import styles.css. */

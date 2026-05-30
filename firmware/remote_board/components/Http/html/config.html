@@ -15,7 +15,7 @@
         <h1>Config</h1>
         <p>
             <h2>Input names</h2>
-            <form action="/config_submit" method="post">
+            <form id="config_form" method="post">
                 <label for="inputname0"></label>
                 <label for="inputname1"></label>
                 <label for="inputname2"></label>
@@ -24,42 +24,42 @@
                 <label for="inputname5"></label>
                 <label for="inputname6"></label>
                 <label for="inputname7"></label>
-                <label for="btnOk"></label>
+                
+                <table id="inputNames">
+                    <tr>
+                        <td>Input 0:</td>
+                        <td><input type="text" name="inputname0" id="inputname0" value="[[INPUTNAME0]]"></td>
+                    </tr>
+                    <tr>
+                        <td>Input 1:</td>
+                        <td><input type="text" name="inputname1" id="inputname1" value="[[INPUTNAME1]]"></td>
+                    </tr>
+                    <tr>
+                        <td>Input 2:</td>
+                        <td><input type="text" name="inputname2" id="inputname2" value="[[INPUTNAME2]]"></td>
+                    </tr>
+                    <tr>
+                        <td>Input 3:</td>
+                        <td><input type="text" name="inputname3" id="inputname3" value="[[INPUTNAME3]]"></td>
+                    </tr>
+                    <tr>
+                        <td>Input 4:</td>
+                        <td><input type="text" name="inputname4" id="inputname4" value="[[INPUTNAME4]]"></td>
+                    </tr>
+                    <tr>
+                        <td>Input 5:</td>
+                        <td><input type="text" name="inputname5" id="inputname5" value="[[INPUTNAME5]]"></td>
+                    </tr>
+                    <tr>
+                        <td>Input 6:</td>
+                        <td><input type="text" name="inputname6" id="inputname6" value="[[INPUTNAME6]]"></td>
+                    </tr>
+                    <tr>
+                        <td>Input 7:</td>
+                        <td><input type="text" name="inputname7" id="inputname7" value="[[INPUTNAME7]]"></td>
+                    </tr>
+                </table>
             </form>
-            <table id="inputNames">
-                <tr>
-                    <td>Input 0:</td>
-                    <td><input type="text" id="inputname0" value="[[INPUTNAME0]]"></td>
-                </tr>
-                <tr>
-                    <td>Input 1:</td>
-                    <td><input type="text" id="inputname1" value="[[INPUTNAME1]]"></td>
-                </tr>
-                <tr>
-                    <td>Input 2:</td>
-                    <td><input type="text" id="inputname2" value="[[INPUTNAME2]]"></td>
-                </tr>
-                <tr>
-                    <td>Input 3:</td>
-                    <td><input type="text" id="inputname3" value="[[INPUTNAME3]]"></td>
-                </tr>
-                <tr>
-                    <td>Input 4:</td>
-                    <td><input type="text" id="inputname4" value="[[INPUTNAME4]]"></td>
-                </tr>
-                <tr>
-                    <td>Input 5:</td>
-                    <td><input type="text" id="inputname5" value="[[INPUTNAME5]]"></td>
-                </tr>
-                <tr>
-                    <td>Input 6:</td>
-                    <td><input type="text" id="inputname6" value="[[INPUTNAME6]]"></td>
-                </tr>
-                <tr>
-                    <td>Input 7:</td>
-                    <td><input type="text" id="inputname7" value="[[INPUTNAME7]]"></td>
-                </tr>
-            </table>
         </p>
         <p>
             <h2>Network</h2>
@@ -72,7 +72,7 @@
         <p>
             <table id="okCancel">
                 <tr>
-                    <td><input type="submit" class="buttonNavigation" id="btn_ok" onclick="location.href='/';" value="OK"></td>
+                    <td><input type="button" class="buttonNavigation" id="btn_ok" onclick="document.getElementById('config_form').submit();" value="OK"></td>
                     <td><input type="button" class="buttonNavigation" id="btn_cancel" onclick="location.href='/';" value="Cancel"></td>
                 </tr>
             </table>
