@@ -10,21 +10,22 @@
 #include "esp_log.h"
 #include "Http.hpp"
 
-extern const char remote[] asm("_binary_remote_html_start");
-extern const char styles[] asm("_binary_styles_css_start");
+extern const char htmlConfig[] asm("_binary_config_html_start");
+extern const char htmlRemote[] asm("_binary_remote_html_start");
+extern const char htmlStyles[] asm("_binary_styles_css_start");
 
 static Config& config = Config::GetInstance();
 
-static esp_err_t onUriRemote(httpd_req_t* request);
+static esp_err_t onUriGet(httpd_req_t* request);
+static esp_err_t onUriPost(httpd_req_t* request);
 
 Http::Http()
 {
     handle = nullptr;
-    uriIndexRemote.handler = onUriRemote;
-
-    /* Zero out the "replacement" buffers. These are double buffers so that I can stop using dynamic allocation
-     * and crashing the ESP32. */
     memset(replacementBuffer, 0, replacementBufferSize);
+    uriIndexConfig.handler = onUriGet;
+    uriIndexConfigSubmit.handler = onUriPost;
+    uriIndexRemote.handler = onUriGet;
 }
 
 char* Http::DoReplacement(char* html, const char* toLookFor, const char* toReplaceItWith, bool htmlIsStatic)
@@ -57,6 +58,8 @@ esp_err_t Http::Init()
 
     /* Start httpd and register URIs. */
     return (    httpd_start(&handle, &httpConfig) |
+                httpd_register_uri_handler(handle, &uriIndexConfig) |
+                httpd_register_uri_handler(handle, &uriIndexConfigSubmit) |
                 httpd_register_uri_handler(handle, &uriIndexRemote));
 }
 
@@ -65,15 +68,21 @@ void Http::OnOops(httpd_req_t* request)
     httpd_resp_send_err(request, HTTPD_500_INTERNAL_SERVER_ERROR, "Oops.");
 }
 
-esp_err_t onUriRemote(httpd_req_t* request)
+esp_err_t onUriGet(httpd_req_t* request)
 {
     Http& http = Http::GetInstance();
     constexpr int inputTagMaxLen = 18;
     char inputTag[inputTagMaxLen] = "[[INPUTNAMEx]]";
     constexpr char stylesTag[] = "[[STYLES]]";
+    char* toServe = nullptr;
+
+    /* What page are we serving? */
+    if(strstr(request->uri, "config") != nullptr)
+        toServe = (char*)htmlConfig;
+    else toServe = (char*)htmlRemote;
 
     /* Import styles.css. */
-    char* newHtml = http.DoReplacement((char*)remote, stylesTag, styles, true);
+    char* newHtml = http.DoReplacement(toServe, stylesTag, htmlStyles, true);
 
     if(newHtml == nullptr)
         http.OnOops(request);
@@ -88,5 +97,18 @@ esp_err_t onUriRemote(httpd_req_t* request)
         httpd_resp_send(request, newHtml, HTTPD_RESP_USE_STRLEN);
     }
 
+    return ESP_OK;
+}
+
+esp_err_t onUriPost(httpd_req_t* request)
+{
+    httpd_req_t redirect = 
+    {
+        .method = HTTP_GET,
+        .uri = "/"
+    };
+
+    /* TODO. For now, just redirect. */
+    onUriGet(&redirect);
     return ESP_OK;
 }

@@ -1,19 +1,28 @@
+text, td {
+    font-family: trebuchet ms;
+    color: black;
+}
+
 body {
     background-color: dimgrey;
 }
+
 
 h1 {
     font-size: 60;
     font-family: trebuchet ms;
     text-align: center;
-    color: black;
 }
 
-p {
-    font-size: 30;
+h2 {
+    font-size: 40;
     font-family: trebuchet ms;
     text-align: center;
-    color: black;
+}
+
+p, tr {
+    font-size: 30;
+    text-align: center;
 }
 
 table {
@@ -25,15 +34,26 @@ td {
     padding: 10px;
 }
 
-.button {
+.buttonInput {
     background-color: lightgrey;
     border: 2px solid black;
     border-radius: 15px;
-    color: black;
     display: inline-block;
     font-family: trebuchet ms;
     font-size: 20px;
     text-align: center;
     transition-duration: 0.4s;
-    padding: 50px;
+    padding: 40px;
+}
+
+.buttonNavigation {
+    background-color: lightgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    font-family: trebuchet ms;
+    font-size: 12px;
+    text-align: center;
+    transition-duration: 0.4s;
+    padding: 20px;
 }

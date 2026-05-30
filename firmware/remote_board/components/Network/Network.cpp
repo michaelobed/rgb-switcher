@@ -47,7 +47,7 @@ esp_err_t Network::InitAP()
     strncpy((char*)wifiConfig.ap.password, defaultSsid, MAX_PASSPHRASE_LEN);
     wifiConfig.ap.channel = CONFIG_NETWORK_CHANNEL;
     wifiConfig.ap.ssid_len = 0;
-    wifiConfig.ap.max_connection = 2;
+    wifiConfig.ap.max_connection = maxConnections;
     wifiConfig.ap.authmode = WIFI_AUTH_WPA_WPA2_PSK;
     err = esp_wifi_init(&initConfig);
     if(err == ESP_OK)

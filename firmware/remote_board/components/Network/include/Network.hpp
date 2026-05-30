@@ -25,6 +25,7 @@ class Network
         esp_err_t InitAP();
 
     private:
+        static constexpr int maxConnections = 3;
         esp_netif_t* netIfInstance;
         wifi_config_t wifiConfig;
 
