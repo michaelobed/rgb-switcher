@@ -22,7 +22,9 @@ class Http
             return h;
         }
 
+        char* ImportStyles();
         esp_err_t Init();
+        void OnOops(httpd_req_t* request);
 
     private:
         httpd_handle_t handle;
