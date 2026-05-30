@@ -47,7 +47,15 @@ class Http
             .handler = nullptr,
             .user_ctx = nullptr
         };
-        
+
+        httpd_uri_t uriIndexInput =
+        {
+            .uri = "/input",
+            .method = HTTP_GET,
+            .handler = nullptr,
+            .user_ctx = nullptr
+        };
+
         httpd_uri_t uriIndexRemote =
         {
             .uri = "/",

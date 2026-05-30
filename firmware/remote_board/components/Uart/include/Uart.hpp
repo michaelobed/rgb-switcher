@@ -28,6 +28,7 @@ class Uart
 
         void Handle();
         bool Init();
+        void SwitchToInput(char inputChar);
 
     private:
         static constexpr int bufferSize = 1024;
