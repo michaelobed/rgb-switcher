@@ -9,6 +9,7 @@
 #include "Config.hpp"
 #include <cstring>
 #include "esp_log.h"
+#include "mdns.h"
 #include "Network.hpp"
 
 static Config& config = Config::GetInstance();
@@ -20,7 +21,7 @@ Network::Network()
 
 esp_err_t Network::InitAP()
 {
-    constexpr char defaultSsid[] = "rgbswremote";
+    constexpr char defaultSsid[] = "rgb-switcher";
     esp_err_t err = ESP_OK;
 
     wifi_init_config_t initConfig = WIFI_INIT_CONFIG_DEFAULT();
@@ -57,9 +58,30 @@ esp_err_t Network::InitAP()
 
 esp_err_t Network::postInit()
 {
-    return (    esp_wifi_set_mode(config.NetworkIsSTA ? WIFI_MODE_STA : WIFI_MODE_AP) |
-                esp_wifi_set_config(config.NetworkIsSTA ? WIFI_IF_STA : WIFI_IF_AP, &wifiConfig) |
-                esp_wifi_start());
+    esp_err_t err = ESP_OK;
+
+    /* Set up WiFi according to the desired mode and start it. */
+    err = esp_wifi_set_mode(config.NetworkIsSTA ? WIFI_MODE_STA : WIFI_MODE_AP);
+    if(err != ESP_OK)
+        return err;
+
+    err = esp_wifi_set_config(config.NetworkIsSTA ? WIFI_IF_STA : WIFI_IF_AP, &wifiConfig);
+    if(err != ESP_OK)
+        return err;
+
+    err = esp_wifi_start();
+    if(err != ESP_OK)
+        return err;
+
+    /* Start mDNS so we're not memorising the IP address just to log into this! */
+    err = mdns_init();
+    if(err != ESP_OK)
+        return err;
+    
+    mdns_hostname_set("rgb-switcher");
+    mdns_service_add(nullptr, "_http", "_tcp", 80, nullptr, 0);
+    mdns_service_instance_name_set("_http", "_tcp", "RGB Switcher");
+    return ESP_OK;
 }
 
 esp_err_t Network::preInit()
