@@ -20,21 +20,16 @@ static esp_err_t onUriRemote(httpd_req_t* request);
 Http::Http()
 {
     handle = nullptr;
-    replacementBufferFlipFlop = false;
-    replacementBufferUsed = false;
     uriIndexRemote.handler = onUriRemote;
 
     /* Zero out the "replacement" buffers. These are double buffers so that I can stop using dynamic allocation
      * and crashing the ESP32. */
-    memset(replacementBuffer[0], 0, replacementBufferSize);
-    memset(replacementBuffer[1], 0, replacementBufferSize);
+    memset(replacementBuffer, 0, replacementBufferSize);
 }
 
 char* Http::DoReplacement(char* html, const char* toLookFor, const char* toReplaceItWith, bool htmlIsStatic)
 {
     int htmlSize = strlen(html);
-    char* newHtml = nullptr;
-    int newHtmlSize = 0;
     char* tag = nullptr;
     int tagLocation = 0;
     int toLookForSize = strlen(toLookFor);
@@ -44,21 +39,14 @@ char* Http::DoReplacement(char* html, const char* toLookFor, const char* toRepla
     tag = strstr(html, toLookFor);
     if(tag != nullptr)
     {
-        /* We need a buffer for the replacement. 
-         * Copy everything until just before the tag, then replace it with the contents of toReplaceItWith. */
+        /* Copy everything until just before the tag, then replace it with the contents of toReplaceItWith. */
         tagLocation = tag - html;
-        ESP_LOGI(__func__, "toLookFor = %s, toLookForSize = %d, htmlSize = %d", toLookFor, toLookForSize, htmlSize);
-        newHtml = replacementBufferFlipFlop ? replacementBuffer[1] : replacementBuffer[0];
-        memcpy(newHtml, html, tagLocation);
-        memcpy(newHtml + tagLocation, toReplaceItWith, toReplaceItWithSize);
-        memcpy(newHtml + tagLocation + toReplaceItWithSize, html + tagLocation + toLookForSize, htmlSize - (tagLocation + toLookForSize));
-        newHtmlSize = tagLocation + toReplaceItWithSize + (htmlSize - (tagLocation + toLookForSize));
-        newHtml[newHtmlSize - 1] = '\0';
-        replacementBufferUsed = true;
-        replacementBufferFlipFlop ^= 0x01;
+        strncpy(replacementBuffer, html, tagLocation);
+        strcpy(replacementBuffer + tagLocation, toReplaceItWith);
+        strcpy(replacementBuffer + tagLocation + toReplaceItWithSize, html + tagLocation + toLookForSize);
     }
 
-    return newHtml;
+    return replacementBuffer;
 }
 
 esp_err_t Http::Init()

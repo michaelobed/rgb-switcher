@@ -29,9 +29,7 @@ class Http
     private:
         httpd_handle_t handle;
         static constexpr int replacementBufferSize = 8192;
-        char replacementBuffer[replacementBufferSize][2];
-        bool replacementBufferFlipFlop;
-        bool replacementBufferUsed;
+        char replacementBuffer[replacementBufferSize];
         httpd_uri_t uriIndexRemote =
         {
             .uri = "/",
