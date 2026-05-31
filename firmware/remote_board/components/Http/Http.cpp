@@ -76,7 +76,7 @@ esp_err_t Http::SendPage(httpd_req_t* request, char* page)
 {
     constexpr int inputTagMaxLen = 18;
     char inputTag[inputTagMaxLen] = "[[INPUTNAMEx]]";
-    constexpr char stylesTag[] = "[[STYLES]]";
+    constexpr char tagStyles[] = "[[STYLES]]";
 
     /* Import styles.css. */
     char* newHtml = doReplacement(page, tagStyles, htmlStyles);
