@@ -31,7 +31,7 @@ Http::Http()
     uriIndexRemote.handler = onUriGet;
 }
 
-char* Http::DoReplacement(char* html, const char* toLookFor, const char* toReplaceItWith, bool htmlIsStatic)
+char* Http::doReplacement(char* html, const char* toLookFor, const char* toReplaceItWith, bool htmlIsStatic)
 {
     char* tag = nullptr;
     int tagLocation = 0;
@@ -67,17 +67,39 @@ esp_err_t Http::Init()
                 httpd_register_uri_handler(handle, &uriIndexRemote));
 }
 
-void Http::OnOops(httpd_req_t* request)
+void Http::onOops(httpd_req_t* request)
 {
     httpd_resp_send_err(request, HTTPD_500_INTERNAL_SERVER_ERROR, "Oops.");
+}
+
+esp_err_t Http::SendPage(httpd_req_t* request, char* page)
+{
+    constexpr int inputTagMaxLen = 18;
+    char inputTag[inputTagMaxLen] = "[[INPUTNAMEx]]";
+    constexpr char stylesTag[] = "[[STYLES]]";
+
+    /* Import styles.css. */
+    char* newHtml = doReplacement(page, stylesTag, htmlStyles, true);
+
+    if(newHtml == nullptr)
+        onOops(request);
+    else
+    {
+        /* Replace input names. */
+        for(int i = 0; i < 8; i++)
+        {
+            snprintf(inputTag, inputTagMaxLen, "[[INPUTNAME%d]]", i);
+            newHtml = doReplacement(newHtml, inputTag, config.InputName[i]);
+        }
+        httpd_resp_send(request, newHtml, HTTPD_RESP_USE_STRLEN);
+    }
+
+    return ESP_OK;
 }
 
 esp_err_t onUriGet(httpd_req_t* request)
 {
     Http& http = Http::GetInstance();
-    constexpr int inputTagMaxLen = 18;
-    char inputTag[inputTagMaxLen] = "[[INPUTNAMEx]]";
-    constexpr char stylesTag[] = "[[STYLES]]";
     char* toServe = nullptr;
 
     /* What page are we serving? */
@@ -93,34 +115,63 @@ esp_err_t onUriGet(httpd_req_t* request)
             uart.SwitchToInput(http.Buffer[0]);
     }
 
-    /* Import styles.css. */
-    char* newHtml = http.DoReplacement(toServe, stylesTag, htmlStyles, true);
-
-    if(newHtml == nullptr)
-        http.OnOops(request);
-    else
-    {
-        /* Replace input names. */
-        for(int i = 0; i < 8; i++)
-        {
-            snprintf(inputTag, inputTagMaxLen, "[[INPUTNAME%d]]", i);
-            newHtml = http.DoReplacement(newHtml, inputTag, config.InputName[i]);
-        }
-        httpd_resp_send(request, newHtml, HTTPD_RESP_USE_STRLEN);
-    }
-
-    return ESP_OK;
+    return http.SendPage(request, toServe);
 }
 
 esp_err_t onUriPost(httpd_req_t* request)
 {
-    httpd_req_t redirect = 
-    {
-        .method = HTTP_GET,
-        .uri = "/"
-    };
+    char* data = nullptr;
+    int dataLength = 0;
+    int err = 0;
+    Http& http = Http::GetInstance();
+    constexpr char zero = '\0';
 
-    /* TODO. For now, just redirect. */
-    onUriGet(&redirect);
+    /* Get the POST data. */
+    memset(http.Buffer, 0, http.BufferSize);
+    err = httpd_req_recv(request, http.Buffer, request->content_len);
+
+    /* If the socket was closed, kill the "connection" here (yeah yeah I know HTTP is supposed to be connectionless...). */
+    if(err == 0)
+        return ESP_FAIL;
+
+    /* Handle timeout.*/
+    else if(err == HTTPD_SOCK_ERR_TIMEOUT)
+        httpd_resp_send_408(request);
+    else
+    {
+        /* Replace '+' with ' '. */
+        data = strchr(http.Buffer, '+');
+        while(data != nullptr)
+        {
+            *data = ' ';
+            data = strchr(data + 1, '+');
+        }
+
+        /* A bit cheeky, but replace '&' with '\0'. */
+        data = strchr(http.Buffer, '&');
+        while(data != nullptr)
+        {
+            *data = zero;
+            data = strchr(data + 1, '&');
+        }
+
+        /* Parse input names, tokenising by '\0'. */
+        data = strchr(http.Buffer, '=') + 1;
+        for(int i = 0; i < 8; i++)
+        {
+            dataLength = strlen(data);
+            strncpy(config.InputName[i], data, dataLength + 1);
+            data += dataLength;
+            data = strchr(data + 1, '=');
+            if(data != nullptr)
+                data += 1;
+        }
+
+        /* Finally, redirect to remote.html. */
+        httpd_resp_set_status(request, "303 See Other");
+        httpd_resp_set_hdr(request, "Location", "/");
+        httpd_resp_send(request, nullptr, 0);
+    }
+
     return ESP_OK;
 }

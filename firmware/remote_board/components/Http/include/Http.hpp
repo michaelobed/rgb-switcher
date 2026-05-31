@@ -25,9 +25,8 @@ class Http
         static constexpr int BufferSize = 8192;
         char Buffer[BufferSize];
 
-        char* DoReplacement(char* html, const char* toLookFor, const char* toReplaceItWith, bool htmlIsStatic = false);
         esp_err_t Init();
-        void OnOops(httpd_req_t* request);
+        esp_err_t SendPage(httpd_req_t* request, char* page);
 
     private:
         httpd_handle_t handle;
@@ -64,6 +63,9 @@ class Http
             .handler = nullptr,
             .user_ctx = nullptr
         };
+
+        char* doReplacement(char* html, const char* toLookFor, const char* toReplaceItWith, bool htmlIsStatic = false);
+        void onOops(httpd_req_t* request);
 };
 
 #endif
