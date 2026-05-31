@@ -64,7 +64,7 @@ class Http
             .user_ctx = nullptr
         };
 
-        char* doReplacement(char* html, const char* toLookFor, const char* toReplaceItWith, bool htmlIsStatic = false);
+        char* doReplacement(char* html, const char* toLookFor, const char* toReplaceItWith);
         void onOops(httpd_req_t* request);
 };
 

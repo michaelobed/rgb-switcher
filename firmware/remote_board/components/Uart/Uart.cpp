@@ -79,6 +79,7 @@ void Uart::SwitchToInput(char inputChar)
 {
     const char txBuffer[3] = {'s', inputChar, '\n'};
     uart_tx_chars(UartNum, txBuffer, 3);
+    ESP_LOGI(__func__, "Sent \"switch to %c\" command.", inputChar);
 }
 
 void eventTask(void* arg)

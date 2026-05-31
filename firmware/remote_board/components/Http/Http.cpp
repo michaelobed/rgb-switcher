@@ -31,7 +31,7 @@ Http::Http()
     uriIndexRemote.handler = onUriGet;
 }
 
-char* Http::doReplacement(char* html, const char* toLookFor, const char* toReplaceItWith, bool htmlIsStatic)
+char* Http::doReplacement(char* html, const char* toLookFor, const char* toReplaceItWith)
 {
     char* tag = nullptr;
     int tagLocation = 0;
@@ -79,7 +79,7 @@ esp_err_t Http::SendPage(httpd_req_t* request, char* page)
     constexpr char stylesTag[] = "[[STYLES]]";
 
     /* Import styles.css. */
-    char* newHtml = doReplacement(page, stylesTag, htmlStyles, true);
+    char* newHtml = doReplacement(page, tagStyles, htmlStyles);
 
     if(newHtml == nullptr)
         onOops(request);
