@@ -167,6 +167,8 @@ esp_err_t onUriPost(httpd_req_t* request)
                 data += 1;
         }
 
+        config.Save();
+
         /* Finally, redirect to remote.html. */
         httpd_resp_set_status(request, "303 See Other");
         httpd_resp_set_hdr(request, "Location", "/");

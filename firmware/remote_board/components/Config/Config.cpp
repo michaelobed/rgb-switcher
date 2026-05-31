@@ -61,6 +61,12 @@ bool Config::Load()
         return false;
 
     /* If we do, grab all the config data. */
+    for(int i = 0; i < 8; i++)
+    {
+        size = InputNameMaxLen;
+        sprintf(tag, "inputName%d", i);
+        nvs_get_str(handle, tag, InputName[i], &size);
+    }
     nvs_get_u8(handle, "networkIsSTA", &temp.u8);
     NetworkIsSTA = (temp.u8 > 0);
     size = MAX_SSID_LEN;
@@ -73,7 +79,14 @@ bool Config::Load()
 
 void Config::Save()
 {
+    char tag[tagBufferSize];
+
     nvs_set_u32(handle, "existence", existenceNum);
+    for(int i = 0; i < 8; i++)
+    {
+        sprintf(tag, "inputName%d", i);
+        nvs_set_str(handle, tag, InputName[i]);
+    }
     nvs_set_u8(handle, "networkIsSTA", NetworkIsSTA ? 0x01 : 0x00);
     nvs_set_str(handle, "networkSsid", NetworkSsid);
     nvs_set_str(handle, "networkPsk", NetworkPsk);

@@ -37,6 +37,7 @@ class Config
     private:
         static constexpr uint32_t existenceNum = 0xbf9d45c5;
         nvs_handle_t handle;
+        int tagBufferSize = 16;
 };
 
 #endif
