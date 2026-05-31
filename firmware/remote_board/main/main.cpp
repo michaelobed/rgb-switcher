@@ -64,12 +64,13 @@ extern "C" void app_main()
     }
     
     /* Look for a config in storage. If it doesn't exist, save the initialised one. */
-    if(!config.InitStorage())
+    err = config.InitStorage();
+    if(err != ESP_OK)
     {
-        ESP_LOGE(__func__, "Could not init config storage!");
+        ESP_LOGE(__func__, "Could not init config storage (%d)!", err);
         errorHandler();
     }
-    
+
     if(!config.Load())
     {
         ESP_LOGW(__func__, "Config did not exist. Saving afresh...");

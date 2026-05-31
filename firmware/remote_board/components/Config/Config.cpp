@@ -25,14 +25,14 @@ void Config::EraseAll()
     nvs_commit(handle);
 }
 
-bool Config::InitStorage()
+esp_err_t Config::InitStorage()
 {
     esp_err_t err = ESP_OK;
     
     /* Init the NVS flash driver. */
     err = nvs_flash_init();
     if(err != ESP_OK)
-        return false;
+        return err;
 
     /* Now get a handle to the NVS. */
     err = nvs_open("KeyStorage", NVS_READWRITE, &handle);
@@ -41,18 +41,19 @@ bool Config::InitStorage()
     EraseAll();
 #endif
 
-    return (err == ESP_OK);
+    return err;
 }
 
 bool Config::Load()
 {
+    size_t size = 0;
+    char tag[tagBufferSize];
     union
     {
         uint8_t u8;
         uint16_t u16;
         uint32_t u32;
     } temp;
-    size_t size = 0;
     
     /* Get the existence number. Do we exist? */
     nvs_get_u32(handle, "existence", &temp.u32);
@@ -73,6 +74,7 @@ bool Config::Load()
 void Config::Save()
 {
     nvs_set_u32(handle, "existence", existenceNum);
+    nvs_set_u8(handle, "networkIsSTA", NetworkIsSTA ? 0x01 : 0x00);
     nvs_set_str(handle, "networkSsid", NetworkSsid);
     nvs_set_str(handle, "networkPsk", NetworkPsk);
 

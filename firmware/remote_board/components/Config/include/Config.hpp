@@ -23,14 +23,14 @@ class Config
             return c;
         }
 
-        static constexpr int InputNameMaxLen = 32;
+        static constexpr size_t InputNameMaxLen = 32;
         char InputName[InputNameMaxLen][8];
         bool NetworkIsSTA;
         char NetworkSsid[MAX_SSID_LEN];
         char NetworkPsk[MAX_PASSPHRASE_LEN];
 
         void EraseAll();
-        bool InitStorage();
+        esp_err_t InitStorage();
         bool Load();
         void Save();
 
